@@ -1,0 +1,144 @@
+<project xmlns              = "http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi          = "http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation = "http://maven.apache.org/POM/4.0.0
+                               http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>gov.goias</groupId>
+    <artifactId>mtb</artifactId>
+    <version>0.1.0</version>
+    <packaging>pom</packaging>
+    <name>Cartão Metrobus - Root </name>
+    <description>Aplicação do Cartão Metrobus</description>
+
+    <organization>
+        <name>Segplan - Secretaria de Gestao e Planejamento do Estado de Goias</name>
+        <url>http://www.segplan.go.goias.gov.br</url>
+    </organization>
+
+    <scm>
+        <connection>scm:svn:https://svn.intra.goias.gov.br/java/supart/mtb/trunk</connection>
+    </scm>
+
+    <modules>
+        <module>mtb-app</module>
+        <module>mtb-model</module>
+    </modules>
+
+    <properties>
+        <java.encoding>UTF-8</java.encoding>
+        <project.build.sourceEncoding>${java.encoding}</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>${java.encoding}</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.2</version>
+                    <configuration>
+                        <source>${java.version}</source>
+                        <target>${java.version}</target>
+                        <encoding>${project.build.sourceEncoding}</encoding>
+                    </configuration>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>2.6</version>
+                    <configuration>
+                        <encoding>${project.build.sourceEncoding}</encoding>
+                    </configuration>
+                </plugin>
+
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <profiles>
+       <!-- <profile>
+        <id>local</id>
+        <activation>
+            <activeByDefault>true</activeByDefault>
+        </activation>
+        <properties>
+            <cas.serverName>https://localhost:8443</cas.serverName>
+            <cas.casServerUrlPrefix>${cas.serverName}/cas</cas.casServerUrlPrefix>
+            <cas.authfilter.casServerLoginUrl>${cas.serverName}/cas/login</cas.authfilter.casServerLoginUrl>
+
+            <include.func.tests>**/Func*.java</include.func.tests>
+            <include.it.tests>**/IT*.java</include.it.tests>
+            <portal.cas.user.test>THIAGO</portal.cas.user.test>
+            <fake.cas.user></fake.cas.user>
+            <cas.ignoressl>true</cas.ignoressl>
+        </properties>
+    </profile>
+-->
+
+        <profile>
+            <id>desenv</id>
+            <properties>
+                <cas.serverName>https://corpdesenv.intra.goias.gov.br</cas.serverName>
+                <cas.client.serverName>${cas.serverName}</cas.client.serverName>
+                <cas.casServerUrlPrefix>${cas.serverName}/cas</cas.casServerUrlPrefix>
+                <cas.authfilter.casServerLoginUrl>${cas.serverName}/cas/login</cas.authfilter.casServerLoginUrl>
+
+                <include.func.tests>false</include.func.tests>
+                <include.it.tests>**/IT*.java</include.it.tests>
+                <portal.cas.user.test>THIAGO</portal.cas.user.test>
+                <fake.cas.user>true</fake.cas.user>
+                <cas.ignoressl>true</cas.ignoressl>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>test</id>
+            <properties>
+
+                <cas.serverName>https://corphomo.intra.goias.gov.br</cas.serverName>
+                <cas.client.serverName>https://testeap.intra.goias.gov.br</cas.client.serverName>
+                <cas.casServerUrlPrefix>${cas.serverName}/cas</cas.casServerUrlPrefix>
+                <cas.authfilter.casServerLoginUrl>${cas.serverName}/cas/login</cas.authfilter.casServerLoginUrl>
+
+                <include.func.tests>false</include.func.tests>
+                <include.it.tests>**/IT*.java</include.it.tests>
+                <portal.cas.user.test>THIAGO</portal.cas.user.test>
+                <fake.cas.user></fake.cas.user>
+                <cas.ignoressl>false</cas.ignoressl>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>homolog</id>
+            <properties>
+                <cas.serverName>https://corphomo.intra.goias.gov.br</cas.serverName>
+                <cas.client.serverName>${cas.serverName}</cas.client.serverName>
+                <cas.casServerUrlPrefix>${cas.serverName}/cas</cas.casServerUrlPrefix>
+                <cas.authfilter.casServerLoginUrl>${cas.serverName}/cas/login</cas.authfilter.casServerLoginUrl>
+
+                <include.func.tests>false</include.func.tests>
+                <include.it.tests>**/IT*.java</include.it.tests>
+                <portal.cas.user.test>THIAGO</portal.cas.user.test>
+                <fake.cas.user></fake.cas.user>
+                <cas.ignoressl>false</cas.ignoressl>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>prod</id>
+            <properties>
+                <include.func.tests>false</include.func.tests>
+                <include.it.tests>**/IT*.java</include.it.tests>
+                <portal.cas.user.test>THIAGO</portal.cas.user.test>
+                <fake.cas.user></fake.cas.user>
+                <cas.ignoressl>false</cas.ignoressl>
+            </properties>
+        </profile>
+
+    </profiles>
+
+</project>
