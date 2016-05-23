@@ -4,7 +4,7 @@
                                http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>gov.goias</groupId>
-    <artifactId>mtb</artifactId>
+    <artifactId>sat2</artifactId>
     <version>0.1.0</version>
     <packaging>pom</packaging>
     <name>Cartão Metrobus - Root </name>
@@ -16,12 +16,12 @@
     </organization>
 
     <scm>
-        <connection>scm:svn:https://svn.intra.goias.gov.br/java/supart/mtb/trunk</connection>
+        <connection>scm:git:http://git.intra.goias.gov.br/supart/sat2.git</connection>
     </scm>
 
     <modules>
-        <module>mtb-app</module>
-        <module>mtb-model</module>
+        <module>sat2-app</module>
+        <module>sat2-model</module>
     </modules>
 
     <properties>
