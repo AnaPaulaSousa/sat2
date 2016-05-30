@@ -9,7 +9,7 @@
 
         <non-jta-data-source>java:jboss/datasources/ExampleDS</non-jta-data-source>
 
-        <class>gov.goias.sat2.entities.AlunoExemploMTB</class>
+        <class>gov.goias.sat2.entities.Aluno</class>
 
         <properties>
             <property name="hibernate.connection.driver_class" value="org.h2.Driver" />
