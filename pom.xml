@@ -7,8 +7,8 @@
     <artifactId>sat2</artifactId>
     <version>0.1.0</version>
     <packaging>pom</packaging>
-    <name>Cartão Metrobus - Root </name>
-    <description>Aplicação do Cartão Metrobus</description>
+    <name>Sat 2</name>
+    <description>Sistema de exemplo</description>
 
     <organization>
         <name>Segplan - Secretaria de Gestao e Planejamento do Estado de Goias</name>
@@ -25,6 +25,7 @@
     </modules>
 
     <properties>
+        <spring.version>4.2.5.RELEASE</spring.version>
         <java.encoding>UTF-8</java.encoding>
         <project.build.sourceEncoding>${java.encoding}</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${java.encoding}</project.reporting.outputEncoding>

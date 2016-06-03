@@ -30,24 +30,21 @@ public class App {
     @Getter @Setter private String nomeAplicacao;
     @Getter @Setter private ProtocoloAuth protocolo;
 
-
     public static BeanMappingBuilder getMappingBuilder(){
         return new BeanMappingBuilder() {
-
             @Override
             protected void configure() {
-
-                mapping(Sistema.class, App.class,
+                mapping(Sistema.class,
+                        App.class,
                         TypeMappingOptions.oneWay(),
                         mapId("A"),
                         mapNull(true)
                 );
             }
         };
-
     }
 
-    public static App from(Sistema s){
+    public static App from(final Sistema s){
         return DozerUtil.getMapper().map(s,App.class);
     }
 

@@ -24,9 +24,9 @@
     <listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
   </listener>
 
-  <listener>
-    <listener-class>org.jasig.cas.client.session.SingleSignOutHttpSessionListener</listener-class>
-  </listener>
+  <!--<listener>-->
+    <!--<listener-class>org.jasig.cas.client.session.SingleSignOutHttpSessionListener</listener-class>-->
+  <!--</listener>-->
 
   <listener>
     <listener-class>gov.goias.sat2.conf.IgnoreSSLContextListener</listener-class>
@@ -48,7 +48,7 @@
     <load-on-startup>1</load-on-startup>
   </servlet>
 
-  <filter>
+ <!-- <filter>
     <filter-name>CAS Single Sign Out Filter</filter-name>
     <filter-class>org.jasig.cas.client.session.SingleSignOutFilter</filter-class>
     <init-param>
@@ -96,7 +96,7 @@
   <filter-mapping>
     <filter-name>CAS Validation Filter</filter-name>
     <url-pattern>/app/*</url-pattern>
-  </filter-mapping>
+  </filter-mapping>-->
 
   <servlet-mapping>
     <servlet-name>WebApp</servlet-name>

@@ -18,7 +18,7 @@ config(['$routeProvider', function($routeProvider) {
 		controller: 'AlunosCtrl'
 	}).
 	otherwise({
-		redirectTo: '/apps'
+		redirectTo: '/alunos'
 	});
 
 

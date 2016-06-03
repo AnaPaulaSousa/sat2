@@ -1,6 +1,8 @@
 package gov.goias.sat2.entities;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import org.hibernate.annotations.*;
 
 import javax.persistence.*;
@@ -12,18 +14,18 @@ import javax.persistence.Table;
  */
 
 @Entity
-@Table(name = "ALUNO_EXEMPLO")
+@Table(name = "TB_ALUNO")
 @Data
 public class Aluno {
-
     @Id
-    @Column(name = "ID_ALUNO_EXEMPLO")
-    @GeneratedValue(generator = "ALUNO_EXEMPLO_SQ")
-    @GenericGenerator(name = "ALUNO_EXEMPLO_SQ", strategy = "gov.goias.persistencia.GoiasGenerator", parameters = { @org.hibernate.annotations.Parameter(name = "sequence", value = "ALUNO_EXEMPLO_SQ") })
-    private Integer id;
+    @Column(name = "ALUN_ID")
+    @GeneratedValue
+    private Long id;
 
-    @Column(name = "NOME_ALUNO_EXEMPLO")
+    @Column(name = "ALUN_NOME")
     private String nome;
 
+    @Column(name = "ALUN_EMAIL")
+    private String email;
 
 }

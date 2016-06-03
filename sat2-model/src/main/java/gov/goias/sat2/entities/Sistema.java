@@ -72,63 +72,60 @@ public class Sistema implements Convertible {
         return protocolo;
     }
 
-    public void setId(Integer id) {
+    public void setId(final Integer id) {
         this.id = id;
     }
 
-    public void setSigla(String sigla) {
+    public void setSigla(final String sigla) {
         this.sigla = sigla;
     }
 
-    public void setDescricao(String descricao) {
+    public void setDescricao(final String descricao) {
         this.descricao = descricao;
     }
 
-    public void setConexao(String conexao) {
-        this.conexao = conexao;
+    public void setConexao(final String url) {
+        this.conexao = url;
     }
 
-    public void setMensagem(String mensagem) {
+    public void setMensagem(final String mensagem) {
         this.mensagem = mensagem;
     }
 
-    public void setLogotipo(String logotipo) {
-        this.logotipo = logotipo;
+    public void setLogotipo(final String url) {
+        this.logotipo = url;
     }
 
-    public void setStatus(StatusSistema status) {
-        this.status = status;
+    public void setStatus(final StatusSistema valor) {
+        this.status = valor;
     }
 
-    public void setEmail(String email) {
+    public void setEmail(final String email) {
         this.email = email;
     }
 
-    public void setNomeAplicacao(String nomeAplicacao) {
-        this.nomeAplicacao = nomeAplicacao;
+    public void setNomeAplicacao(final String nome) {
+        this.nomeAplicacao = nome;
     }
 
-    public void setInternet(boolean internet) {
+    public void setInternet(final boolean internet) {
         this.internet = internet;
     }
 
-    public void setIntranet(boolean intranet) {
+    public void setIntranet(final boolean intranet) {
         this.intranet = intranet;
     }
 
-    public void setProtocolo(ProtocoloAuth protocolo) {
+    public void setProtocolo(final ProtocoloAuth protocolo) {
         this.protocolo = protocolo;
     }
 
     @Override
-    public boolean equals(Object o) {
+    public boolean equals(final Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-
-        Sistema sistema = (Sistema) o;
-
+        final Sistema sistema = (Sistema) o;
         return sigla.equals(sistema.sigla);
-
     }
 
     @Override

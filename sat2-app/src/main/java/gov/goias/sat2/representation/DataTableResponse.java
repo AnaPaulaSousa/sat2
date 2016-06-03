@@ -15,8 +15,7 @@ import java.util.List;
  */
 @XmlRootElement(name=DataTableResponse.SCHEMA_NAME)
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = DataTableResponse.SCHEMA_NAME,propOrder = {}
-)
+@XmlType(name = DataTableResponse.SCHEMA_NAME,propOrder = {})
 public class DataTableResponse {
     private Integer draw;
     private Integer recordsTotal;
@@ -28,12 +27,12 @@ public class DataTableResponse {
         this.draw = draw;
     }
 
-    public void setRecordsTotal(final Integer recordsTotal) {
-        this.recordsTotal = recordsTotal;
+    public void setRecordsTotal(final Integer total) {
+        this.recordsTotal = total;
     }
 
-    public void setRecordsFiltered(final Integer recordsFiltered) {
-        this.recordsFiltered = recordsFiltered;
+    public void setRecordsFiltered(final Integer filtered) {
+        this.recordsFiltered = filtered;
     }
 
     public void setData(final List data) {

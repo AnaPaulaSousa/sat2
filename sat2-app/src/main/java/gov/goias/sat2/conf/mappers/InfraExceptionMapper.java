@@ -22,6 +22,7 @@ import javax.ws.rs.ext.Provider;
 @Provider
 public class InfraExceptionMapper implements ExceptionMapper<InfraException> {
 	private static final Logger LOGGER = Logger.getLogger(InfraExceptionMapper.class);
+
 	@Context
 	protected HttpServletRequest request;
 

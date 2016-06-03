@@ -1,5 +1,6 @@
 package gov.goias.sat2.repositories;
 
+import gov.goias.excecao.InfraException;
 import lombok.Getter;
 import lombok.Setter;
 import oracle.jdbc.OracleTypes;
@@ -9,6 +10,9 @@ import org.springframework.jdbc.core.SqlParameter;
 import org.springframework.jdbc.core.simple.SimpleJdbcCall;
 import org.springframework.stereotype.Repository;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import javax.sql.DataSource;
 
 /**
@@ -18,27 +22,20 @@ import javax.sql.DataSource;
 @Repository
 public class HistoricoRepository {
 
-    @Autowired
-    @Getter
-    @Setter
-    private DataSource dataSource;
+    @PersistenceContext
+    private EntityManager em;
 
     /**
      * Executa a procedure {call GEN.PKGGEN_INICIALIZA_USER.SPGEN_INICIALIZA_USER(:usuario)}
      * @param usuario
      */
     public void setUsuarioSessao(String usuario){
-
-        SimpleJdbcCall jdbcCall = new SimpleJdbcCall(new JdbcTemplate(this.dataSource))
-                .withoutProcedureColumnMetaDataAccess()
-                .withSchemaName("GEN")
-                .withCatalogName("PKGGEN_INICIALIZA_USER")
-                .withProcedureName("SPGEN_INICIALIZA_USER");
-        jdbcCall.addDeclaredParameter(new SqlParameter("usuario", OracleTypes.VARCHAR));
-        jdbcCall.execute(usuario);
-
+        try{
+            final Query q = em.createNativeQuery("{call GEN.PKGGEN_INICIALIZA_USER.SPGEN_INICIALIZA_USER(:usuario)}");
+            q.setParameter("usuario", usuario);
+            q.executeUpdate();
+        }catch(Exception e){
+            throw new InfraException("Houve um erro ao tentar atribuir o usuário na sessão de auditoria",e);
+        }
     }
-
 }
-
-

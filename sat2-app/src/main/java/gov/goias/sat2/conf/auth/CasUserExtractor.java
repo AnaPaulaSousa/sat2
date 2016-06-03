@@ -21,67 +21,48 @@ import java.util.Properties;
 @Component
 @Provider
 public class CasUserExtractor {
-
     private static final Logger LOGGER = Logger.getLogger(CasUserExtractor.class);
-
     private static Optional<String> mockCasUser = Optional.empty();
     private static Properties p = new Properties(System.getProperties());
 
     static{
-
         try {
-
-            p.load(CasUserExtractor.class.getClassLoader()
-                    .getResourceAsStream("cas-config.properties"));
-
+            p.load(CasUserExtractor.class.getClassLoader().getResourceAsStream("cas-config.properties"));
             confiMockUser();
-
         } catch (Exception e) {
             LOGGER.error(e);
         }
-
     }
 
     private static void confiMockUser() throws IOException {
-
         final String fakeCasUser = p.getProperty("fake-cas-user");
         final String portalCasUserTest = p.getProperty("portal.cas.user.test");
-
         if(!Strings.isNullOrEmpty(fakeCasUser)){
             mockCasUser = Optional.of(fakeCasUser.toUpperCase());
         }else if(!Strings.isNullOrEmpty(portalCasUserTest)){
             mockCasUser = Optional.of(portalCasUserTest.toUpperCase());
         }
-
-
     }
 
     protected Optional<String> extractUser(){
         return mockCasUser;
     }
 
-    public Optional<String> extractUser(HttpServletRequest request){
+    public Optional<String> extractUser(final HttpServletRequest request){
         Objects.requireNonNull(request, MsgApp.CAS_LOGIN);
         return extractUser(request.getSession());
     }
 
-    public Optional<String> extractUser(HttpSession session){
+    public Optional<String> extractUser(final HttpSession session){
         return mockCasUser.isPresent()? mockCasUser : extractUserFromSession(session);
     }
 
-    public Optional<String> extractUserFromSession(HttpSession session){
-
+    public Optional<String> extractUserFromSession(final HttpSession session){
         if(session != null){
-            final Assertion a = (Assertion)
-                    session.getAttribute(AbstractCasFilter.CONST_CAS_ASSERTION);
-
-            final Optional<String> u = a != null? Optional.of(a.getPrincipal().getName().toUpperCase())
-                    : Optional.empty();
-
-            LOGGER.debug("Usuário cas na sessão: "+u.orElse("Erro ao extrair usuário"));
-
+            final Assertion a = (Assertion) session.getAttribute(AbstractCasFilter.CONST_CAS_ASSERTION);
+            final Optional<String> u = a != null? Optional.of(a.getPrincipal().getName().toUpperCase()) : Optional.empty();
+            LOGGER.debug("Usuário cas na sessão: " + u.orElse("Erro ao extrair usuário"));
             return u;
-
         }else return Optional.empty();
     }
 

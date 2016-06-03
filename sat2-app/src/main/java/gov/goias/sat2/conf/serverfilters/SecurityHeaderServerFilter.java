@@ -18,11 +18,9 @@ import java.io.IOException;
 public class SecurityHeaderServerFilter implements ContainerResponseFilter {
 
     @Override
-    public void filter(ContainerRequestContext requestContext, ContainerResponseContext responseContext)
-            throws IOException {
-
-        responseContext.getHeaders().add("X-Frame-Options","SAMEORIGIN");
-        responseContext.getHeaders().add("X-XSS-Protection","1; mode=block");
-
+    public void filter(final ContainerRequestContext request, final ContainerResponseContext response)throws IOException {
+        response.getHeaders().add("X-Frame-Options","SAMEORIGIN");
+        response.getHeaders().add("X-XSS-Protection","1; mode=block");
     }
+
 }

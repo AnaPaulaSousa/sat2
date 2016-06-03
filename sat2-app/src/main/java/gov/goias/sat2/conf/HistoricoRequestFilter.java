@@ -19,34 +19,28 @@ import java.io.IOException;
  */
 @Component
 public class HistoricoRequestFilter implements ContainerRequestFilter {
-
-    @Autowired
-    protected HistoricoAspectoFuncional historico;
-
-    @Autowired
-    protected HistoricoRepository historicoRepository;
-
+//
+//    @Autowired
+//    protected HistoricoAspectoFuncional historico;
+//
+//    @Autowired
+//    protected HistoricoRepository historicoRepository;
+//
     @Context
     protected HttpServletRequest servletRequest;
-
-    @Autowired
-    protected CasUserExtractor userExtractor;
-
-
-    @PostConstruct
-    protected void setHistorico(){
-
-        historico.c = (final String usuario) -> historicoRepository.setUsuarioSessao(usuario);
-
-    }
-
+//
+//    @Autowired
+//    protected CasUserExtractor userExtractor;
+//
+//    @PostConstruct
+//    protected void setHistorico(){
+//        //historico.c = (final String usuario) -> historicoRepository.setUsuarioSessao(usuario);
+//    }
+//
     @Override
-    public void filter(ContainerRequestContext requestContext)
-            throws IOException {
-
-        historico.s = () -> userExtractor.extractUser(servletRequest.getSession())
-                    .orElseThrow(() -> new RuntimeException(MsgApp.CAS_LOGIN));
-
+    public void filter(final ContainerRequestContext request) throws IOException {
+        //historico.s = () -> userExtractor.extractUser(servletRequest.getSession())
+        //            .orElseThrow(() -> new RuntimeException(MsgApp.CAS_LOGIN));
     }
 
 }

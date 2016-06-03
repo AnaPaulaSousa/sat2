@@ -55,19 +55,6 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <label for="nascimento">Data de Nascimento</label>
-                                    <div class="input-group">
-                                        <div id="datetimepicker2" class="input-group">
-                                            <input name="nascimento" id="nascimento" type="text" class="form-control" placeholder="00/00/0000"
-                                                   value="" ng-model="aluno.nascimento"
-                                                   data-toggle="tooltip" data-placement="right" data-parsley-required/>
-                                            <ul class="parsley-errors-list filled" id="nascimento-errors"></ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
 
                     </fieldset>
@@ -122,9 +109,7 @@
                             <tr style="background: #F5F5F5;">
                                 <th name="id" style="width: 5%">Id</th>
                                 <th name="nome" style="width: 40%">Nome</th>
-                                <th name="sexo" style="width: 15%">Sexo</th>
-                                <th name="nascimento" style="width: 15%">Nascimento</th>
-                                <th name="situacao" style="width: 15%">Situação</th>
+                                <th name="email" style="width: 15%">Email</th>
                                 <th style="width: 5%"></th>
                             </tr>
                             </thead>
@@ -132,9 +117,7 @@
                             <tr style="background: #F5F5F5;">
                                 <th><input id="id-search" type="text" placeholder="Id" /></th>
                                 <th><input id="nome-search" type="text" placeholder="Filtrar por Nome" /></th>
-                                <th><input id="sexo-search" type="text" placeholder="Filtrar por Sexo" /></th>
-                                <th><input id="nascimento-search" type="text" placeholder="Filtrar por Nascimento" /></th>
-                                <th><input id="situacao-search" type="text" placeholder="Filtrar por Situação" /></th>
+                                <th><input id="email-search" type="text" placeholder="Filtrar por Email" /></th>
                                 <th></th>
                             </tr>
                             </tfoot>
@@ -165,9 +148,7 @@
                 "columns": [
                     { "data": "id" },
                     { "data": "nome" },
-                    { "data": "sexo" },
-                    { "data": "nascimento" },
-                    { "data": "situacao" },
+                    { "data": "email" },
                     {
                         "class":          "edit-table-cell",
                         "orderable":      false,
