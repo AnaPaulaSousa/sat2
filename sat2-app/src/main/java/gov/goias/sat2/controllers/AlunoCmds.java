@@ -19,8 +19,7 @@ public class AlunoCmds {
     private AlunoService service;
 
     @POST
-    @Path("/")
-    @Consumes(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     public Response incluir(@NotNull @NotEmpty @FormParam("nome") final String nome,
                             @NotNull @NotEmpty @FormParam("email") final String email) {
         final Aluno aluno = new Aluno(null, nome,email);
@@ -29,8 +28,7 @@ public class AlunoCmds {
     }
 
     @PUT
-    @Path("/")
-    @Consumes(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     public Response alterar(@NotNull @NotEmpty @FormParam("id") final Long id,
                             @NotNull @NotEmpty @FormParam("nome") final String nome,
                             @NotNull @NotEmpty @FormParam("email") final String email) {

@@ -2,14 +2,11 @@
 
 angular.module('myApp.alunos', ['ngRoute'])
 
-.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/alunos', {
-    templateUrl: 'alunos/alunos.html',
-    controller: 'AlunosCtrl'
-  });
-}])
+    .controller('AlunosCtrl', ['$scope', '$http', 'acessos', 'Messages', 'Validation', 'Notifica', function($scope, $http, acessos, Messages, Validation, Notifica) {
 
-.controller('AlunosCtrl', ['$scope', '$http', 'Messages', 'Validation', 'Notifica', function($scope, $http, Messages, Validation, Notifica) {
+
+      //console.log(acessos);
+      //console.log(Messages);
 
   $scope.Aluno = function() {
     return {
@@ -34,7 +31,7 @@ angular.module('myApp.alunos', ['ngRoute'])
 
     $http({
       method  : 'POST',
-      url     : '/sat2/api/aluno',
+      url     : '/sat2-app/api/aluno',
       data    : $.param($scope.aluno),  // pass in data as strings
       headers : { 'Content-Type': 'application/x-www-form-urlencoded' }  // set the headers so angular passing info as form data (not request payload)
     })

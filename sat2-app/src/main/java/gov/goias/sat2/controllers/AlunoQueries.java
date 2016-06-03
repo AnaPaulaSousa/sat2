@@ -35,13 +35,12 @@ public class AlunoQueries {
     }
 
     @GET
-    @Path("/")
     public List<Aluno> listar() {
         return null; //return service.listarPaginado();
     }
 
     @GET
-    @Path("/datatable")
+    @Path("/paginar")
     @Produces({DataTableResponse.JSON})
     public Response list(@QueryParam("draw")   final Integer draw,
                          @QueryParam("start")  final Integer start,
