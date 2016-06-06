@@ -30,12 +30,12 @@ public class HistoricoRepository {
      * @param usuario
      */
     public void setUsuarioSessao(String usuario){
-        try{
-            final Query q = em.createNativeQuery("{call GEN.PKGGEN_INICIALIZA_USER.SPGEN_INICIALIZA_USER(:usuario)}");
-            q.setParameter("usuario", usuario);
-            q.executeUpdate();
-        }catch(Exception e){
-            throw new InfraException("Houve um erro ao tentar atribuir o usuário na sessão de auditoria",e);
-        }
+//        try{
+//            final Query q = em.createNativeQuery("{call GEN.PKGGEN_INICIALIZA_USER.SPGEN_INICIALIZA_USER(:usuario)}");
+//            q.setParameter("usuario", usuario);
+//            q.executeUpdate();
+//        }catch(Exception e){
+//            throw new InfraException("Houve um erro ao tentar atribuir o usuário na sessão de auditoria",e);
+//        }
     }
 }

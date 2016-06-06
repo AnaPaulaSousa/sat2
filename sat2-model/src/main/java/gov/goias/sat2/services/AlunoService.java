@@ -33,16 +33,16 @@ public class AlunoService {
                 .get();
     }
 
-//    @Transactional
-//    @Historico
+    @Transactional
+    @Historico
     public Aluno salvar(final Aluno aluno){
         return Try.of(() -> repository.save(aluno))
                 .onFailure(e -> new InfraException(e))
                 .get();
     }
 
-//    @Transactional
-//    @Historico
+    @Transactional
+    @Historico
     public void remover(final Integer id){
         Try.run(() -> repository.delete(id))
                 .onFailure(e -> new InfraException(e));
