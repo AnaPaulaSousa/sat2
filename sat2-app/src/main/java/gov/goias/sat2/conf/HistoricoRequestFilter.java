@@ -12,35 +12,37 @@ import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.container.ContainerRequestContext;
 import javax.ws.rs.container.ContainerRequestFilter;
 import javax.ws.rs.core.Context;
+import javax.ws.rs.ext.Provider;
 import java.io.IOException;
 
 /**
  * Created by thiago-rs on 4/11/16.
  */
 @Component
+@Provider
 public class HistoricoRequestFilter implements ContainerRequestFilter {
-//
-//    @Autowired
-//    protected HistoricoAspectoFuncional historico;
-//
-//    @Autowired
-//    protected HistoricoRepository historicoRepository;
-//
+
+    @Autowired
+    protected HistoricoAspectoFuncional historico;
+
+    @Autowired
+    protected HistoricoRepository historicoRepository;
+
     @Context
     protected HttpServletRequest servletRequest;
-//
-//    @Autowired
-//    protected CasUserExtractor userExtractor;
-//
-//    @PostConstruct
-//    protected void setHistorico(){
-//        //historico.c = (final String usuario) -> historicoRepository.setUsuarioSessao(usuario);
-//    }
-//
+
+    @Autowired
+    protected CasUserExtractor userExtractor;
+
+    @PostConstruct
+    protected void setHistorico(){
+        historico.c = (final String usuario) -> historicoRepository.setUsuarioSessao(usuario);
+    }
+
     @Override
     public void filter(final ContainerRequestContext request) throws IOException {
-        //historico.s = () -> userExtractor.extractUser(servletRequest.getSession())
-        //            .orElseThrow(() -> new RuntimeException(MsgApp.CAS_LOGIN));
+        historico.s = () -> userExtractor.extractUser(servletRequest.getSession())
+                    .orElseThrow(() -> new RuntimeException(MsgApp.CAS_LOGIN));
     }
 
 }
