@@ -49,7 +49,7 @@ public class AlunoQueries {
         final DataTableResponse dtr = new DataTableResponse();
         final List<Map<String, String>> res = new ArrayList<>();
         dtr.setDraw(draw);
-        String[] columns = new String[]{"id", "nome","email"};
+        final String[] columns = new String[]{"id", "nome","email"};
         try {
             final Integer qtTotal = new Long(service.contarTodos()).intValue();
             final Map<String, String> searchParams = new HashMap<>();

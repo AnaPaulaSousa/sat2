@@ -58,66 +58,66 @@ notifications.factory('Notifica', [
 ]);
 
 
-notifications.factory('NotificaModal', [
-    function(){
-
-        var exibaErroDetalhado = function (inconsistencias) {
-            return mensagemNotificacao.exibaErroDetalhado($(".modal.in .modal-content"), inconsistencias);
-        }
-
-        var exibaNotificacao = function (mensagem) {
-            return mensagemNotificacao.exibaNotificacao($(".modal.in .modal-content"), mensagem);
-        }
-
-        var exibaSucesso = function (mensagem) {
-            return mensagemNotificacao.exibaSucesso($(".modal.in .modal-content"), mensagem);
-        }
-
-        return {
-            exibaErroDetalhado: exibaErroDetalhado,
-            exibaNotificacao: exibaNotificacao,
-            exibaSucesso: exibaSucesso
-        }
-
-    }
-]);
-
-
-notifications.factory('NotificaGeral', [
-    function(){
-
-        var exibaErroDetalhado = function (inconsistencias) {
-            return mensagemNotificacao.exibaErroDetalhado(undefined, inconsistencias);
-        }
-
-        var exibaNotificacao = function (mensagem) {
-            return mensagemNotificacao.exibaNotificacao(undefined, mensagem);
-        }
-
-        var exibaSucesso = function (mensagem) {
-            return mensagemNotificacao.exibaSucesso(undefined, mensagem);
-        }
-
-        var exibaSucessoPadrao = function (detalhamento) {
-            if (detalhamento != undefined) {
-                return this.exibaSucesso('<strong>Sucesso!</strong> ' + detalhamento);
-            } else {
-                return this.exibaSucesso('<strong>Sucesso!</strong> Operação realizada.');
-            }
-        }
-
-        var exibaErro = function (mensagem) {
-            return mensagemNotificacao.exibaErro(undefined, mensagem);
-        }
-
-        return {
-            exibaErro: exibaErro,
-            exibaNotificacao: exibaNotificacao,
-            exibaSucesso: exibaSucesso,
-            exibaSucessoPadrao: exibaSucessoPadrao,
-            exibaErroDetalhado: exibaErroDetalhado
-        }
-    }
-]);
+// notifications.factory('NotificaModal', [
+//     function(){
+//
+//         var exibaErroDetalhado = function (inconsistencias) {
+//             return mensagemNotificacao.exibaErroDetalhado($(".modal.in .modal-content"), inconsistencias);
+//         }
+//
+//         var exibaNotificacao = function (mensagem) {
+//             return mensagemNotificacao.exibaNotificacao($(".modal.in .modal-content"), mensagem);
+//         }
+//
+//         var exibaSucesso = function (mensagem) {
+//             return mensagemNotificacao.exibaSucesso($(".modal.in .modal-content"), mensagem);
+//         }
+//
+//         return {
+//             exibaErroDetalhado: exibaErroDetalhado,
+//             exibaNotificacao: exibaNotificacao,
+//             exibaSucesso: exibaSucesso
+//         }
+//
+//     }
+// ]);
+//
+//
+// notifications.factory('NotificaGeral', [
+//     function(){
+//
+//         var exibaErroDetalhado = function (inconsistencias) {
+//             return mensagemNotificacao.exibaErroDetalhado(undefined, inconsistencias);
+//         }
+//
+//         var exibaNotificacao = function (mensagem) {
+//             return mensagemNotificacao.exibaNotificacao(undefined, mensagem);
+//         }
+//
+//         var exibaSucesso = function (mensagem) {
+//             return mensagemNotificacao.exibaSucesso(undefined, mensagem);
+//         }
+//
+//         var exibaSucessoPadrao = function (detalhamento) {
+//             if (detalhamento != undefined) {
+//                 return this.exibaSucesso('<strong>Sucesso!</strong> ' + detalhamento);
+//             } else {
+//                 return this.exibaSucesso('<strong>Sucesso!</strong> Operação realizada.');
+//             }
+//         }
+//
+//         var exibaErro = function (mensagem) {
+//             return mensagemNotificacao.exibaErro(undefined, mensagem);
+//         }
+//
+//         return {
+//             exibaErro: exibaErro,
+//             exibaNotificacao: exibaNotificacao,
+//             exibaSucesso: exibaSucesso,
+//             exibaSucessoPadrao: exibaSucessoPadrao,
+//             exibaErroDetalhado: exibaErroDetalhado
+//         }
+//     }
+// ]);
 
 

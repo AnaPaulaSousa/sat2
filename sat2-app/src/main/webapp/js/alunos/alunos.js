@@ -1,25 +1,20 @@
 'use strict';
 
 angular.module('myApp.alunos', ['ngRoute'])
-
+    
     .controller('AlunosCtrl', ['$scope', '$http', 'acessos', 'Messages', 'Validation', 'Notifica', function($scope, $http, acessos, Messages, Validation, Notifica) {
-
-
       //console.log(acessos);
       //console.log(Messages);
-
   $scope.Aluno = function() {
     return {
       id: null,
       nome: "",
-      situacao: true,
-      sexo: "M",
-      nascimento: ""
+      telefone: ""
     }
   };
 
   $scope.aluno = $scope.Aluno();
-
+      
   // process the form
   $scope.limparForm = function() {
     $scope.aluno = $scope.Aluno();
@@ -36,6 +31,7 @@ angular.module('myApp.alunos', ['ngRoute'])
       headers : { 'Content-Type': 'application/x-www-form-urlencoded' }  // set the headers so angular passing info as form data (not request payload)
     })
     .success(function(data) {
+      console.log(data);
       $('#dataTables-alunos').DataTable().ajax.reload( null, false );
       $scope.limparForm();
       Notifica.exibaSucesso(null,Messages.salvoComSucesso("Aluno"));
@@ -55,14 +51,15 @@ angular.module('myApp.alunos', ['ngRoute'])
   $scope.edit = function(id) {
 
     if($scope.aluno.id != id){
-
+  
       $scope.limparForm();
 
       $http({
         method  : 'GET',
-        url     : '/sat2/api/aluno/'+id
+        url     : '/sat2-app/api/aluno/'+id
       }).success(function(aluno) {
          $scope.aluno = aluno;
+        console.log(aluno);
       }).error(function(data) {
         Notifica.exibaErro(null,Messages.erroEfetuarOp);
       });
@@ -74,7 +71,7 @@ angular.module('myApp.alunos', ['ngRoute'])
     if($scope.aluno != null){
       $http({
         method  : 'GET',
-        url     : '/sat2/api/aluno/'+$scope.aluno.id+"/delete"
+        url     : '/sat2-app/api/aluno/'+$scope.aluno.id+"/delete"
       }).success(function(response){
         $("#confirm-delete").modal('hide');
         $('#dataTables-alunos').DataTable().ajax.reload( null, false );
@@ -87,4 +84,3 @@ angular.module('myApp.alunos', ['ngRoute'])
   };
 
 }]);
-

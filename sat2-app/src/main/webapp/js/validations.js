@@ -1,7 +1,7 @@
 var validations = angular.module('myApp.validations', []);
 
-validations.factory('Validation', [
-    function(){
+validations.factory('Validation', ['Notifica',
+    function(Notifica){
         var validarClienteSide = function (formulario) {
 
             this.limpar(formulario);
@@ -31,7 +31,7 @@ validations.factory('Validation', [
             this.limpar(formulario, parsley);
 
             if (inconsistencias == null || inconsistencias == undefined) {
-                mensagemNotificacaoGeral.exibaErro(mensagemDetalhada);
+                Notifica.exibaErro(null,mensagemDetalhada);
             } else {
 
                 for(iconsistencia in inconsistencias){

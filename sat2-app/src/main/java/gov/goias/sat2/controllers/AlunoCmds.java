@@ -24,8 +24,8 @@ public class AlunoCmds {
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     public Response incluir(@NotNull @NotEmpty @FormParam("nome") final String nome,
                             @NotNull @NotEmpty @FormParam("email") final String email) {
-        final Aluno aluno = new Aluno(null, nome,email);
-        service.salvar(aluno.toEntity());
+        Aluno aluno = new Aluno(null, nome,email);
+        aluno = aluno.from(service.salvar(aluno.toEntity()));
         return Response.status(Response.Status.SEE_OTHER).header("Location", String.format("aluno/%s", aluno.getId())).build();
     }
 
