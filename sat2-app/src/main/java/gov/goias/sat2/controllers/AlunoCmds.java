@@ -2,6 +2,7 @@ package gov.goias.sat2.controllers;
 
 import gov.goias.sat2.services.AlunoService;
 import gov.goias.sat2.view.model.Aluno;
+import gov.goias.validation.FormValidation;
 import gov.goias.validation.NotEmpty;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,6 +20,7 @@ public class AlunoCmds {
     private AlunoService service;
 
     @POST
+    @FormValidation
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     public Response incluir(@NotNull @NotEmpty @FormParam("nome") final String nome,
                             @NotNull @NotEmpty @FormParam("email") final String email) {
