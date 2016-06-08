@@ -28,7 +28,7 @@ angular.module('myApp.alunos', ['ngRoute'])
         $scope.save = function () {
 
             $http({
-                method: 'POST',
+                method: $scope.aluno.id ? 'PUT': 'POST',
                 url: '/sat2-app/api/aluno',
                 data: $.param($scope.aluno),  // pass in data as strings
                 headers: {'Content-Type': 'application/x-www-form-urlencoded'}  // set the headers so angular passing info as form data (not request payload)
