@@ -22,24 +22,15 @@
                             <div class="col-md-5">
                                 <div class="form-group">
                                     <label for="nome">Nome</label>
-                                    <input type="text" id="nome" name="nome" class="form-control" placeholder="Nome do Aluno" ng-model="aluno.nome">
+                                    <input type="text" id="nome" name="nome" class="form-control" placeholder="Nome do Aluno"
+                                           ng-model="aluno.nome">
                                     <ul class="parsley-errors-list filled" id="nome-errors"></ul>
                                 </div>
                             </div>
                         </div>
 
                         <div class="row">
-                            <div class="col-md-5">
-                                <div class="form-group">
-                                    <label for="email">E-mail</label>
-                                    <input type="text" id="email" name="email" class="form-control" placeholder="E-mail do Aluno" ng-model="aluno.email">
-                                    <ul class="parsley-errors-list filled" id="email-errors"></ul>
-                                </div>
-                            </div>
-                        </div>
 
-<!--
-                        <div class="row">
                             <div class="col-md-1">
                                 <div class="form-group">
                                     <label for="situacao">Situação</label>
@@ -50,9 +41,8 @@
                                     </div>
                                 </div>
                             </div>
--->
 
-<!--                            <div class="col-md-2">
+                            <div class="col-md-2">
                                 <div class="form-group">
                                     <label for="sexo">Sexo</label>
                                     <select data-width="auto" name="sexo" id="sexo" ng-model="aluno.sexo"
@@ -63,7 +53,18 @@
                                     </select>
                                     <ul class="parsley-errors-list filled" id="sexo-errors"></ul>
                                 </div>
-                            </div>-->
+                            </div>
+                            <div class="col-md-5">
+                                <div class="form-group">
+                                    <label for="email">E-mail</label>
+                                    <input type="text" id="email" name="email" class="form-control" placeholder="E-mail do Aluno"
+                                           ng-model="aluno.email">
+                                    <ul class="parsley-errors-list filled" id="email-errors"></ul>
+                                </div>
+                            </div>
+
+                        </div>
+
                     </fieldset>
                     <div class="form-actions">
                         <div class="btn-toolbar">
@@ -144,10 +145,46 @@
     <script>
 
         $(document).ready(function() {
-            iniciaListaAlunos();
+            $('#dataTables-alunos').DataTable({
+                "processing": true,
+                "serverSide": true,
+                dom: 'T clear rtip', //Remove filtro de pesquisa
+                "ajax": "../api/aluno/paginar",
+                "language": {
+                    "url": "../js/Portuguese-Brasil.json"
+                },
+                "columns": [
+                    { "data": "id" },
+                    { "data": "nome" },
+                    { "data": "email" },
+                    {
+                        "class":          "edit-table-cell",
+                        "orderable":      false,
+                        "data":           null,
+                        "defaultContent": "<button class='btn btn-primary'><i class='fa fa-pencil'></i></button>"
+                    }
+                ]
+            }).columns().every( function () {
+                var that = this;
+
+                var id = $(this.header()).attr("name")+"-search"
+
+                $("#"+id).on( 'keyup change', function () {
+                    if ( that.search() !== this.value) {
+                        that.search( this.value ).draw();
+                    }
+                } );
+            });
+
+            $('#dataTables-alunos').on( 'mouseover', 'tbody tr', function () {
+                var id = $($(this)[0].cells[0]).text()
+                var jsCall = "angular.element($('#container')).scope().edit('"+id+"')";
+                $($(this)[0].cells[5]).find("button").first().attr("onclick", jsCall);
+            } );
 
         });
 
     </script>
 
 </div>
+<!-- /.row -->

@@ -9,7 +9,7 @@ import java.util.Optional;
 /**
  * Created by ederbd on 16/05/16.
  */
-public interface AlunoRepository extends  PagingAndSortingRepository<Aluno, Integer> , QueryByExampleExecutor<Aluno> {
+public interface AlunoRepository extends  PagingAndSortingRepository<Aluno, Long> , QueryByExampleExecutor<Aluno> {
     Optional<Aluno> findById(Long id);
     //Page<Aluno> queryFirst10ByNome(final String nome, final Pageable pageable);
 }

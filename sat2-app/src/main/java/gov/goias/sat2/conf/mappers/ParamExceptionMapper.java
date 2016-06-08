@@ -23,6 +23,7 @@ public class ParamExceptionMapper implements ExceptionMapper<ParamException> {
 	@Override
 	public Response toResponse(final ParamException exception) {
 		LOGGER.error(exception);
+		exception.printStackTrace();
 		return Response.status(Response.Status.BAD_REQUEST).entity(getErrorModel(exception)).build();
 	}
 

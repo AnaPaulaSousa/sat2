@@ -41,9 +41,9 @@ public class AlunoCmds {
 
     @DELETE
     @Path("/{id}")
-    public Response remover(@PathParam("id") final Integer id) {
+    public Response remover(@PathParam("id") final Long id) {
         service.remover(id);
-        return Response.status(Response.Status.SEE_OTHER).header("Location", "aluno/").build();
+        return Response.status(Response.Status.OK).build();
     }
 
 }

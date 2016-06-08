@@ -9,6 +9,7 @@ import javaslang.control.Try;
 import org.jboss.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.data.domain.Example;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
@@ -41,11 +42,16 @@ public class AlunoService {
                 .get();
     }
 
-    @Transactional
+    @Transactional(noRollbackFor = EmptyResultDataAccessException.class)
     @Historico
-    public void remover(final Integer id){
-        Try.run(() -> repository.delete(id))
-                .onFailure(e -> new InfraException(e));
+    public void remover(final Long id){
+        try{
+            repository.delete(id);
+        }catch(EmptyResultDataAccessException e){
+            log.debug(e);
+        }catch(Exception e){
+            new InfraException(e);
+        }
     }
 
     public Page<Aluno> listarTodos(final PageRequest page){

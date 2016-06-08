@@ -7,12 +7,12 @@
 
     <persistence-unit name="ExampleDS">
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
-        <non-jta-data-source>java:jboss/datasources/ExampleDS</non-jta-data-source>
+        <non-jta-data-source>java:jboss/datasources/SatDS</non-jta-data-source>
         <class>gov.goias.sat2.entities.Aluno</class>
         <properties>
             <property name="hibernate.connection.driver_class" value="org.h2.Driver" />
             <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect" />
-            <property name="hibernate.hbm2ddl.auto" value="create"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
             <property name="hibernate.show_sql" value="true" />
         </properties>
     </persistence-unit>
