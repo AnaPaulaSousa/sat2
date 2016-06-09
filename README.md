@@ -4,6 +4,25 @@
 
 Java8, JPA, CQRS, Restful, BDD, TDD, DDD, HTML5, WebSocket, Jersey2, Servlet3, JBossEAP, Bootstrap, Bower, JQuery, Amgular
 
+## Java 8
+Programação funcional é utilizado para criar uma DSL fluente para o domínio, facilitando transformações entre camadas sem utilizar estruturas de controles (if, else, for), atribuição de variávies e variáveis mutáveis.
+```java
+    @Transactional
+    @Historico
+    public Aluno salvar(final Aluno aluno){
+        return Try.of(() -> repository.save(aluno))
+                .onFailure(e -> new InfraException(e))
+                .get();
+    }
+    
+     @GET
+    @Path("/{id}")
+    public Aluno obter(@PathParam("id") final Long id) {
+        return Aluno.from(service.obterPorId(id).orElseThrow(() -> new NaoEncontradoException()));
+    }
+```
+
+
 ## Controllers CQRS (Separação de Responsabilidade entre Comandos e Consultas)
 
 Possibilita que para diferentes operações a aplicação se comporte de forma diferente, como utilizar um banco Relacional para inclusões, alterações e remoções e um repositório de dados NoSQL para consultas.
