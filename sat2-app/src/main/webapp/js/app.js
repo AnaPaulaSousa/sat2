@@ -7,7 +7,8 @@ var myApp = angular.module('myApp', [
     'myApp.version',
     'myApp.messages',
     'myApp.validations',
-    'myApp.notifications'
+    'myApp.notifications',
+    'goDataTable'
 ]).config(['$routeProvider', function ($routeProvider) {
     // $routeProvider.otherwise({redirectTo: '/alunos'});
 

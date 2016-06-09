@@ -14,5 +14,7 @@
     "notifyjs": "0.4.0",
     "pace.js": "https://github.com/HubSpot/pace.git#1.0.2",
     "flickity": "~1.2.1"
+  //, "go-data-table": "http://git.intra.goias.gov.br/supart/go-data-table.git#1.0.0"
+
   }
 }

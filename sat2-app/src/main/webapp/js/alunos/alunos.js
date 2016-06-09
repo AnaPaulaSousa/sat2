@@ -1,13 +1,8 @@
 'use strict';
 
-var editarAlunos;
-
-
 angular.module('myApp.alunos', ['ngRoute'])
 
     .controller('AlunosCtrl', ['$scope', '$http', 'acessos', 'Messages', 'Validation', 'Notifica', function ($scope, $http, acessos, Messages, Validation, Notifica) {
-        //console.log(acessos);
-        //console.log(Messages);
         $scope.Aluno = function () {
             return {
                 id: null,
@@ -62,15 +57,12 @@ angular.module('myApp.alunos', ['ngRoute'])
                     url: '/sat2-app/api/aluno/' + id
                 }).success(function (aluno) {
                     $scope.aluno = aluno;
-                    console.log(aluno);
                 }).error(function (data) {
                     Notifica.exibaErro(null, Messages.erroEfetuarOp);
                 });
 
             }
         };
-
-        editarAlunos = $scope.edit;
 
         var deleteSucesso = function () {
             $("#confirm-delete").modal('hide');
@@ -108,45 +100,3 @@ angular.module('myApp.alunos', ['ngRoute'])
     }]);
 
 
-var iniciaListaAlunos = function () {
-
-
-    $('#dataTables-alunos').DataTable({
-        "processing": true,
-        "serverSide": true,
-        dom: 'T clear rtip', //Remove filtro de pesquisa
-        "ajax": "../api/aluno/paginar",
-        "language": {
-            "url": "../js/Portuguese-Brasil.json"
-        },
-        "columns": [
-            {"data": "id"},
-            {"data": "nome"},
-            {"data": "email"},
-            {
-                "class": "edit-table-cell",
-                "orderable": false,
-                "data": null,
-                "defaultContent": "<button class='btn btn-primary'><i class='fa fa-pencil'></i></button>"
-            }
-        ]
-    }).columns().every(function () {
-        var that = this;
-
-        var id = $(this.header()).attr("name") + "-search"
-
-        $("#" + id).on('keyup change', function () {
-            if (that.search() !== this.value) {
-                that.search(this.value).draw();
-            }
-        });
-    });
-
-    $('#dataTables-alunos').on('mouseover', 'tbody tr', function () {
-        var id = $($(this)[0].cells[0]).text()
-        // var jsCall = "angular.element($('#container')).scope().edit('"+id+"')";
-        var jsCall = "editarAlunos('" + id + "')";
-        $($(this)[0].cells[3]).find("button").first().attr("onclick", jsCall);
-    });
-
-}

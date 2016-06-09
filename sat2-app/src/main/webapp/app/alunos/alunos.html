@@ -111,12 +111,12 @@
                     <legend class="section" style="font-weight: 600;">Alunos</legend>
 
                     <div class="dataTable_wrapper">
-                        <table id="dataTables-alunos" class="display table table-hover" cellspacing="0" width="100%">
+                        <table go-data-table  edit-ctl="edit"  ajax="../api/aluno/paginar" id="dataTables-alunos" class="display table table-hover" cellspacing="0" width="100%">
                             <thead>
                             <tr style="background: #F5F5F5;">
-                                <th name="id" style="width: 5%">Id</th>
-                                <th name="nome" style="width: 40%">Nome</th>
-                                <th name="email" style="width: 15%">Email</th>
+                                <th go-data-table-item name="id" style="width: 5%">Id</th>
+                                <th go-data-table-item name="nome" style="width: 40%">Nome</th>
+                                <th go-data-table-item name="email" style="width: 15%">Email</th>
                                 <th style="width: 5%"></th>
                             </tr>
                             </thead>
@@ -141,13 +141,6 @@
         <!-- /.panel -->
     </div>
 
-    <script>
 
-        $(document).ready(function() {
-            iniciaListaAlunos();
-
-        });
-
-    </script>
 
 </div>
