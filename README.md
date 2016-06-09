@@ -1,8 +1,8 @@
-Arquitetura para aplicações Web baseada na plataforma Java. Utiliza padrão MVC com controladores Restful, domínio com JPA e Spring Transaction e view baseada em Bootstrap/HTML5 com gerenciamento de pacotes para apresentação com Bower.
+#Template Arquitetural para desenvolvimento de aplicações Web baseado em plataforma Java.
 
 ## Principais Tecnologias
 
-Java8, JPA, CQRS, Restful, BDD, TDD, DDD, HTML5, WebSocket, CSRF, Selenium, Jersey2, Servlet3, JBossEAP, Bootstrap, Bower, JQuery, I18n, SB de Admin 2
+Java8, JPA, CQRS, Restful, BDD, TDD, DDD, HTML5, WebSocket, Jersey2, Servlet3, JBossEAP, Bootstrap, Bower, JQuery, Amgular
 
 ## Controllers CQRS (Separação de Responsabilidade entre Comandos e Consultas)
 
@@ -13,32 +13,26 @@ Possibilita que para diferentes operações a aplicação se comporte de forma d
 
 ## Persistência
 
-Baseado em goias-dominio utilizando JPA e Spring Transaction
+Para JPA foi usado Spring Data JPA para facilitar a quantidade de codigo repetitivo para consultas e comandos. Todos os métodos de CRUD e paginação são herdados da interface CrudRepository e PagingAndSortingRepository 
+
+```java
+public interface StudentRepository extends PagingAndSortingRepository<Student, Integer> {
+
+    Page<Student> queryFirst10ByName(String name, Pageable pageable);
+
+}
+```
 
 ## Thymeleaf
 
 Thymeleaf foi a framework de escolha para apresentação uma vez que é bem documentada, usa marcação HTML em vez de scriptlets e tem uma grande integração com Spring.
 Durante a construção da arquitetura as frameworks Jersey2 e Thymeleaf não possuíam suporte por padrão logo alguma integração foi feita utilizando a classe ThymeleafViewProcessor
 
-## SB Admin 2
-
-[SB Admin 2] (http://startbootstrap.com/template-overviews/sb-admin-2/): Um template HTML de administração baseado em Bootstrap com plugins jQuery.
 
 ## I18n (Internacionalização)
 
-Com base no padrão JVM Locale e a classe UniversalMessageResolver, mensagens são agregadas em um único arquivo .properties podendo ser usada em todos os templates thymeleaf.
+Com base no padrão JVM Locale e a classe UniversalMessageResolver, mensagens são agregadas em um único arquivo .properties podendo ser usada em todos as classes
 
-## Security: CSRF
-
-Em vez de usar Spring Security que é uma suíte completa para segurança, decidimos adotar algo mais leve como OWASP Security Suite. A "Open Web Application Security Project" é uma comunidade online dedicada a promover segurança para aplicações web. Da OWASP somente a proteção a CSRF foi adicionado, porém futuras versões deste template irá implementar outras proteções de segurança.
-Entretanto, a maioria da OWASP Top 10 falhas críticas de segurança de aplicações web são cobertos usando Spring, Jersey, OWASP CSRFGuard 3 e Java EE.
-
-## Integração do Thymeleaf com OWASP CSRFGuard 3
-
-Exemplo:
-```html
-    <a href = "#" csrf: token_for = "href-dados" th: attr = "href-data = $ {it.id + '/ delete'}"-th-texto de dados = "# {delete.button.label } "class =" btn btn-esboço "-toggle dados =" btn-modal perigo "-alvo de dados =" # confirm-delete "> excluir </a>
-```
 
 ## WebSocket
 
@@ -83,7 +77,7 @@ Bower é o gerenciador de pacotes mais usado para tecnologias web. Ele é usado 
 
 ## Teste
 
-##+ BDD e TDD
+## BDD e TDD
 
 Usando Cubumber e JUnit, fomos capazes de definir o comportamento da aplicação e em requisitos para que depois pudessemos aplicar TDD no sentido de construir os testes para validar o comportamento da aplicação.
 
