@@ -41,11 +41,9 @@ public interface AlunoRepository extends  PagingAndSortingRepository<Aluno, Long
 }
 ```
 
-## Thymeleaf
+## Angular
 
-Thymeleaf foi a framework de escolha para apresentação uma vez que é bem documentada, usa marcação HTML em vez de scriptlets e tem uma grande integração com Spring.
-Durante a construção da arquitetura as frameworks Jersey2 e Thymeleaf não possuíam suporte por padrão logo alguma integração foi feita utilizando a classe ThymeleafViewProcessor
-
+???
 
 ## I18n (Internacionalização)
 
