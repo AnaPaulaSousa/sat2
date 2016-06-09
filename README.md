@@ -209,4 +209,4 @@ public class NaoEncontradoExceptionMapper implements ExceptionMapper<NaoEncontra
 
    * Autenticação e Autorização
    * Exemplos de Testes unitário
-   * Cache de paginas e entidades&lt;/verbatim&gt;
+   * Cache de paginas e entidades
