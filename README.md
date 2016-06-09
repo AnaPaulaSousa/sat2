@@ -1,4 +1,4 @@
-#Template Arquitetural para desenvolvimento de aplicações Web baseado em plataforma Java.
+##Template Arquitetural para desenvolvimento de aplicações Web baseado em plataforma Java.
 
 ## Principais Tecnologias
 
