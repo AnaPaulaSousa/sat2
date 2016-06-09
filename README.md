@@ -16,10 +16,9 @@ Possibilita que para diferentes operações a aplicação se comporte de forma d
 Para JPA foi usado Spring Data JPA para facilitar a quantidade de codigo repetitivo para consultas e comandos. Todos os métodos de CRUD e paginação são herdados da interface CrudRepository e PagingAndSortingRepository 
 
 ```java
-public interface StudentRepository extends PagingAndSortingRepository<Student, Integer> {
-
-    Page<Student> queryFirst10ByName(String name, Pageable pageable);
-
+public interface AlunoRepository extends  PagingAndSortingRepository<Aluno, Long> , QueryByExampleExecutor<Aluno> {
+    Optional<Aluno> findById(Long id);
+    Page<Aluno> queryFirst10ByNome(final String nome, final Pageable pageable);
 }
 ```
 
