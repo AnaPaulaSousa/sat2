@@ -2,26 +2,43 @@
 
 ## Principais Tecnologias
 
-Java8, JPA, CQRS, Restful, BDD, TDD, DDD, HTML5, WebSocket, Jersey2, Servlet3, JBossEAP, Bootstrap, Bower, JQuery, Angular
+Java8, JPA, CQRS, Restful, BDD, TDD, DDD, HTML5, WebSocket, Jersey2, Servlet3, JBossEAP, Lombok, Javaslang, Bootstrap, Bower, JQuery, Angular
 
 ## Java 8
 Programação funcional é utilizado para criar uma DSL fluente para o domínio, facilitando transformações entre camadas sem utilizar estruturas de controles (if, else, for), atribuição de variávies e variáveis mutáveis.
 ```java
-    @Transactional
-    @Historico
-    public Aluno salvar(final Aluno aluno){
-        return Try.of(() -> repository.save(aluno))
-                .onFailure(e -> new InfraException(e))
-                .get();
-    }
-    
-     @GET
+    @GET
     @Path("/{id}")
     public Aluno obter(@PathParam("id") final Long id) {
         return Aluno.from(service.obterPorId(id).orElseThrow(() -> new NaoEncontradoException()));
     }
 ```
 
+## Javaslang
+Framework completamente integrada a Java que estende o conceito de programação funcional em Java com DSLs específicas.
+Ver http://www.javaslang.io
+```java
+    
+    return Try.of(() -> repository.save(aluno))
+            .onFailure(e -> new InfraException(e))
+            .get();
+                
+                
+```
+
+## Lombok
+Framework para injeção de código repetitivo e com semântica similar entre diferentes componentes. Reduz a quantidade de codigo em classes substituindo código Java por uma série de anotações, garantindo assim a integridade com o padrão Java Bean. 
+Os principais métodos substituidos são, equals, hashCode, getters e setters com uma annotation somente, a @Data. 
+Ver https://projectlombok.org/
+
+```java
+@Data(staticConstructor="of")
+public class Company {
+    private final Person founder;
+    private String name;
+    private List<Person> employees;
+}
+```
 
 ## Controllers CQRS (Separação de Responsabilidade entre Comandos e Consultas)
 
@@ -47,7 +64,7 @@ public interface AlunoRepository extends  PagingAndSortingRepository<Aluno, Long
 
 ## I18n (Internacionalização)
 
-Com base no padrão JVM Locale e a classe UniversalMessageResolver, mensagens são agregadas em um único arquivo .properties podendo ser usada em todos as classes
+Com base no padrão JVM Locale e a classe UniversalMessageResolver, mensagens são agregadas em um único arquivo .properties podendo ser usadas em todos as classes
 
 
 ## WebSocket
@@ -140,7 +157,7 @@ public class ITAluno implements Pt {
 }
 ```
 
-##+ Teste durante construções com o Maven
+## Teste durante construções com o Maven
 
 Usamos o plugin do maven surefire para executar testes unitários, testes funcionais e de integração durante uma construção Maven.
 Durante a construção os plugins iniciam o banco em memória h2, aplica DDL, iniciar o  servidor de aplicação, inicia o navegador e automaticamente testa os recursos para gerar resultados do teste.
