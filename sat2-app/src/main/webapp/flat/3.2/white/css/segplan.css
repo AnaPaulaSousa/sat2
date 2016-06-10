@@ -209,10 +209,10 @@ h4.logo-goias 	img {
 .dataTables_filter input[type=search], .dataTable input[type=text],
 	.dataTables_length select {
 	background-position: 97%;
-	background: #fff url("../img/search.png") no-repeat scroll 2%;
+	background: #fff url("../img/search.png") no-repeat scroll 8px;
 	/* 5px 6px */
 	padding: 5px 12px;
-	padding-left: 25px;
+	padding-left: 32px;
 	transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
 	border: 1px solid #ccc;
 	border-radius: 3px;
