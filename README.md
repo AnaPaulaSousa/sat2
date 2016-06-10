@@ -140,7 +140,7 @@ public class ITAluno implements Pt {
 }
 ```
 
-##+ Teste durante construções com o Maven
+## Teste durante construções com o Maven
 
 Usamos o plugin do maven surefire para executar testes unitários, testes funcionais e de integração durante uma construção Maven.
 Durante a construção os plugins iniciam o banco em memória h2, aplica DDL, iniciar o  servidor de aplicação, inicia o navegador e automaticamente testa os recursos para gerar resultados do teste.
