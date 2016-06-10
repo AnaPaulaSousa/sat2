@@ -15,14 +15,15 @@ Programação funcional é utilizado para criar uma DSL fluente para o domínio,
 ```
 
 ## Javaslang
+Framework completamente integrada a Java que estende o conceito de programação funcional em Java com DSLs específicas.
+Ver http://www.javaslang.io
 ```java
-    @Transactional
-    @Historico
-    public Aluno salvar(final Aluno aluno){
-        return Try.of(() -> repository.save(aluno))
-                .onFailure(e -> new InfraException(e))
-                .get();
-    }
+    
+    return Try.of(() -> repository.save(aluno))
+            .onFailure(e -> new InfraException(e))
+            .get();
+                
+                
 ```
 
 ## Lombok
