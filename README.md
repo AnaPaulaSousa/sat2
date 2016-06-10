@@ -2,7 +2,7 @@
 
 ## Principais Tecnologias
 
-Java8, JPA, CQRS, Restful, BDD, TDD, DDD, HTML5, WebSocket, Jersey2, Servlet3, JBossEAP, Bootstrap, Bower, JQuery, Angular
+Java8, JPA, CQRS, Restful, BDD, TDD, DDD, HTML5, WebSocket, Jersey2, Servlet3, JBossEAP, Lombok, Javaslang, Bootstrap, Bower, JQuery, Angular
 
 ## Java 8
 Programação funcional é utilizado para criar uma DSL fluente para o domínio, facilitando transformações entre camadas sem utilizar estruturas de controles (if, else, for), atribuição de variávies e variáveis mutáveis.
