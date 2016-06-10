@@ -47,7 +47,7 @@ public interface AlunoRepository extends  PagingAndSortingRepository<Aluno, Long
 
 ## I18n (Internacionalização)
 
-Com base no padrão JVM Locale e a classe UniversalMessageResolver, mensagens são agregadas em um único arquivo .properties podendo ser usada em todos as classes
+Com base no padrão JVM Locale e a classe UniversalMessageResolver, mensagens são agregadas em um único arquivo .properties podendo ser usadas em todos as classes
 
 
 ## WebSocket
