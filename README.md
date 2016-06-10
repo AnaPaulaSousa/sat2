@@ -22,7 +22,7 @@ Programação funcional é utilizado para criar uma DSL fluente para o domínio,
     }
 ```
 
-##Lombok
+## Lombok
 Framework para injeção de código repetitivo e com semântica similar entre diferentes componentes. Reduz a quantidade de codigo em classes substituindo código Java por uma série de anotações, garantindo assim a integridade com o padrão Java Bean. 
 Os principais métodos substituidos são, equals, hashCode, getters e setters com uma annotation somente, a @Data. Ver https://projectlombok.org/
 
