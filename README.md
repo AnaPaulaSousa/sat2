@@ -7,7 +7,7 @@ Java8, JPA, CQRS, Restful, BDD, TDD, DDD, HTML5, WebSocket, Jersey2, Servlet3, J
 ## Java 8
 Programação funcional é utilizado para criar uma DSL fluente para o domínio, facilitando transformações entre camadas sem utilizar estruturas de controles (if, else, for), atribuição de variávies e variáveis mutáveis.
 ```java
-     @GET
+    @GET
     @Path("/{id}")
     public Aluno obter(@PathParam("id") final Long id) {
         return Aluno.from(service.obterPorId(id).orElseThrow(() -> new NaoEncontradoException()));
