@@ -29,7 +29,27 @@ angular.module('goDataTable', []).directive("goDataTable", function () {
                     dom: 'T clear rtip', //Remove filtro de pesquisa
                     "ajax": $attrs.ajax,
                     "language": {
-                        "url": "../js/Portuguese-Brasil.json"
+                        "sEmptyTable": "Nenhum registro encontrado",
+                        "sInfo": "Mostrando de _START_ até _END_ de _TOTAL_ registros",
+                        "sInfoEmpty": "Mostrando 0 até 0 de 0 registros",
+                        "sInfoFiltered": "(Filtrados de _MAX_ registros)",
+                        "sInfoPostFix": "",
+                        "sInfoThousands": ".",
+                        "sLengthMenu": "_MENU_ resultados por página",
+                        "sLoadingRecords": "Carregando...",
+                        "sProcessing": "Processando...",
+                        "sZeroRecords": "Nenhum registro encontrado",
+                        "sSearch": "Pesquisar",
+                        "oPaginate": {
+                            "sNext": "Próximo",
+                            "sPrevious": "Anterior",
+                            "sFirst": "Primeiro",
+                            "sLast": "Último"
+                        },
+                        "oAria": {
+                            "sSortAscending": ": Ordenar colunas de forma ascendente",
+                            "sSortDescending": ": Ordenar colunas de forma descendente"
+                        }
                     },
                     "columns": columns
                 });
@@ -55,7 +75,7 @@ angular.module('goDataTable', []).directive("goDataTable", function () {
                         if ($attrs.editUrl) {
                             if (/(#)/.test($attrs.editUrl)){
                                 var url = $attrs.editUrl.replace("#", "");
-                                $location.path(url).search({id: id});//.replace();
+                                $location.path(url).search({id: id});
                                 $window.location.href = $location.absUrl();
                             }else {
                                 $window.location.href = $attrs.editUrl;
