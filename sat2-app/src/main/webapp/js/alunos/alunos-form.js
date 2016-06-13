@@ -1,8 +1,9 @@
 'use strict';
 
-angular.module('myApp.alunos', ['ngRoute'])
+angular.module('myApp.alunosFormPadrao', ['ngRoute'])
 
-    .controller('AlunosCtrl', ['$scope', '$http', 'acessos', 'Messages', 'Validation', 'Notifica', function ($scope, $http, acessos, Messages, Validation, Notifica) {
+    .controller('AlunosFormPadraoCtrl', ['$scope', '$http', 'acessos', 'Messages', 'Validation', 'Notifica', '$routeParams', function ($scope, $http, acessos, Messages, Validation, Notifica, $routeParams) {
+
         $scope.Aluno = function () {
             return {
                 id: null,
@@ -48,7 +49,7 @@ angular.module('myApp.alunos', ['ngRoute'])
 
         $scope.edit = function (id) {
 
-            if ($scope.aluno.id != id) {
+            if (id && $scope.aluno.id != id) {
 
                 $scope.limparForm();
 
@@ -80,6 +81,10 @@ angular.module('myApp.alunos', ['ngRoute'])
                 });
             }
         };
+
+
+        $scope.edit($routeParams.id);
+
 
     }]);
 

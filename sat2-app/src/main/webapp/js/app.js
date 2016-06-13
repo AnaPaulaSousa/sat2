@@ -4,28 +4,14 @@
 var myApp = angular.module('myApp', [
     'ngRoute',
     'myApp.alunos',
+    'myApp.alunosFormPadrao',
+    'myApp.alunosListaPaginada',
     'myApp.version',
     'myApp.messages',
     'myApp.validations',
     'myApp.notifications',
     'goDataTable'
-]).config(['$routeProvider', function ($routeProvider) {
-    // $routeProvider.otherwise({redirectTo: '/alunos'});
-
-    $routeProvider.when('/aluno-com-botao', {
-        templateUrl: 'alunos/alunos.html',
-        controller: 'AlunosCtrl',
-
-        resolve: {
-            acessos: function () {
-                return "CIAE";
-            }
-        }
-
-    }).otherwise({
-        redirectTo: '/aluno-com-botao'
-    });
-
+]).config(['$routeProvider', function () {
 
     $.notify.addStyle("segplan", {
         html: "<div> <span data-notify-text>  </span><div data-notify-html='mensagemHtml'> </div> </div>",

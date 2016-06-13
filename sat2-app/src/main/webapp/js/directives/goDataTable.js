@@ -1,10 +1,10 @@
 /**
  * Created by ederbd on 09/06/16.
  */
-angular.module('goDataTable',[]).directive("goDataTable", function () {
+angular.module('goDataTable', []).directive("goDataTable", function () {
     return {
         require: "goDataTable",
-        controller: function ($scope, $element, $attrs) {
+        controller: function ($scope, $element, $attrs, $location, $window) {
 
             var columns = [
                 {
@@ -16,14 +16,14 @@ angular.module('goDataTable',[]).directive("goDataTable", function () {
             ];
 
             this.registraItem = function (data) {
-                columns.splice(columns.length-1, 0,{"data": data});
+                columns.splice(columns.length - 1, 0, {"data": data});
             };
 
             var elemento = $('#' + $attrs.id);
             var dataTable = null;
 
             this.criaDataTable = function () {
-                dataTable =  elemento.DataTable({
+                dataTable = elemento.DataTable({
                     "processing": true,
                     "serverSide": true,
                     dom: 'T clear rtip', //Remove filtro de pesquisa
@@ -48,8 +48,19 @@ angular.module('goDataTable',[]).directive("goDataTable", function () {
                 elemento.on('mouseover', 'tbody tr', function () {
                     var id = $($(this)[0].cells[0]).text()
                     var doClick = function () {
-                        var fClick = $scope[$attrs.editCtl];
-                        return fClick(id);
+                        if ($attrs.editCtl && $scope[$attrs.editCtl]) {
+                            var fClick = $scope[$attrs.editCtl];
+                            fClick(id);
+                        }
+                        if ($attrs.editUrl) {
+                            if (/(#)/.test($attrs.editUrl)){
+                                var url = $attrs.editUrl.replace("#", "");
+                                $location.path(url).search({id: id});//.replace();
+                                $window.location.href = $location.absUrl();
+                            }else {
+                                $window.location.href = $attrs.editUrl;
+                            }
+                        }
                     }
                     $($(this)[0].cells[columns.length - 1]).find("button").prop('onclick', null).off('click');
                     $($(this)[0].cells[columns.length - 1]).find("button").on("click", doClick);
@@ -57,12 +68,16 @@ angular.module('goDataTable',[]).directive("goDataTable", function () {
             }
 
         },
-        link: function(scope, element, attr, ctrl) { ctrl.criaDataTable()}
+        link: function (scope, element, attr, ctrl) {
+            ctrl.criaDataTable()
+        }
     };
 });
 angular.module('goDataTable').directive("goDataTableItem", function () {
     return {
         require: "^goDataTable",
-        link: function(scope, element, attr, ctrl) { ctrl.registraItem(attr.name);}
+        link: function (scope, element, attr, ctrl) {
+            ctrl.registraItem(attr.name);
+        }
     };
 });
