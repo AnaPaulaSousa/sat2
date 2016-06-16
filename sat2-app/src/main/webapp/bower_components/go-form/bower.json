@@ -1,0 +1,15 @@
+{
+  "name": "go-form",
+  "authors": [
+    "eder-bd <eder-bd@segplan.go.gov.br>"
+  ],
+  "description": "Manipula formulario para ações de post",
+  "main": "goForm.js",
+  "keywords": [
+    "form",
+    "submit",
+    "post"
+  ],
+  "license": "MIT",
+  "homepage": "http://git.intra.goias.gov.br/goias/go-form.git"
+}

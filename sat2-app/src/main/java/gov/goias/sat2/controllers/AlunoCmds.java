@@ -22,20 +22,15 @@ public class AlunoCmds {
     @POST
     @FormValidation
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    public Response incluir(@NotNull @NotEmpty @FormParam("nome") final String nome,
-                            @NotNull @NotEmpty @FormParam("email") final String email) {
-        Aluno aluno = new Aluno(null, nome,email);
-        aluno = aluno.from(service.salvar(aluno.toEntity()));
-        return Response.status(Response.Status.SEE_OTHER).header("Location", String.format("aluno/%s", aluno.getId())).build();
-    }
-
-    @PUT
-    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    public Response alterar(@NotNull @NotEmpty @FormParam("id") final Long id,
+    public Response incluir(@FormParam("id") final Long id,
                             @NotNull @NotEmpty @FormParam("nome") final String nome,
                             @NotNull @NotEmpty @FormParam("email") final String email) {
-        final Aluno aluno = new Aluno(id, nome, email);
-        service.salvar(aluno.toEntity());
+        Aluno aluno = new Aluno(id, nome, email);
+        if (id != null) {
+            service.salvar(aluno.toEntity());
+        } else {
+            aluno = aluno.from(service.salvar(aluno.toEntity()));
+        }
         return Response.status(Response.Status.SEE_OTHER).header("Location", String.format("aluno/%s", aluno.getId())).build();
     }
 

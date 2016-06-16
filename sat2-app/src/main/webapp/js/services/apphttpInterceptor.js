@@ -5,7 +5,7 @@ angular.module('myApp').factory('apphttpInterceptor', function ($q, $rootScope, 
 
         request: function(config) {
             // console.log("request");
-            console.log(config.url);
+            //console.log(config.url);
             return config;
         },
         // optional method

@@ -9,7 +9,12 @@
         <section class="widget">
             <div class="body">
 
-                <form id="aluno-form" role="form" ng-submit="save()">
+                <form go-form id="aluno-form" go-form-action="/sat2-app/api/aluno" go-form-on-error-msg="Deu erro!"
+                      go-form-redirect="#/aluno-lista-pag-padrao" go-form-model="aluno"
+                      role="form">
+                      <!--go-form-on-success-fn="sucessoAoSalvar" [opcional]-->
+                      <!--go-form-on-error-fn="erroAoSalvar" [opcional] -->
+
                     <fieldset>
 
                         <legend class="section" style="font-weight:600;">Cadastrar Aluno</legend>
@@ -22,7 +27,8 @@
                             <div class="col-md-5">
                                 <div class="form-group">
                                     <label for="nome">Nome</label>
-                                    <input type="text" id="nome" name="nome" class="form-control" placeholder="Nome do Aluno" ng-model="aluno.nome">
+                                    <input type="text" id="nome" name="nome" class="form-control"
+                                           placeholder="Nome do Aluno" ng-model="aluno.nome">
                                     <ul class="parsley-errors-list filled" id="nome-errors"></ul>
                                 </div>
                             </div>
@@ -32,47 +38,23 @@
                             <div class="col-md-5">
                                 <div class="form-group">
                                     <label for="email">E-mail</label>
-                                    <input type="text" id="email" name="email" class="form-control" placeholder="E-mail do Aluno" ng-model="aluno.email">
+                                    <input type="text" id="email" name="email" class="form-control"
+                                           placeholder="E-mail do Aluno" ng-model="aluno.email">
                                     <ul class="parsley-errors-list filled" id="email-errors"></ul>
                                 </div>
                             </div>
                         </div>
 
-                        <!--
-                                                <div class="row">
-                                                    <div class="col-md-1">
-                                                        <div class="form-group">
-                                                            <label for="situacao">Situação</label>
-                                                            <div class="input-group">
-                                                                <div id="situacao" class="btn-group" data-toggle="buttons">
-                                                                    <input type="checkbox" name="situacao" ng-model="aluno.situacao"> Ativo
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                        -->
-
-                        <!--                            <div class="col-md-2">
-                                                        <div class="form-group">
-                                                            <label for="sexo">Sexo</label>
-                                                            <select data-width="auto" name="sexo" id="sexo" ng-model="aluno.sexo"
-                                                                    data-minimum-results-for-search="10" tabindex="-1"
-                                                                    class="select2 form-control" id="default-select" data-parsley-required>
-                                                                <option value="M">Masculino</option>
-                                                                <option value="F">Feminino</option>
-                                                            </select>
-                                                            <ul class="parsley-errors-list filled" id="sexo-errors"></ul>
-                                                        </div>
-                                                    </div>-->
                     </fieldset>
                     <div class="form-actions">
                         <div class="btn-toolbar">
 
-                            <button type="submit" name="action" class="btn btn-primary pull-right">
+                            <button go-submit type="button" name="action" class="btn btn-primary pull-right">
                                 <i class="fa fa-save" style="margin-right:4px;" id="show-info-message"></i> Salvar
                             </button>
 
-                            <button type="button" name="action" class="btn btn-primary pull-right" ng-click="limparForm()">
+                            <button type="button" name="action" class="btn btn-primary pull-right"
+                                    ng-click="limparForm()">
                                 <i class="fa fa-repeat" style="margin-right:4px;" id="show-info-message"></i> Limpar
                             </button>
 
@@ -87,7 +69,8 @@
 
                 </form>
 
-                <div id="confirm-delete" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                <div id="confirm-delete" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                     aria-hidden="true" style="display: none;">
                     <div class="modal-dialog">
                         <div class="modal-content">
 
@@ -108,14 +91,12 @@
                 </div>
 
 
-
             </div>
             <!-- /.panel-body -->
 
         </section>
         <!-- /.panel -->
     </div>
-
 
 
 </div>

@@ -10,7 +10,8 @@ var myApp = angular.module('myApp', [
     'myApp.messages',
     'myApp.validations',
     'myApp.notifications',
-    'goDataTable'
+    'goDataTable',
+    'goForm'
 ]).config(['$routeProvider', function () {
 
     $.notify.addStyle("segplan", {
