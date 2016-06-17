@@ -220,8 +220,11 @@ public class NaoEncontradoExceptionMapper implements ExceptionMapper<NaoEncontra
 }
 ```
 
-## O que não está no template?
+## Proximos passos
 
    * Autenticação e Autorização
    * Exemplos de Testes unitário
+   * Exemplos de Testes de integração
+   * Exemplos de Testes Funcionais automatizados
+   * Projeto de Api Web   
    * Cache de paginas e entidades
