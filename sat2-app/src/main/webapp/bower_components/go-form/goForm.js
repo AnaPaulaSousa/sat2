@@ -22,7 +22,11 @@ angular.module('goForm', []).directive("goForm", function () {
                             if ($attrs.goFormRedirect) {
                                 if (/(#)/.test($attrs.goFormRedirect)) {
                                     var url = $attrs.goFormRedirect.replace("#", "");
-                                    $location.path(url);
+                                    if (data && data.id){
+                                        $location.path(url).search({id: data.id});
+                                    }else{
+                                        $location.path(url);
+                                    }
                                     $window.location.href = $location.absUrl();
                                 } else {
                                     $window.location.href = $attrs.goFormRedirect;
