@@ -229,16 +229,5 @@ public class NaoEncontradoExceptionMapper implements ExceptionMapper<NaoEncontra
    * Projeto de Api Web   
    * Cache de paginas e entidades
    * Lorem ipsum
-    fasf asdflkçgsdfjg çlskdjfgç lsdfkjg çdgdçflkgj 
-    asdf a
-    fas lçkjçasfdk çlkj
-     asdf as
-asdasdadasd
-     asdasdasd 
-     
-     sdf lçksadjf çlaskjf
-      çlsdkafj çlasdkfj çsaldfj asdçlfk jasçdlfkj açsldfjkasd f
-      
-      asd asdasdada skasdjfhasfjaslkdfh laskdjhf dsfljkahslkfh asldh
    
    
