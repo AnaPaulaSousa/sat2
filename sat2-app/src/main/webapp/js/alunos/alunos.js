@@ -29,7 +29,6 @@ angular.module('myApp.alunos', ['ngRoute'])
                 headers: {'Content-Type': 'application/x-www-form-urlencoded'}  // set the headers so angular passing info as form data (not request payload)
             })
                 .success(function (data) {
-                    console.log(data);
                     $('#dataTables-alunos').DataTable().ajax.reload(null, false);
                     $scope.limparForm();
                     Notifica.exibaSucesso(null, Messages.salvoComSucesso("Aluno"));
