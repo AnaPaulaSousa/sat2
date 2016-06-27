@@ -45,6 +45,42 @@
                             </div>
                         </div>
 
+                        <div class="row">
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label for="nascimento">Nascimento</label>
+                                    <input type="date" id="nascimento" name="nascimento" class="form-control go-date-style"
+                                           placeholder="dd/MM/yyyy" ng-model="aluno.nascimento"/>
+                                    <ul class="parsley-errors-list filled" id="nascimento-errors"></ul>
+                                </div>
+                            </div>
+
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label for="sexo">Sexo</label>
+                                    <select data-width="auto" name="sexo" id="sexo" ng-model="aluno.sexo"
+                                            data-minimum-results-for-search="10" tabindex="-1"
+                                            class="select2 form-control" id="default-select" data-parsley-required>
+                                        <option value="M">Masculino</option>
+                                        <option value="F">Feminino</option>
+                                    </select>
+                                    <ul class="parsley-errors-list filled" id="sexo-errors"></ul>
+                                </div>
+                            </div>
+
+                            <div class="col-md-1">
+                                <div class="form-group">
+                                    <label for="situacao">Situação</label>
+                                    <div class="input-group">
+                                        <div id="situacao" class="btn-group" data-toggle="buttons">
+                                            <input type="checkbox" name="situacao" ng-model="aluno.situacao"> Ativo
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
                     </fieldset>
                     <div class="form-actions">
                         <div class="btn-toolbar">

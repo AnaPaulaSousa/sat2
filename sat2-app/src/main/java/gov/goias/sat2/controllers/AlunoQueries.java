@@ -1,5 +1,6 @@
 package gov.goias.sat2.controllers;
 
+import gov.goias.excecao.GoiasResourceMessage;
 import gov.goias.excecao.negocio.NaoEncontradoException;
 import gov.goias.sat2.representation.DataTableResponse;
 import gov.goias.sat2.services.AlunoService;
@@ -71,8 +72,8 @@ public class AlunoQueries {
             dtr.setData(res);
             dtr.setRecordsTotal(qtTotal);
         } catch (Exception e) {
-            //log.error(e);
-            //dtr.setError(GoiasResourceMessage.getMessage("msg_erro_dessconhecido"));
+//            log.error(e);
+            dtr.setError(GoiasResourceMessage.getMessage("msg_erro_dessconhecido:"+ e.getMessage()));
         }
        return Response.status(Response.Status.OK).entity(dtr).build();
     }

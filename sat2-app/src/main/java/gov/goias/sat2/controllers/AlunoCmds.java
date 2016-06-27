@@ -1,5 +1,6 @@
 package gov.goias.sat2.controllers;
 
+import gov.goias.converters.DateParam;
 import gov.goias.sat2.services.AlunoService;
 import gov.goias.sat2.view.model.Aluno;
 import gov.goias.validation.FormValidation;
@@ -8,9 +9,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Past;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.text.ParseException;
 
 @Controller
 @Path("/aluno")
@@ -24,8 +27,12 @@ public class AlunoCmds {
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     public Response incluir(@FormParam("id") final Long id,
                             @NotNull @NotEmpty @FormParam("nome") final String nome,
-                            @NotNull @NotEmpty @FormParam("email") final String email) {
-        Aluno aluno = new Aluno(id, nome, email);
+                            @NotNull @NotEmpty @FormParam("email") final String email,
+                            @NotNull @Past @FormParam("nascimento") final DateParam nascimento,
+                            @NotNull @NotEmpty @FormParam("sexo") final String sexo,
+                            @FormParam("situacao") final Boolean situacao) throws ParseException {
+
+        Aluno aluno = new Aluno(id, nome, email, nascimento.getDate(), sexo, situacao);
         if (id != null) {
             service.salvar(aluno.toEntity());
         } else {

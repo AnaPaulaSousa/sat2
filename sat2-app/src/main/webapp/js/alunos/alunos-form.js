@@ -45,6 +45,9 @@ angular.module('myApp.alunosFormPadrao', ['ngRoute'])
                     method: 'GET',
                     url: '/sat2-app/api/aluno/' + id
                 }).success(function (aluno) {
+                    if (aluno.nascimento){
+                        aluno.nascimento = new Date(aluno.nascimento);
+                    }
                     $scope.aluno = aluno;
                 }).error(function (data) {
                     Notifica.exibaErro(null, Messages.erroEfetuarOp);

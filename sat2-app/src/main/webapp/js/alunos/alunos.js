@@ -7,7 +7,10 @@ angular.module('myApp.alunos', ['ngRoute'])
             return {
                 id: null,
                 nome: "",
-                telefone: ""
+                telefone: "",
+                nascimento: null,
+                sexo: null,
+                situacao: null
             }
         };
 
@@ -55,6 +58,9 @@ angular.module('myApp.alunos', ['ngRoute'])
                     method: 'GET',
                     url: '/sat2-app/api/aluno/' + id
                 }).success(function (aluno) {
+                    if (aluno.nascimento){
+                        aluno.nascimento = new Date(aluno.nascimento);
+                    }
                     $scope.aluno = aluno;
                 }).error(function (data) {
                     Notifica.exibaErro(null, Messages.erroEfetuarOp);
