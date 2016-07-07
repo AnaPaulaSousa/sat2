@@ -60,7 +60,61 @@ public interface AlunoRepository extends  PagingAndSortingRepository<Aluno, Long
 
 ## Angular
 
-???
+Na a interface de usuário, para um front-end mais amigável, rico, contemporizado e simplificando, foi usado o AngularJS, um framework escrito em Java Script, que estende atributos HTML através de diretivas e faz binds de dados para o HTML com expressões.
+
+```html
+<html ng-app="myApp">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<div ng-controller="MyAppCtrl as myAppCtrl">
+    <nav id="sidebar" class="sidebar nav-collapse collapse">
+        <ul id='versao-menu' class='dropdown-menu account' role='menu' style="min-width: 180px;">
+            <li role='presentation' class='account-picture'>
+                <i class='fa fa-calendar'></i>
+                <span class='conteudoDropDownInterno'>{{ toolbar.alm.buildTime | date : 'dd/MM/yyyy HH:mm:ss' }}</span>
+            </li>
+            <li class="dropdown">
+                <a ng-href="{{toolbar.gitRepositoryState.remoteBuildUrl}}" title="build" codigo="account"
+                   class="dropdown-toggle" ng-click="goToRemoteBuildUrl()"
+                   data-toggle="dropdown">
+                    <i class='fa fa-check-square-o'></i>
+                <span class='conteudoDropDownInterno'
+                      title="{{toolbar.gitRepositoryState.remoteBuildUrl}}">Commit: {{toolbar.gitRepositoryState.commitIdAbbrev}}</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<script src="../angular/angular.js"></script>
+<script src="../js/app.js"></script>
+</body>
+</html>
+```
+
+
+```javascript
+angular.module('myApp')
+    .controller('MyAppCtrl', ['$scope', '$http', 'Notifica', 'API_BASE_URL', '$window', function ($scope, $http, Notifica, API_BASE_URL, $window) {
+        $scope.goToRemoteTagUrl = function () {
+            $window.open($scope.toolbar.gitRepositoryState.remoteTagUrl);
+        }
+        $scope.goToRemoteBuildUrl = function () {
+            $window.open($scope.toolbar.gitRepositoryState.remoteBuildUrl);
+        }
+        $http({
+            method: "GET",
+            url: API_BASE_URL + '/toolbar'
+        }).success(function (toolbar) {
+            $scope.toolbar = toolbar;
+        }).error(function (data) {
+            $scope.retorno = data;
+            Notifica.exibaErro(null, $scope.retorno.mensagens);
+        });
+    },
+    ]);
+```
 
 ## I18n (Internacionalização)
 
