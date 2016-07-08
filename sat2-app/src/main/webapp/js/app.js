@@ -100,3 +100,34 @@ var myApp = angular.module('myApp', [
 }]);
 
 myApp.value('API_BASE_URL', '/sat2-app/api');
+
+angular.module('myApp')
+
+    .controller('MyAppCtrl', ['$scope', '$http', 'Messages', 'Validation', 'Notifica', 'API_BASE_URL', '$window', function ($scope, $http, Messages, Validation, Notifica, API_BASE_URL, $window) {
+
+        $scope.goToRemoteTagUrl = function () {
+            $window.open($scope.toolbar.gitRepositoryState.remoteTagUrl);
+        }
+        $scope.goToRemoteBuildUrl = function () {
+            $window.open($scope.toolbar.gitRepositoryState.remoteBuildUrl);
+        }
+
+
+        $http({
+            method: "GET",
+            url: API_BASE_URL + '/toolbar'
+        }).success(function (toolbar) {
+            $scope.toolbar = toolbar;
+        }).error(function (data) {
+            $scope.retorno = data;
+            if (data != null) {
+                Notifica.exibaErro(null, $scope.retorno.mensagens);
+            } else {
+                Notifica.exibaErro(null, $scope.retorno.mensagens);
+            }
+        });
+
+
+    },
+
+    ]);
