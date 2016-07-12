@@ -13,8 +13,8 @@
     <meta charset="utf-8">
     <script>
         /* yeah we need this empty stylesheet here. It's cool chrome & chromium fix
-           chrome fix https://code.google.com/p/chromium/issues/detail?codigo=167083
-                      https://code.google.com/p/chromium/issues/detail?codigo=332189
+           chrome fix https://code.google.com/p/chromium/issues/detail?id=167083
+                      https://code.google.com/p/chromium/issues/detail?id=332189
         */
     </script>
 </head>
@@ -22,15 +22,15 @@
     <div class="logo">
         <h4><a href="index.html">Light <strong>Blue</strong></a></h4>
     </div>
-        <nav codigo="sidebar" class="sidebar nav-collapse collapse">
-            <ul codigo="side-nav" class="side-nav">
+        <nav id="sidebar" class="sidebar nav-collapse collapse">
+            <ul id="side-nav" class="side-nav">
                 <li class="">
                     <a href="index.html"><i class="fa fa-home"></i> <span class="name">Dashboard</span></a>
                 </li>
                 <li class="panel active">
                     <a class="accordion-toggle " data-toggle="collapse"
                        data-parent="#side-nav" href="#forms-collapse"><i class="fa fa-pencil"></i> <span class="name">Forms</span></a>
-                    <ul codigo="forms-collapse" class="panel-collapse collapse in">
+                    <ul id="forms-collapse" class="panel-collapse collapse in">
                         <li class=""><a href="form_account.html">Account</a></li>
                         <li class=""><a href="form_article.html">Article</a></li>
                         <li class=""><a href="form_elements.html">Elements</a></li>
@@ -41,7 +41,7 @@
                 <li class="panel ">
                     <a class="accordion-toggle collapsed" data-toggle="collapse"
                        data-parent="#side-nav" href="#stats-collapse"><i class="fa fa-area-chart"></i> <span class="name">Statistics</span></a>
-                    <ul codigo="stats-collapse" class="panel-collapse collapse ">
+                    <ul id="stats-collapse" class="panel-collapse collapse ">
                         <li class=""><a href="stat_statistics.html">Stats</a></li>
                         <li class=""><a href="stat_charts.html">Charts</a></li>
                         <li class=""><a href="stat_realtime.html">Realtime</a></li>
@@ -50,7 +50,7 @@
                 <li class="panel ">
                     <a class="accordion-toggle collapsed" data-toggle="collapse"
                        data-parent="#side-nav" href="#ui-collapse"><i class="fa fa-magic"></i> <span class="name">User Interface</span></a>
-                    <ul codigo="ui-collapse" class="panel-collapse collapse ">
+                    <ul id="ui-collapse" class="panel-collapse collapse ">
                         <li class=""><a href="ui_buttons.html">Buttons</a></li>
                         <li class=""><a href="ui_dialogs.html">Dialogs</a></li>
                         <li class=""><a href="ui_notifications.html">Notifications</a></li>
@@ -62,7 +62,7 @@
                 <li class="panel ">
                     <a class="accordion-toggle collapsed" data-toggle="collapse"
                        data-parent="#side-nav" href="#components-collapse"><i class="fa fa-tree"></i> <span class="name">Components</span></a>
-                    <ul codigo="components-collapse" class="panel-collapse collapse ">
+                    <ul id="components-collapse" class="panel-collapse collapse ">
                         <li class=""><a href="component_calendar.html">Calendar</a></li>
                         <li class=""><a href="component_maps.html" data-no-pjax>Maps</a></li>
                         <li class=""><a href="component_gallery.html">Gallery</a></li>
@@ -74,7 +74,7 @@
                 <li class="panel ">
                     <a class="accordion-toggle collapsed" data-toggle="collapse"
                        data-parent="#side-nav" href="#tables-collapse"><i class="fa fa-cog"></i> <span class="name">Tables</span></a>
-                    <ul codigo="tables-collapse" class="panel-collapse collapse ">
+                    <ul id="tables-collapse" class="panel-collapse collapse ">
                         <li class=""><a href="tables_static.html">Static <sup class="text-danger fw-bold">upd</sup></a></li>
                         <li class=""><a href="tables_dynamic.html">Dynamic</a></li>
                     </ul>
@@ -82,7 +82,7 @@
                 <li class="panel ">
                     <a class="accordion-toggle collapsed" data-toggle="collapse"
                        data-parent="#side-nav" href="#grid-collapse"><i class="fa fa-th"></i> <span class="name">Widgets</span></a>
-                    <ul codigo="grid-collapse" class="panel-collapse collapse ">
+                    <ul id="grid-collapse" class="panel-collapse collapse ">
                         <li class=""><a href="grid_basic.html">Basic</a></li>
                         <li class=""><a href="grid_live.html">Live</a></li>
                     </ul>
@@ -90,7 +90,7 @@
                 <li class="panel ">
                     <a class="accordion-toggle collapsed" data-toggle="collapse"
                        data-parent="#side-nav" href="#special-collapse"><i class="fa fa-leaf"></i> <span class="name">Special</span></a>
-                    <ul codigo="special-collapse" class="panel-collapse collapse ">
+                    <ul id="special-collapse" class="panel-collapse collapse ">
                         <li class=""><a href="special_search.html">Search <sup class="text-warning fw-bold">new</sup></a></li>
                         <li class=""><a href="special_invoice.html">Invoice</a></li>
                         <li class=""><a href="special_inbox.html">Inbox &nbsp; <span class="label label-important">3</span></a></li>
@@ -103,17 +103,17 @@
                 <li class="panel">
                     <a class="accordion-toggle collapsed" data-toggle="collapse"
                        data-parent="#side-nav" href="#menu-levels-collapse"><i class="fa fa-folder-open"></i> <span class="name">Menu Levels</span></a>
-                    <ul codigo="menu-levels-collapse" class="panel-collapse collapse">
+                    <ul id="menu-levels-collapse" class="panel-collapse collapse">
                         <li><a href="#">Item 1.1</a></li>
                         <li><a href="#">Item 1.2</a></li>
                         <li class="panel">
                             <a class="accordion-toggle collapsed" data-toggle="collapse"
                                data-parent="#menu-levels-collapse" href="#sub-menu-1-collapse">Item 1.3</a>
-                            <ul codigo="sub-menu-1-collapse" class="panel-collapse collapse">
+                            <ul id="sub-menu-1-collapse" class="panel-collapse collapse">
                                 <li class="panel">
                                     <a class="accordion-toggle collapsed" data-toggle="collapse"
                                        data-parent="#sub-menu-1-collapse" href="#sub-menu-3-collapse">Item 2.1</a>
-                                    <ul codigo="sub-menu-3-collapse" class="panel-collapse collapse">
+                                    <ul id="sub-menu-3-collapse" class="panel-collapse collapse">
                                         <li><a href="#">Item 3.1</a></li>
                                         <li><a href="#">Item 3.2</a></li>
                                         <li><a href="#">Item 3.3</a></li>
@@ -123,7 +123,7 @@
                                 <li class="panel">
                                     <a class="accordion-toggle collapsed" data-toggle="collapse"
                                        data-parent="#sub-menu-1-collapse" href="#sub-menu-2-collapse">Item 2.3</a>
-                                    <ul codigo="sub-menu-2-collapse" class="panel-collapse collapse">
+                                    <ul id="sub-menu-2-collapse" class="panel-collapse collapse">
                                         <li><a href="#">Item 3.4</a></li>
                                         <li><a href="#">Item 3.5</a></li>
                                         <li><a href="#">Item 3.6</a></li>
@@ -187,17 +187,17 @@
             <div class="navbar">
                 <ul class="nav navbar-nav navbar-right pull-right">
                     <li class="visible-phone-landscape">
-                        <a href="#" codigo="search-toggle">
+                        <a href="#" id="search-toggle">
                             <i class="fa fa-search"></i>
                         </a>
                     </li>
                     <li class="dropdown">
-                        <a href="#" title="Messages" codigo="messages"
+                        <a href="#" title="Messages" id="messages"
                            class="dropdown-toggle"
                            data-toggle="dropdown">
                             <i class="fa fa-comments"></i>
                         </a>
-                        <ul codigo="messages-menu" class="dropdown-menu messages" role="menu">
+                        <ul id="messages-menu" class="dropdown-menu messages" role="menu">
                             <li role="presentation">
                                 <a href="#" class="message">
                                     <img src="img/1.jpg" alt="">
@@ -245,7 +245,7 @@
                             <i class="fa fa-group"></i>
                             <span class="count">8</span>
                         </a>
-                        <ul codigo="support-menu" class="dropdown-menu support" role="menu">
+                        <ul id="support-menu" class="dropdown-menu support" role="menu">
                             <li role="presentation">
                                 <a href="#" class="support-ticket">
                                     <div class="picture">
@@ -305,7 +305,7 @@
                     </li>
                     <li class="divider"></li>
                     <li class="hidden-xs">
-                        <a href="#" codigo="settings"
+                        <a href="#" id="settings"
                            title="Settings"
                            data-toggle="popover"
                            data-placement="bottom">
@@ -313,12 +313,12 @@
                         </a>
                     </li>
                     <li class="hidden-xs dropdown">
-                        <a href="#" title="Account" codigo="account"
+                        <a href="#" title="Account" id="account"
                            class="dropdown-toggle"
                            data-toggle="dropdown">
                             <i class="fa fa-user"></i>
                         </a>
-                        <ul codigo="account-menu" class="dropdown-menu account" role="menu">
+                        <ul id="account-menu" class="dropdown-menu account" role="menu">
                             <li role="presentation" class="account-picture">
                                 <img src="img/2.jpg" alt="">
                                 Philip Daineka
@@ -354,13 +354,13 @@
                     </li>
                     <li class="hidden-xs"><a href="login.html"><i class="fa fa-sign-out"></i></a></li>
                 </ul>
-                <form codigo="search-form" class="navbar-form pull-right" role="search">
+                <form id="search-form" class="navbar-form pull-right" role="search">
                     <input type="search" class="form-control search-query" placeholder="Search...">
                 </form>
                 <div class="notifications pull-right">
                     <div class="alert pull-right">
                         <a href="#" class="close ml-xs" data-dismiss="alert">&times;</a>
-                        <i class="fa fa-info-circle mr-xs"></i> Check out Light Blue <a codigo="notification-link" href="#">settings</a> on the right!
+                        <i class="fa fa-info-circle mr-xs"></i> Check out Light Blue <a id="notification-link" href="#">settings</a> on the right!
                     </div>
                 </div>
             </div>
@@ -377,7 +377,7 @@
                         </h4>
                     </header>
                     <div class="body">
-                        <form codigo="validation-form" class="form-horizontal form-label-left" method="post"
+                        <form id="validation-form" class="form-horizontal form-label-left" method="post"
                               data-parsley-priority-enabled="false"
                               novalidate="novalidate">
                             <fieldset>
@@ -387,7 +387,7 @@
                                 <div class="form-group">
                                     <label class="control-label col-md-4" for="basic">Simple required</label>
                                     <div class="col-md-5">
-                                        <input type="text" codigo="basic" name="basic" class="form-control input-transparent"
+                                        <input type="text" id="basic" name="basic" class="form-control input-transparent"
                                                required="required">
                                     </div>
                                 </div>
@@ -399,7 +399,7 @@
                                     </span>
                                     </label>
                                     <div class="col-md-5">
-                                        <input type="text" codigo="basic-change" name="basic-change" class="form-control input-transparent"
+                                        <input type="text" id="basic-change" name="basic-change" class="form-control input-transparent"
                                                data-parsley-trigger="change"
                                                data-parsley-minlength="10"
                                                required="required">
@@ -418,7 +418,7 @@
                                         E-mail
                                     </label>
                                     <div class="col-md-5">
-                                        <input type="email" codigo="email" name="email" class="form-control input-transparent"
+                                        <input type="email" id="email" name="email" class="form-control input-transparent"
                                                data-parsley-trigger="change"
                                                data-parsley-validation-threshold="1"
                                                required="required">
@@ -429,7 +429,7 @@
                                         Number
                                     </label>
                                     <div class="col-md-5">
-                                        <input type="text" codigo="number" name="number" class="form-control input-transparent"
+                                        <input type="text" id="number" name="number" class="form-control input-transparent"
                                                data-parsley-type="number"
                                                required="required">
                                     </div>
@@ -440,7 +440,7 @@
                                     </label>
                                     <div class="col-md-5">
                                         <input type="text"  class="form-control input-transparent"
-                                               codigo="range" name="range"
+                                               id="range" name="range"
                                                data-parsley-range="[10, 100]"
                                                data-parsley-trigger="change"
                                                data-parsley-validation-threshold="1"
@@ -457,11 +457,11 @@
                                         Password helpers
                                     </label>
                                     <div class="col-md-5">
-                                        <input type="password" codigo="password" name="password" class="form-control input-transparent"
+                                        <input type="password" id="password" name="password" class="form-control input-transparent"
                                                data-parsley-trigger="change"
                                                data-parsley-minlength="6"
                                                required="required">
-                                        <input type="password" codigo="password-r" name="password-r" class="form-control input-transparent mt-sm"
+                                        <input type="password" id="password-r" name="password-r" class="form-control input-transparent mt-sm"
                                                data-parsley-trigger="change"
                                                data-parsley-minlength="6"
                                                data-parsley-equalto="#password"
@@ -473,7 +473,7 @@
                                         Website
                                     </label>
                                     <div class="col-md-5">
-                                        <input type="text" codigo="website" name="website" class="form-control input-transparent"
+                                        <input type="text" id="website" name="website" class="form-control input-transparent"
                                                data-parsley-trigger="change"
                                                data-parsley-type="url"
                                                required="required">
@@ -510,10 +510,10 @@
 <script src="js/settings.js"></script>
 
 <!-- common templates -->
-<script type="text/template" codigo="settings-template">
+<script type="text/template" id="settings-template">
     <div class="setting clearfix">
         <div>Background</div>
-        <div codigo="background-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
+        <div id="background-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
             <% dark = background == 'dark'; light = background == 'light';%>
             <button type="button" data-value="dark" class="btn btn-sm btn-default <%= dark? 'active' : '' %>">Dark</button>
             <button type="button" data-value="light" class="btn btn-sm btn-default <%= light? 'active' : '' %>">Light</button>
@@ -521,7 +521,7 @@
     </div>
     <div class="setting clearfix">
         <div>Sidebar on the</div>
-        <div codigo="sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
+        <div id="sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
             <% onRight = sidebar == 'right'%>
             <button type="button" data-value="left" class="btn btn-sm btn-default <%= onRight? '' : 'active' %>">Left</button>
             <button type="button" data-value="right" class="btn btn-sm btn-default <%= onRight? 'active' : '' %>">Right</button>
@@ -529,7 +529,7 @@
     </div>
     <div class="setting clearfix">
         <div>Sidebar</div>
-        <div codigo="display-sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
+        <div id="display-sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
             <% display = displaySidebar%>
             <button type="button" data-value="true" class="btn btn-sm btn-default <%= display? 'active' : '' %>">Show</button>
             <button type="button" data-value="false" class="btn btn-sm btn-default <%= display? '' : 'active' %>">Hide</button>
@@ -543,7 +543,7 @@
     </div>
 </script>
 
-<script type="text/template" codigo="sidebar-settings-template">
+<script type="text/template" id="sidebar-settings-template">
     <% auto = sidebarState == 'auto'%>
     <% if (auto) {%>
     <button type="button"

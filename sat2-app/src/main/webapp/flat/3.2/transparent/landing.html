@@ -13,8 +13,8 @@
     <meta charset="utf-8">
     <script>
         /* yeah we need this empty stylesheet here. It's cool chrome & chromium fix
-           chrome fix https://code.google.com/p/chromium/issues/detail?codigo=167083
-                      https://code.google.com/p/chromium/issues/detail?codigo=332189
+           chrome fix https://code.google.com/p/chromium/issues/detail?id=167083
+                      https://code.google.com/p/chromium/issues/detail?id=332189
         */
     </script>
 </head>
@@ -56,7 +56,7 @@
                     </div>
                 </header>
                 <div class="content">
-                    <div codigo="carousel-landing" class="carousel slide carousel-landing carousel-fade">
+                    <div id="carousel-landing" class="carousel slide carousel-landing carousel-fade">
                         <ol class="carousel-indicators">
                             <li data-target="#carousel-landing" data-slide-to="0" class="active"></li>
                             <li data-target="#carousel-landing" data-slide-to="1" class=""></li>
@@ -158,7 +158,7 @@
                     </div>
                 </div>
             </div>
-            <div codigo="about" class="widget widget-white widget-about">
+            <div id="about" class="widget widget-white widget-about">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-offset-1 col-sm-10">
@@ -313,10 +313,10 @@
 <script src="js/settings.js"></script>
 
 <!-- common templates -->
-<script type="text/template" codigo="settings-template">
+<script type="text/template" id="settings-template">
     <div class="setting clearfix">
         <div>Background</div>
-        <div codigo="background-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
+        <div id="background-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
             <% dark = background == 'dark'; light = background == 'light';%>
             <button type="button" data-value="dark" class="btn btn-sm btn-default <%= dark? 'active' : '' %>">Dark</button>
             <button type="button" data-value="light" class="btn btn-sm btn-default <%= light? 'active' : '' %>">Light</button>
@@ -324,7 +324,7 @@
     </div>
     <div class="setting clearfix">
         <div>Sidebar on the</div>
-        <div codigo="sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
+        <div id="sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
             <% onRight = sidebar == 'right'%>
             <button type="button" data-value="left" class="btn btn-sm btn-default <%= onRight? '' : 'active' %>">Left</button>
             <button type="button" data-value="right" class="btn btn-sm btn-default <%= onRight? 'active' : '' %>">Right</button>
@@ -332,7 +332,7 @@
     </div>
     <div class="setting clearfix">
         <div>Sidebar</div>
-        <div codigo="display-sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
+        <div id="display-sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
             <% display = displaySidebar%>
             <button type="button" data-value="true" class="btn btn-sm btn-default <%= display? 'active' : '' %>">Show</button>
             <button type="button" data-value="false" class="btn btn-sm btn-default <%= display? '' : 'active' %>">Hide</button>
@@ -346,7 +346,7 @@
     </div>
 </script>
 
-<script type="text/template" codigo="sidebar-settings-template">
+<script type="text/template" id="sidebar-settings-template">
     <% auto = sidebarState == 'auto'%>
     <% if (auto) {%>
     <button type="button"

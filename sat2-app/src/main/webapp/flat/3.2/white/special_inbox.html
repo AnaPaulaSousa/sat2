@@ -13,8 +13,8 @@
     <meta charset="utf-8">
     <script>
         /* yeah we need this empty stylesheet here. It's cool chrome & chromium fix
-           chrome fix https://code.google.com/p/chromium/issues/detail?codigo=167083
-                      https://code.google.com/p/chromium/issues/detail?codigo=332189
+           chrome fix https://code.google.com/p/chromium/issues/detail?id=167083
+                      https://code.google.com/p/chromium/issues/detail?id=332189
         */
     </script>
 </head>
@@ -22,15 +22,15 @@
     <div class="logo">
         <h4><a href="index.html">Light <strong>Blue</strong></a></h4>
     </div>
-        <nav codigo="sidebar" class="sidebar nav-collapse collapse">
-            <ul codigo="side-nav" class="side-nav">
+        <nav id="sidebar" class="sidebar nav-collapse collapse">
+            <ul id="side-nav" class="side-nav">
                 <li class="">
                     <a href="index.html"><i class="fa fa-home"></i> <span class="name">Dashboard</span></a>
                 </li>
                 <li class="panel ">
                     <a class="accordion-toggle collapsed" data-toggle="collapse"
                        data-parent="#side-nav" href="#forms-collapse"><i class="fa fa-pencil"></i> <span class="name">Forms</span></a>
-                    <ul codigo="forms-collapse" class="panel-collapse collapse ">
+                    <ul id="forms-collapse" class="panel-collapse collapse ">
                         <li class=""><a href="form_account.html">Account</a></li>
                         <li class=""><a href="form_article.html">Article</a></li>
                         <li class=""><a href="form_elements.html">Elements</a></li>
@@ -41,7 +41,7 @@
                 <li class="panel ">
                     <a class="accordion-toggle collapsed" data-toggle="collapse"
                        data-parent="#side-nav" href="#stats-collapse"><i class="fa fa-area-chart"></i> <span class="name">Statistics</span></a>
-                    <ul codigo="stats-collapse" class="panel-collapse collapse ">
+                    <ul id="stats-collapse" class="panel-collapse collapse ">
                         <li class=""><a href="stat_statistics.html">Stats</a></li>
                         <li class=""><a href="stat_charts.html">Charts</a></li>
                         <li class=""><a href="stat_realtime.html">Realtime</a></li>
@@ -50,7 +50,7 @@
                 <li class="panel ">
                     <a class="accordion-toggle collapsed" data-toggle="collapse"
                        data-parent="#side-nav" href="#ui-collapse"><i class="fa fa-magic"></i> <span class="name">User Interface</span></a>
-                    <ul codigo="ui-collapse" class="panel-collapse collapse ">
+                    <ul id="ui-collapse" class="panel-collapse collapse ">
                         <li class=""><a href="ui_buttons.html">Buttons</a></li>
                         <li class=""><a href="ui_dialogs.html">Dialogs</a></li>
                         <li class=""><a href="ui_notifications.html">Notifications</a></li>
@@ -62,7 +62,7 @@
                 <li class="panel ">
                     <a class="accordion-toggle collapsed" data-toggle="collapse"
                        data-parent="#side-nav" href="#components-collapse"><i class="fa fa-tree"></i> <span class="name">Components</span></a>
-                    <ul codigo="components-collapse" class="panel-collapse collapse ">
+                    <ul id="components-collapse" class="panel-collapse collapse ">
                         <li class=""><a href="component_calendar.html">Calendar</a></li>
                         <li class=""><a href="component_maps.html" data-no-pjax>Maps</a></li>
                         <li class=""><a href="component_gallery.html">Gallery</a></li>
@@ -74,7 +74,7 @@
                 <li class="panel ">
                     <a class="accordion-toggle collapsed" data-toggle="collapse"
                        data-parent="#side-nav" href="#tables-collapse"><i class="fa fa-cog"></i> <span class="name">Tables</span></a>
-                    <ul codigo="tables-collapse" class="panel-collapse collapse ">
+                    <ul id="tables-collapse" class="panel-collapse collapse ">
                         <li class=""><a href="tables_static.html">Static <sup class="text-danger fw-bold">upd</sup></a></li>
                         <li class=""><a href="tables_dynamic.html">Dynamic</a></li>
                     </ul>
@@ -82,7 +82,7 @@
                 <li class="panel ">
                     <a class="accordion-toggle collapsed" data-toggle="collapse"
                        data-parent="#side-nav" href="#grid-collapse"><i class="fa fa-th"></i> <span class="name">Widgets</span></a>
-                    <ul codigo="grid-collapse" class="panel-collapse collapse ">
+                    <ul id="grid-collapse" class="panel-collapse collapse ">
                         <li class=""><a href="grid_basic.html">Basic</a></li>
                         <li class=""><a href="grid_live.html">Live</a></li>
                     </ul>
@@ -90,7 +90,7 @@
                 <li class="panel active">
                     <a class="accordion-toggle " data-toggle="collapse"
                        data-parent="#side-nav" href="#special-collapse"><i class="fa fa-leaf"></i> <span class="name">Special</span></a>
-                    <ul codigo="special-collapse" class="panel-collapse collapse in">
+                    <ul id="special-collapse" class="panel-collapse collapse in">
                         <li class=""><a href="special_search.html">Search <sup class="text-warning fw-bold">new</sup></a></li>
                         <li class=""><a href="special_invoice.html">Invoice</a></li>
                         <li class="active"><a href="special_inbox.html">Inbox &nbsp; <span class="label label-important">3</span></a></li>
@@ -103,17 +103,17 @@
                 <li class="panel">
                     <a class="accordion-toggle collapsed" data-toggle="collapse"
                        data-parent="#side-nav" href="#menu-levels-collapse"><i class="fa fa-folder-open"></i> <span class="name">Menu Levels</span></a>
-                    <ul codigo="menu-levels-collapse" class="panel-collapse collapse">
+                    <ul id="menu-levels-collapse" class="panel-collapse collapse">
                         <li><a href="#">Item 1.1</a></li>
                         <li><a href="#">Item 1.2</a></li>
                         <li class="panel">
                             <a class="accordion-toggle collapsed" data-toggle="collapse"
                                data-parent="#menu-levels-collapse" href="#sub-menu-1-collapse">Item 1.3</a>
-                            <ul codigo="sub-menu-1-collapse" class="panel-collapse collapse">
+                            <ul id="sub-menu-1-collapse" class="panel-collapse collapse">
                                 <li class="panel">
                                     <a class="accordion-toggle collapsed" data-toggle="collapse"
                                        data-parent="#sub-menu-1-collapse" href="#sub-menu-3-collapse">Item 2.1</a>
-                                    <ul codigo="sub-menu-3-collapse" class="panel-collapse collapse">
+                                    <ul id="sub-menu-3-collapse" class="panel-collapse collapse">
                                         <li><a href="#">Item 3.1</a></li>
                                         <li><a href="#">Item 3.2</a></li>
                                         <li><a href="#">Item 3.3</a></li>
@@ -123,7 +123,7 @@
                                 <li class="panel">
                                     <a class="accordion-toggle collapsed" data-toggle="collapse"
                                        data-parent="#sub-menu-1-collapse" href="#sub-menu-2-collapse">Item 2.3</a>
-                                    <ul codigo="sub-menu-2-collapse" class="panel-collapse collapse">
+                                    <ul id="sub-menu-2-collapse" class="panel-collapse collapse">
                                         <li><a href="#">Item 3.4</a></li>
                                         <li><a href="#">Item 3.5</a></li>
                                         <li><a href="#">Item 3.6</a></li>
@@ -187,17 +187,17 @@
             <div class="navbar">
                 <ul class="nav navbar-nav navbar-right pull-right">
                     <li class="visible-phone-landscape">
-                        <a href="#" codigo="search-toggle">
+                        <a href="#" id="search-toggle">
                             <i class="fa fa-search"></i>
                         </a>
                     </li>
                     <li class="dropdown">
-                        <a href="#" title="Messages" codigo="messages"
+                        <a href="#" title="Messages" id="messages"
                            class="dropdown-toggle"
                            data-toggle="dropdown">
                             <i class="fa fa-comments"></i>
                         </a>
-                        <ul codigo="messages-menu" class="dropdown-menu messages" role="menu">
+                        <ul id="messages-menu" class="dropdown-menu messages" role="menu">
                             <li role="presentation">
                                 <a href="#" class="message">
                                     <img src="img/1.jpg" alt="">
@@ -245,7 +245,7 @@
                             <i class="fa fa-group"></i>
                             <span class="count">8</span>
                         </a>
-                        <ul codigo="support-menu" class="dropdown-menu support" role="menu">
+                        <ul id="support-menu" class="dropdown-menu support" role="menu">
                             <li role="presentation">
                                 <a href="#" class="support-ticket">
                                     <div class="picture">
@@ -305,7 +305,7 @@
                     </li>
                     <li class="divider"></li>
                     <li class="hidden-xs">
-                        <a href="#" codigo="settings"
+                        <a href="#" id="settings"
                            title="Settings"
                            data-toggle="popover"
                            data-placement="bottom">
@@ -313,12 +313,12 @@
                         </a>
                     </li>
                     <li class="hidden-xs dropdown">
-                        <a href="#" title="Account" codigo="account"
+                        <a href="#" title="Account" id="account"
                            class="dropdown-toggle"
                            data-toggle="dropdown">
                             <i class="fa fa-user"></i>
                         </a>
-                        <ul codigo="account-menu" class="dropdown-menu account" role="menu">
+                        <ul id="account-menu" class="dropdown-menu account" role="menu">
                             <li role="presentation" class="account-picture">
                                 <img src="img/2.jpg" alt="">
                                 Philip Daineka
@@ -354,27 +354,27 @@
                     </li>
                     <li class="hidden-xs"><a href="login.html"><i class="fa fa-sign-out"></i></a></li>
                 </ul>
-                <form codigo="search-form" class="navbar-form pull-right" role="search">
+                <form id="search-form" class="navbar-form pull-right" role="search">
                     <input type="search" class="form-control search-query" placeholder="Search...">
                 </form>
                 <div class="notifications pull-right">
                     <div class="alert pull-right">
                         <a href="#" class="close ml-xs" data-dismiss="alert">&times;</a>
-                        <i class="fa fa-info-circle mr-xs"></i> Check out Light Blue <a codigo="notification-link" href="#">settings</a> on the right!
+                        <i class="fa fa-info-circle mr-xs"></i> Check out Light Blue <a id="notification-link" href="#">settings</a> on the right!
                     </div>
                 </div>
             </div>
         </header>        <div class="content container">
-        <div class="alert alert-warning alert-sm pull-right no-margin animated bounceInLeft hide" codigo="app-alert">
+        <div class="alert alert-warning alert-sm pull-right no-margin animated bounceInLeft hide" id="app-alert">
             <button type="button" class="ml-lg close" data-dismiss="alert" aria-hidden="true">×</button>
             Hey! This is a <span class="fw-semi-bold">real app</span> with CRUD and Search functions. Have fun!
         </div>
         <h2 class="page-title">Inbox <small>Ready-to-use client-side application</small></h2>
         <div class="row">
             <div class="col-md-3 col-lg-2">
-                <a class="btn btn-danger btn-block" codigo="compose-btn" href="#">Compose</a>
+                <a class="btn btn-danger btn-block" id="compose-btn" href="#">Compose</a>
 
-                <ul class="nav nav-pills nav-stacked nav-email-folders mt" codigo="folders-list">
+                <ul class="nav nav-pills nav-stacked nav-email-folders mt" id="folders-list">
                     <li class="active">
                         <a href="inbox.html">
                             <span class="badge pull-right">2</span>
@@ -400,10 +400,10 @@
             </div>
             <div class="col-md-9 col-lg-10">
                 <div class="clearfix mb-xs">
-                    <a class="btn btn-transparent btn-sm width-50 pull-left hide" codigo="back-btn" href="special_inbox.html">
+                    <a class="btn btn-transparent btn-sm width-50 pull-left hide" id="back-btn" href="special_inbox.html">
                         <i class="fa fa-angle-left fa-lg"></i>
                     </a>
-                    <div class="pull-right" codigo="folder-stats">
+                    <div class="pull-right" id="folder-stats">
                         <p class="widget-email-count">Showing 1 - 10 of 96 messages</p>
                         <ul class="pagination pagination-sm widget-email-pagination">
                             <li class="prev disabled"><a href="#"><i class="fa fa-chevron-left"></i></a></li>
@@ -414,7 +414,7 @@
                     </div>
                 </div>
                 <section class="widget widget-email">
-                    <header codigo="widget-email-header" class="mb-sm">
+                    <header id="widget-email-header" class="mb-sm">
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="btn-group">
@@ -423,11 +423,11 @@
                                         <i class="fa fa-angle-down "></i>
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li><a codigo="select-all" href="#">All</a></li>
-                                        <li><a codigo="select-none" href="#">None</a></li>
+                                        <li><a id="select-all" href="#">All</a></li>
+                                        <li><a id="select-none" href="#">None</a></li>
                                         <li class="divider"></li>
-                                        <li><a codigo="select-read" href="#">Read</a></li>
-                                        <li><a codigo="select-unread" href="#">Unread</a></li>
+                                        <li><a id="select-read" href="#">Read</a></li>
+                                        <li><a id="select-unread" href="#">Unread</a></li>
                                     </ul>
                                 </div>
                                 <div class="btn-group">
@@ -436,29 +436,29 @@
                                         <i class="fa fa-angle-down "></i>
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li><a codigo="reply" href="#">Reply</a></li>
-                                        <li><a codigo="forward" href="#">Forward</a></li>
-                                        <li><a codigo="archive" href="#">Archive</a></li>
+                                        <li><a id="reply" href="#">Reply</a></li>
+                                        <li><a id="forward" href="#">Forward</a></li>
+                                        <li><a id="archive" href="#">Archive</a></li>
                                         <li class="divider"></li>
-                                        <li><a codigo="mark-as-read" href="#">Mark As Read</a></li>
-                                        <li><a codigo="mark-as-unread" href="#">Mark As Unread</a></li>
+                                        <li><a id="mark-as-read" href="#">Mark As Read</a></li>
+                                        <li><a id="mark-as-unread" href="#">Mark As Unread</a></li>
                                         <li class="divider"></li>
-                                        <li><a codigo="delete" href="#">Delete</a></li>
+                                        <li><a id="delete" href="#">Delete</a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-sm-6">
-                                <input class="form-control input-sm width-200 pull-right" codigo="mailbox-search" type="text" placeholder="Search Messages">
+                                <input class="form-control input-sm width-200 pull-right" id="mailbox-search" type="text" placeholder="Search Messages">
                             </div>
                         </div>
                     </header>
-                    <div class="widget-table-overflow" codigo="mailbox-content">
-                        <table class="table table-striped table-emails table-hover table-lg mb-sm" codigo="folder-view" >
+                    <div class="widget-table-overflow" id="mailbox-content">
+                        <table class="table table-striped table-emails table-hover table-lg mb-sm" id="folder-view" >
                             <thead>
                             <tr>
-                                <th colspan="3" codigo="folder-actions">
+                                <th colspan="3" id="folder-actions">
                                     <div class="checkbox">
-                                        <input codigo="toggle-all" type="checkbox">
+                                        <input id="toggle-all" type="checkbox">
                                         <label for="toggle-all"></label>
                                     </div>
                                 </th>
@@ -468,7 +468,7 @@
                             <tr class="unread">
                                 <td>
                                     <div class="checkbox">
-                                        <input type="checkbox" codigo="checkbox1">
+                                        <input type="checkbox" id="checkbox1">
                                         <label for="checkbox1"></label>
                                     </div>
                                 </td>
@@ -480,7 +480,7 @@
                             </tr><tr class="unread">
                                 <td>
                                     <div class="checkbox">
-                                        <input type="checkbox" codigo="checkbox2">
+                                        <input type="checkbox" id="checkbox2">
                                         <label for="checkbox2"></label>
                                     </div>
                                 </td>
@@ -492,7 +492,7 @@
                             </tr><tr class="">
                                 <td>
                                     <div class="checkbox">
-                                        <input type="checkbox" codigo="checkbox3">
+                                        <input type="checkbox" id="checkbox3">
                                         <label for="checkbox3"></label>
                                     </div>
                                 </td>
@@ -504,7 +504,7 @@
                             </tr><tr class="unread">
                                 <td>
                                     <div class="checkbox">
-                                        <input type="checkbox" codigo="checkbox4">
+                                        <input type="checkbox" id="checkbox4">
                                         <label for="checkbox4"></label>
                                     </div>
                                 </td>
@@ -516,7 +516,7 @@
                             </tr><tr class="">
                                 <td>
                                     <div class="checkbox">
-                                        <input type="checkbox" codigo="checkbox5">
+                                        <input type="checkbox" id="checkbox5">
                                         <label for="checkbox5"></label>
                                     </div>
                                 </td>
@@ -528,7 +528,7 @@
                             </tr><tr class="">
                                 <td>
                                     <div class="checkbox">
-                                        <input type="checkbox" codigo="checkbox6">
+                                        <input type="checkbox" id="checkbox6">
                                         <label for="checkbox6"></label>
                                     </div>
                                 </td>
@@ -540,7 +540,7 @@
                             </tr><tr class="">
                                 <td>
                                     <div class="checkbox">
-                                        <input type="checkbox" codigo="checkbox7">
+                                        <input type="checkbox" id="checkbox7">
                                         <label for="checkbox7"></label>
                                     </div>
                                 </td>
@@ -552,7 +552,7 @@
                             </tr><tr class="">
                                 <td>
                                     <div class="checkbox">
-                                        <input type="checkbox" codigo="checkbox8">
+                                        <input type="checkbox" id="checkbox8">
                                         <label for="checkbox8"></label>
                                     </div>
                                 </td>
@@ -584,10 +584,10 @@
 <script src="js/settings.js"></script>
 
 <!-- common templates -->
-<script type="text/template" codigo="settings-template">
+<script type="text/template" id="settings-template">
     <div class="setting clearfix">
         <div>Background</div>
-        <div codigo="background-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
+        <div id="background-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
             <% dark = background == 'dark'; light = background == 'light';%>
             <button type="button" data-value="dark" class="btn btn-sm btn-default <%= dark? 'active' : '' %>">Dark</button>
             <button type="button" data-value="light" class="btn btn-sm btn-default <%= light? 'active' : '' %>">Light</button>
@@ -595,7 +595,7 @@
     </div>
     <div class="setting clearfix">
         <div>Sidebar on the</div>
-        <div codigo="sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
+        <div id="sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
             <% onRight = sidebar == 'right'%>
             <button type="button" data-value="left" class="btn btn-sm btn-default <%= onRight? '' : 'active' %>">Left</button>
             <button type="button" data-value="right" class="btn btn-sm btn-default <%= onRight? 'active' : '' %>">Right</button>
@@ -603,7 +603,7 @@
     </div>
     <div class="setting clearfix">
         <div>Sidebar</div>
-        <div codigo="display-sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
+        <div id="display-sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
             <% display = displaySidebar%>
             <button type="button" data-value="true" class="btn btn-sm btn-default <%= display? 'active' : '' %>">Show</button>
             <button type="button" data-value="false" class="btn btn-sm btn-default <%= display? '' : 'active' %>">Hide</button>
@@ -617,7 +617,7 @@
     </div>
 </script>
 
-<script type="text/template" codigo="sidebar-settings-template">
+<script type="text/template" id="sidebar-settings-template">
     <% auto = sidebarState == 'auto'%>
     <% if (auto) {%>
     <button type="button"
@@ -645,13 +645,13 @@
 
 
         <!-- page templates -->
-        <script type="text/template" codigo="folders-view-template">
+        <script type="text/template" id="folders-view-template">
             <table class="table table-striped table-emails table-hover table-lg mb-sm">
                 <thead>
                 <tr>
                     <th colspan="3">
                         <div class="checkbox">
-                            <input type="checkbox" codigo="toggle-all">
+                            <input type="checkbox" id="toggle-all">
                             <label for="toggle-all"></label>
                         </div>
                     </th>
@@ -663,18 +663,18 @@
             </table>
         </script>
 
-        <script type="text/template" codigo="folder-template">
+        <script type="text/template" id="folder-template">
             <a href="#">
                 <% if (unread) {%><span class="badge pull-right"><%= unread %></span><% } %>
                 <%= name %>
             </a>
         </script>
 
-        <script type="text/template" codigo="mail-item-template">
+        <script type="text/template" id="mail-item-template">
             <td>
                 <div class="checkbox">
                     <% checkboxId = Math.round(Math.random()*2344523) %>
-                    <input class="selected-checkbox" type="checkbox" codigo="checkbox<%= checkboxId %>" <%= selected ? 'checked="checked"' : ''%> />
+                    <input class="selected-checkbox" type="checkbox" id="checkbox<%= checkboxId %>" <%= selected ? 'checked="checked"' : ''%> />
                     <label for="checkbox<%= checkboxId %>"></label>
                 </div>
             </td>
@@ -685,7 +685,7 @@
             <td class="date"><%= this.formatDate(timestamp) %></td>
         </script>
 
-        <script type="text/template" codigo="email-view-template">
+        <script type="text/template" id="email-view-template">
             <div class="email-details clearfix">
                 <div class="email-details-content">
             <span class="thumb thumb-sm pull-left">
@@ -700,7 +700,7 @@
                     </div>
                     <div class="email-actions pull-right">
                         <div class="btn-group">
-                            <button codigo="email-opened-reply" class="btn btn-sm btn-transparent">
+                            <button id="email-opened-reply" class="btn btn-sm btn-transparent">
                                 <i class="fa fa-reply mr-xs"></i> Reply
                             </button>
                             <button class="btn btn-sm btn-transparent dropdown-toggle" data-toggle="dropdown">
@@ -754,30 +754,30 @@
             <% } %>
         </script>
 
-        <script type="text/template" codigo="compose-view-template">
-            <form codigo="email-compose" class="form-email-compose" method="get" action="inbox.html">
+        <script type="text/template" id="compose-view-template">
+            <form id="email-compose" class="form-email-compose" method="get" action="inbox.html">
                 <div class="form-group">
-                    <input type="email" codigo="input-to" placeholder="To" class="form-control"
+                    <input type="email" id="input-to" placeholder="To" class="form-control"
                            value="<%= receiver %>">
                 </div>
                 <div class="form-group">
-                    <input type="text" codigo="input-subject" placeholder="Subject" class="form-control"
+                    <input type="text" id="input-subject" placeholder="Subject" class="form-control"
                            value="<%= subject %>">
                 </div>
                 <div class="form-group">
-                    <textarea rows="10" class="form-control" codigo="wysiwyg" placeholder="Message"><%- body %></textarea>
+                    <textarea rows="10" class="form-control" id="wysiwyg" placeholder="Message"><%- body %></textarea>
                 </div>
                 <div class="clearfix">
                     <div class="btn-toolbar pull-right">
-                        <button type="reset" codigo="compose-discard-button" class="btn btn-transparent">Discard</button>
-                        <button type="button" codigo="compose-save-button" class="btn btn-transparent">&nbsp;&nbsp;Save&nbsp;&nbsp;</button>
-                        <button type="submit" codigo="compose-send-button" class="btn btn-danger">&nbsp;&nbsp;&nbsp;Send&nbsp;&nbsp;&nbsp;</button>
+                        <button type="reset" id="compose-discard-button" class="btn btn-transparent">Discard</button>
+                        <button type="button" id="compose-save-button" class="btn btn-transparent">&nbsp;&nbsp;Save&nbsp;&nbsp;</button>
+                        <button type="submit" id="compose-send-button" class="btn btn-danger">&nbsp;&nbsp;&nbsp;Send&nbsp;&nbsp;&nbsp;</button>
                     </div>
                 </div>
             </form>
         </script>
 
-        <script type="text/template" codigo="email-list-view-header-template">
+        <script type="text/template" id="email-list-view-header-template">
             <div class="row">
                 <div class="col-sm-6">
                     <div class="btn-group">
@@ -786,11 +786,11 @@
                             <i class="fa fa-angle-down "></i>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a codigo="select-all" href="#">All</a></li>
-                            <li><a codigo="select-none" href="#">None</a></li>
+                            <li><a id="select-all" href="#">All</a></li>
+                            <li><a id="select-none" href="#">None</a></li>
                             <li class="divider"></li>
-                            <li><a codigo="select-read" href="#">Read</a></li>
-                            <li><a codigo="select-unread" href="#">Unread</a></li>
+                            <li><a id="select-read" href="#">Read</a></li>
+                            <li><a id="select-unread" href="#">Unread</a></li>
                         </ul>
                     </div>
                     <div class="btn-group">
@@ -799,19 +799,19 @@
                             <i class="fa fa-angle-down "></i>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a codigo="reply" href="#">Reply</a></li>
-                            <li><a codigo="forward" href="#">Forward</a></li>
-                            <li><a codigo="archive" href="#">Archive</a></li>
+                            <li><a id="reply" href="#">Reply</a></li>
+                            <li><a id="forward" href="#">Forward</a></li>
+                            <li><a id="archive" href="#">Archive</a></li>
                             <li class="divider"></li>
-                            <li><a codigo="mark-as-read" href="#">Mark As Read</a></li>
-                            <li><a codigo="mark-as-unread" href="#">Mark As Unread</a></li>
+                            <li><a id="mark-as-read" href="#">Mark As Read</a></li>
+                            <li><a id="mark-as-unread" href="#">Mark As Unread</a></li>
                             <li class="divider"></li>
-                            <li><a codigo="delete" href="#">Delete</a></li>
+                            <li><a id="delete" href="#">Delete</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <input class="form-control input-sm width-200 pull-right" codigo="mailbox-search" type="text" placeholder="Search Messages">
+                    <input class="form-control input-sm width-200 pull-right" id="mailbox-search" type="text" placeholder="Search Messages">
                 </div>
             </div>
         </script>

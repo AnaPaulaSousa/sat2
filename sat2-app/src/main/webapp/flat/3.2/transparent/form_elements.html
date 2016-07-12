@@ -13,8 +13,8 @@
     <meta charset="utf-8">
     <script>
         /* yeah we need this empty stylesheet here. It's cool chrome & chromium fix
-           chrome fix https://code.google.com/p/chromium/issues/detail?codigo=167083
-                      https://code.google.com/p/chromium/issues/detail?codigo=332189
+           chrome fix https://code.google.com/p/chromium/issues/detail?id=167083
+                      https://code.google.com/p/chromium/issues/detail?id=332189
         */
     </script>
 </head>
@@ -22,15 +22,15 @@
     <div class="logo">
         <h4><a href="index.html">Light <strong>Blue</strong></a></h4>
     </div>
-        <nav codigo="sidebar" class="sidebar nav-collapse collapse">
-            <ul codigo="side-nav" class="side-nav">
+        <nav id="sidebar" class="sidebar nav-collapse collapse">
+            <ul id="side-nav" class="side-nav">
                 <li class="">
                     <a href="index.html"><i class="fa fa-home"></i> <span class="name">Dashboard</span></a>
                 </li>
                 <li class="panel active">
                     <a class="accordion-toggle " data-toggle="collapse"
                        data-parent="#side-nav" href="#forms-collapse"><i class="fa fa-pencil"></i> <span class="name">Forms</span></a>
-                    <ul codigo="forms-collapse" class="panel-collapse collapse in">
+                    <ul id="forms-collapse" class="panel-collapse collapse in">
                         <li class=""><a href="form_account.html">Account</a></li>
                         <li class=""><a href="form_article.html">Article</a></li>
                         <li class="active"><a href="form_elements.html">Elements</a></li>
@@ -41,7 +41,7 @@
                 <li class="panel ">
                     <a class="accordion-toggle collapsed" data-toggle="collapse"
                        data-parent="#side-nav" href="#stats-collapse"><i class="fa fa-area-chart"></i> <span class="name">Statistics</span></a>
-                    <ul codigo="stats-collapse" class="panel-collapse collapse ">
+                    <ul id="stats-collapse" class="panel-collapse collapse ">
                         <li class=""><a href="stat_statistics.html">Stats</a></li>
                         <li class=""><a href="stat_charts.html">Charts</a></li>
                         <li class=""><a href="stat_realtime.html">Realtime</a></li>
@@ -50,7 +50,7 @@
                 <li class="panel ">
                     <a class="accordion-toggle collapsed" data-toggle="collapse"
                        data-parent="#side-nav" href="#ui-collapse"><i class="fa fa-magic"></i> <span class="name">User Interface</span></a>
-                    <ul codigo="ui-collapse" class="panel-collapse collapse ">
+                    <ul id="ui-collapse" class="panel-collapse collapse ">
                         <li class=""><a href="ui_buttons.html">Buttons</a></li>
                         <li class=""><a href="ui_dialogs.html">Dialogs</a></li>
                         <li class=""><a href="ui_notifications.html">Notifications</a></li>
@@ -62,7 +62,7 @@
                 <li class="panel ">
                     <a class="accordion-toggle collapsed" data-toggle="collapse"
                        data-parent="#side-nav" href="#components-collapse"><i class="fa fa-tree"></i> <span class="name">Components</span></a>
-                    <ul codigo="components-collapse" class="panel-collapse collapse ">
+                    <ul id="components-collapse" class="panel-collapse collapse ">
                         <li class=""><a href="component_calendar.html">Calendar</a></li>
                         <li class=""><a href="component_maps.html" data-no-pjax>Maps</a></li>
                         <li class=""><a href="component_gallery.html">Gallery</a></li>
@@ -74,7 +74,7 @@
                 <li class="panel ">
                     <a class="accordion-toggle collapsed" data-toggle="collapse"
                        data-parent="#side-nav" href="#tables-collapse"><i class="fa fa-cog"></i> <span class="name">Tables</span></a>
-                    <ul codigo="tables-collapse" class="panel-collapse collapse ">
+                    <ul id="tables-collapse" class="panel-collapse collapse ">
                         <li class=""><a href="tables_static.html">Static <sup class="text-danger fw-bold">upd</sup></a></li>
                         <li class=""><a href="tables_dynamic.html">Dynamic</a></li>
                     </ul>
@@ -82,7 +82,7 @@
                 <li class="panel ">
                     <a class="accordion-toggle collapsed" data-toggle="collapse"
                        data-parent="#side-nav" href="#grid-collapse"><i class="fa fa-th"></i> <span class="name">Widgets</span></a>
-                    <ul codigo="grid-collapse" class="panel-collapse collapse ">
+                    <ul id="grid-collapse" class="panel-collapse collapse ">
                         <li class=""><a href="grid_basic.html">Basic</a></li>
                         <li class=""><a href="grid_live.html">Live</a></li>
                     </ul>
@@ -90,7 +90,7 @@
                 <li class="panel ">
                     <a class="accordion-toggle collapsed" data-toggle="collapse"
                        data-parent="#side-nav" href="#special-collapse"><i class="fa fa-leaf"></i> <span class="name">Special</span></a>
-                    <ul codigo="special-collapse" class="panel-collapse collapse ">
+                    <ul id="special-collapse" class="panel-collapse collapse ">
                         <li class=""><a href="special_search.html">Search <sup class="text-warning fw-bold">new</sup></a></li>
                         <li class=""><a href="special_invoice.html">Invoice</a></li>
                         <li class=""><a href="special_inbox.html">Inbox &nbsp; <span class="label label-important">3</span></a></li>
@@ -103,17 +103,17 @@
                 <li class="panel">
                     <a class="accordion-toggle collapsed" data-toggle="collapse"
                        data-parent="#side-nav" href="#menu-levels-collapse"><i class="fa fa-folder-open"></i> <span class="name">Menu Levels</span></a>
-                    <ul codigo="menu-levels-collapse" class="panel-collapse collapse">
+                    <ul id="menu-levels-collapse" class="panel-collapse collapse">
                         <li><a href="#">Item 1.1</a></li>
                         <li><a href="#">Item 1.2</a></li>
                         <li class="panel">
                             <a class="accordion-toggle collapsed" data-toggle="collapse"
                                data-parent="#menu-levels-collapse" href="#sub-menu-1-collapse">Item 1.3</a>
-                            <ul codigo="sub-menu-1-collapse" class="panel-collapse collapse">
+                            <ul id="sub-menu-1-collapse" class="panel-collapse collapse">
                                 <li class="panel">
                                     <a class="accordion-toggle collapsed" data-toggle="collapse"
                                        data-parent="#sub-menu-1-collapse" href="#sub-menu-3-collapse">Item 2.1</a>
-                                    <ul codigo="sub-menu-3-collapse" class="panel-collapse collapse">
+                                    <ul id="sub-menu-3-collapse" class="panel-collapse collapse">
                                         <li><a href="#">Item 3.1</a></li>
                                         <li><a href="#">Item 3.2</a></li>
                                         <li><a href="#">Item 3.3</a></li>
@@ -123,7 +123,7 @@
                                 <li class="panel">
                                     <a class="accordion-toggle collapsed" data-toggle="collapse"
                                        data-parent="#sub-menu-1-collapse" href="#sub-menu-2-collapse">Item 2.3</a>
-                                    <ul codigo="sub-menu-2-collapse" class="panel-collapse collapse">
+                                    <ul id="sub-menu-2-collapse" class="panel-collapse collapse">
                                         <li><a href="#">Item 3.4</a></li>
                                         <li><a href="#">Item 3.5</a></li>
                                         <li><a href="#">Item 3.6</a></li>
@@ -187,17 +187,17 @@
             <div class="navbar">
                 <ul class="nav navbar-nav navbar-right pull-right">
                     <li class="visible-phone-landscape">
-                        <a href="#" codigo="search-toggle">
+                        <a href="#" id="search-toggle">
                             <i class="fa fa-search"></i>
                         </a>
                     </li>
                     <li class="dropdown">
-                        <a href="#" title="Messages" codigo="messages"
+                        <a href="#" title="Messages" id="messages"
                            class="dropdown-toggle"
                            data-toggle="dropdown">
                             <i class="fa fa-comments"></i>
                         </a>
-                        <ul codigo="messages-menu" class="dropdown-menu messages" role="menu">
+                        <ul id="messages-menu" class="dropdown-menu messages" role="menu">
                             <li role="presentation">
                                 <a href="#" class="message">
                                     <img src="img/1.jpg" alt="">
@@ -245,7 +245,7 @@
                             <i class="fa fa-group"></i>
                             <span class="count">8</span>
                         </a>
-                        <ul codigo="support-menu" class="dropdown-menu support" role="menu">
+                        <ul id="support-menu" class="dropdown-menu support" role="menu">
                             <li role="presentation">
                                 <a href="#" class="support-ticket">
                                     <div class="picture">
@@ -305,7 +305,7 @@
                     </li>
                     <li class="divider"></li>
                     <li class="hidden-xs">
-                        <a href="#" codigo="settings"
+                        <a href="#" id="settings"
                            title="Settings"
                            data-toggle="popover"
                            data-placement="bottom">
@@ -313,12 +313,12 @@
                         </a>
                     </li>
                     <li class="hidden-xs dropdown">
-                        <a href="#" title="Account" codigo="account"
+                        <a href="#" title="Account" id="account"
                            class="dropdown-toggle"
                            data-toggle="dropdown">
                             <i class="fa fa-user"></i>
                         </a>
-                        <ul codigo="account-menu" class="dropdown-menu account" role="menu">
+                        <ul id="account-menu" class="dropdown-menu account" role="menu">
                             <li role="presentation" class="account-picture">
                                 <img src="img/2.jpg" alt="">
                                 Philip Daineka
@@ -354,13 +354,13 @@
                     </li>
                     <li class="hidden-xs"><a href="login.html"><i class="fa fa-sign-out"></i></a></li>
                 </ul>
-                <form codigo="search-form" class="navbar-form pull-right" role="search">
+                <form id="search-form" class="navbar-form pull-right" role="search">
                     <input type="search" class="form-control search-query" placeholder="Search...">
                 </form>
                 <div class="notifications pull-right">
                     <div class="alert pull-right">
                         <a href="#" class="close ml-xs" data-dismiss="alert">&times;</a>
-                        <i class="fa fa-info-circle mr-xs"></i> Check out Light Blue <a codigo="notification-link" href="#">settings</a> on the right!
+                        <i class="fa fa-info-circle mr-xs"></i> Check out Light Blue <a id="notification-link" href="#">settings</a> on the right!
                     </div>
                 </div>
             </div>
@@ -392,7 +392,7 @@
                                 <div class="form-group">
                                     <label for="normal-field" class="col-sm-4 control-label">Normal field</label>
                                     <div class="col-sm-7">
-                                        <input type="text" codigo="normal-field" class="form-control" placeholder="May have placeholder">
+                                        <input type="text" id="normal-field" class="form-control" placeholder="May have placeholder">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -400,7 +400,7 @@
                                         Transparent input
                                     </label>
                                     <div class="col-sm-7">
-                                        <input type="text" codigo="transparent-field" class="form-control input-transparent" placeholder="Stylish, huh??">
+                                        <input type="text" id="transparent-field" class="form-control input-transparent" placeholder="Stylish, huh??">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -409,13 +409,13 @@
                                         <span class="help-block">Some help text</span>
                                     </label>
                                     <div class="col-sm-7">
-                                        <input type="text" codigo="hint-field" class="form-control input-transparent">
+                                        <input type="text" id="hint-field" class="form-control input-transparent">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-4 control-label" for="tooltip-enabled">Tooltip enabled</label>
                                     <div class="col-sm-7">
-                                        <input type="text" codigo="tooltip-enabled" class="form-control input-transparent"
+                                        <input type="text" id="tooltip-enabled" class="form-control input-transparent"
                                                data-placement="top" data-original-title="Some explanation text here"
                                                placeholder="Hover over me..">
                                     </div>
@@ -423,14 +423,14 @@
                                 <div class="form-group">
                                     <label class="col-sm-4 control-label" for="disabled-input">Disabled input</label>
                                     <div class="col-sm-7">
-                                        <input type="text" codigo="disabled-input" class="form-control input-transparent"
+                                        <input type="text" id="disabled-input" class="form-control input-transparent"
                                                disabled="disabled" value="Default value" >
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-4 control-label" for="max-length">Max length</label>
                                     <div class="col-sm-7">
-                                        <input type="text" codigo="max-length" maxlength="3"
+                                        <input type="text" id="max-length" maxlength="3"
                                                class="form-control input-transparent"
                                                placeholder="Max length 3 characters"
                                                data-placement="top" data-original-title="You cannot write more than 3 characters.">
@@ -441,7 +441,7 @@
                                     <div class="col-sm-7">
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                                            <input codigo="prepended-input" class="form-control input-transparent" size="16" type="text" placeholder="Username">
+                                            <input id="prepended-input" class="form-control input-transparent" size="16" type="text" placeholder="Username">
                                         </div>
                                     </div>
                                 </div>
@@ -450,7 +450,7 @@
                                     <div class="col-sm-7">
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                                            <input type="password" class="form-control input-transparent" codigo="password-field" placeholder="Password">
+                                            <input type="password" class="form-control input-transparent" id="password-field" placeholder="Password">
                                         </div>
                                     </div>
                                 </div>
@@ -458,7 +458,7 @@
                                     <label class="col-sm-4 control-label" for="appended-input">Appended input</label>
                                     <div class="col-sm-7">
                                         <div class="input-group">
-                                            <input codigo="appended-input" class="form-control input-transparent" size="16" type="text">
+                                            <input id="appended-input" class="form-control input-transparent" size="16" type="text">
                                             <span class="input-group-addon">.00</span>
                                         </div>
                                     </div>
@@ -468,7 +468,7 @@
                                     <div class="col-sm-7">
                                         <div class="input-group">
                                             <span class="input-group-addon">$</span>
-                                            <input codigo="combined-input" class="form-control input-transparent" size="16" type="text">
+                                            <input id="combined-input" class="form-control input-transparent" size="16" type="text">
                                             <span class="input-group-addon">.00</span>
                                         </div>
                                     </div>
@@ -479,7 +479,7 @@
                                     </label>
                                     <div class="col-sm-7">
                                         <div class="input-group">
-                                            <input codigo="transparent-input" class="form-control input-transparent" type="text">
+                                            <input id="transparent-input" class="form-control input-transparent" type="text">
                                             <span class="input-group-addon">
                                                 <i class="fa fa-camera"></i>
                                             </span>
@@ -522,7 +522,7 @@
                                         <div class="form-group">
                                             <label for="search-input">Search type input</label>
                                             <div class="input-group">
-                                                <input type="search" class="form-control" codigo="search-input">
+                                                <input type="search" class="form-control" id="search-input">
                                                 <span class="input-group-btn">
                                                     <button type="button" class="btn btn-inverse">Search</button>
                                                 </span>
@@ -531,7 +531,7 @@
                                         <div class="form-group">
                                             <label for="bar">Whole bar appended</label>
                                             <div class="input-group">
-                                                <input type="text" class="form-control" codigo="bar">
+                                                <input type="text" class="form-control" id="bar">
                                                 <div class="input-group-btn">
                                                     <button type="button" class="btn btn-danger"><i class="fa fa-pencil"></i></button>
                                                     <button type="button" class="btn btn-warning"><i class="fa fa-plus"></i></button>
@@ -542,7 +542,7 @@
                                         <div class="form-group">
                                             <label for="dropdown-appended">Actions dropdown</label>
                                             <div class="input-group">
-                                                <input type="text" class="form-control" codigo="dropdown-appended">
+                                                <input type="text" class="form-control" id="dropdown-appended">
                                                 <div class="input-group-btn">
                                                     <button class="btn btn-success dropdown-toggle" data-toggle="dropdown">
                                                         Action
@@ -562,9 +562,9 @@
                                             <label for="type-dropdown-appended">Types dropdown</label>
 
                                             <div class="input-group">
-                                                <input type="text" class="form-control" codigo="type-dropdown-appended">
+                                                <input type="text" class="form-control" id="type-dropdown-appended">
                                                 <div class="input-group-btn">
-                                                    <select codigo="phone-type" class="selectpicker"
+                                                    <select id="phone-type" class="selectpicker"
                                                             data-style="btn-primary"
                                                             data-width="auto">
                                                         <option>Another type</option>
@@ -578,7 +578,7 @@
                                         <div class="form-group">
                                             <label for="segmented-dropdown">Segmented dropdown</label>
                                             <div class="input-group">
-                                                <input codigo="segmented-dropdown" class="form-control" type="text">
+                                                <input id="segmented-dropdown" class="form-control" type="text">
                                                 <div class="input-group-btn">
                                                     <button class="btn btn-warning" tabindex="-1">Action</button>
                                                     <button class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
@@ -716,7 +716,7 @@
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label" for="default-textarea">Default textarea</label>
                                     <div class="col-sm-9">
-                                        <textarea rows="4" class="form-control input-transparent" codigo="default-textarea"></textarea>
+                                        <textarea rows="4" class="form-control input-transparent" id="default-textarea"></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -724,7 +724,7 @@
                                         Auto-growing textarea
                                     </label>
                                     <div class="col-sm-9">
-                                        <textarea rows="3" class="autogrow form-control transition-height input-transparent" codigo="elastic-textarea"
+                                        <textarea rows="3" class="autogrow form-control transition-height input-transparent" id="elastic-textarea"
                                                   placeholder="Try to add few new lines.."></textarea>
                                     </div>
                                 </div>
@@ -736,7 +736,7 @@
                                         </span>
                                     </label>
                                     <div class="col-sm-9">
-                                        <textarea rows="4" class="form-control" codigo="wysiwyg"></textarea>
+                                        <textarea rows="4" class="form-control" id="wysiwyg"></textarea>
                                         <div class="btn-toolbar mt-sm">
                                             <button type="button" class="btn btn-sm btn-default pull-right">Clear</button>
                                             <button type="button" class="btn btn-sm btn-danger pull-right">Save</button>
@@ -772,7 +772,7 @@
                                                 data-width="auto"
                                                 data-minimum-results-for-search="10"
                                                 tabindex="-1"
-                                                class="select2 form-control" codigo="default-select">
+                                                class="select2 form-control" id="default-select">
                                             <option value=""></option>
                                             <option value="Magellanic">Large Magellanic Cloud</option>
                                             <option value="Andromeda">Andromeda Galaxy</option>
@@ -783,7 +783,7 @@
                                 <div class="form-group">
                                     <label class="col-sm-4 control-label" for="country-select">Select with search</label>
                                     <div class="col-sm-8">
-                                        <select codigo="country-select"
+                                        <select id="country-select"
                                                 data-placeholder="Select country"
                                                 class="select2 form-control"
                                                 tabindex="-1"
@@ -1043,7 +1043,7 @@
                                                 data-placeholder="Multiple countries this time"
                                                 data-minimum-results-for-search="10"
                                                 tabindex="-1"
-                                                class="select2 form-control" codigo="multiple-select">
+                                                class="select2 form-control" id="multiple-select">
                                             <option value="United States">United States</option>
                                             <option value="United Kingdom">United Kingdom</option>
                                             <option value="Afghanistan">Afghanistan</option>
@@ -1297,7 +1297,7 @@
                                                 multiple
                                                 tabindex="-1"
                                                 data-minimum-results-for-search="10"
-                                                class="select2 form-control" codigo="grouped-select">
+                                                class="select2 form-control" id="grouped-select">
                                             <option value=""></option>
                                             <optgroup label="NFC EAST">
                                                 <option>Dallas Cowboys</option>
@@ -1358,7 +1358,7 @@
                                     <div class="col-sm-8">
                                         <select class="selectpicker" data-style="btn-default"
                                                 data-width="auto"
-                                                tabindex="-1" codigo="simple-select">
+                                                tabindex="-1" id="simple-select">
                                             <option value="0">Option One</option>
                                             <option value="1">Option Two</option>
                                             <option value="2">Option Three</option>
@@ -1377,7 +1377,7 @@
                                         <select class="selectpicker"
                                                 data-style="btn-danger btn-sm"
                                                 data-width="auto"
-                                                tabindex="-1" codigo="simple-red-select">
+                                                tabindex="-1" id="simple-red-select">
                                             <option value="0">Ichi</option>
                                             <option value="1">Ni</option>
                                             <option value="2">San</option>
@@ -1385,7 +1385,7 @@
                                         <select class="selectpicker"
                                                 data-style="btn-warning btn-sm"
                                                 data-width="auto"
-                                                tabindex="-1" codigo="simple-orange-select">
+                                                tabindex="-1" id="simple-orange-select">
                                             <option value="0">Shi</option>
                                             <option value="1">Go</option>
                                             <option value="2">Roku</option>
@@ -1393,7 +1393,7 @@
                                         <select class="selectpicker"
                                                 data-style="btn-success btn-sm"
                                                 data-width="auto"
-                                                tabindex="-1" codigo="simple-green-select">
+                                                tabindex="-1" id="simple-green-select">
                                             <option value="0">Hichi</option>
                                             <option value="1">Hachi</option>
                                             <option value="2">Ku</option>
@@ -1411,7 +1411,7 @@
                                     <div class="col-sm-8">
                                         <select class="selectpicker"
                                                 data-style="btn-default btn-lg"
-                                                tabindex="-1" codigo="simple-big-select">
+                                                tabindex="-1" id="simple-big-select">
                                             <option value="0">Fourth Item</option>
                                             <option value="1">Fifth Item</option>
                                             <option value="2">Sixth item</option>
@@ -1451,37 +1451,37 @@
                                             Let your checkboxes shine!
                                         </p>
                                         <div class="checkbox">
-                                            <input codigo="checkbox1" type="checkbox">
+                                            <input id="checkbox1" type="checkbox">
                                             <label for="checkbox1">
                                                 Default
                                             </label>
                                         </div>
                                         <div class="checkbox checkbox-primary">
-                                            <input codigo="checkbox2" type="checkbox" checked>
+                                            <input id="checkbox2" type="checkbox" checked>
                                             <label for="checkbox2">
                                                 Primary
                                             </label>
                                         </div>
                                         <div class="checkbox checkbox-success">
-                                            <input codigo="checkbox3" type="checkbox">
+                                            <input id="checkbox3" type="checkbox">
                                             <label for="checkbox3">
                                                 Success
                                             </label>
                                         </div>
                                         <div class="checkbox checkbox-info">
-                                            <input codigo="checkbox4" type="checkbox" checked>
+                                            <input id="checkbox4" type="checkbox" checked>
                                             <label for="checkbox4">
                                                 Info
                                             </label>
                                         </div>
                                         <div class="checkbox checkbox-warning">
-                                            <input codigo="checkbox5" type="checkbox">
+                                            <input id="checkbox5" type="checkbox">
                                             <label for="checkbox5">
                                                 Warning
                                             </label>
                                         </div>
                                         <div class="checkbox checkbox-danger">
-                                            <input codigo="checkbox6" type="checkbox" checked>
+                                            <input id="checkbox6" type="checkbox" checked>
                                             <label for="checkbox6">
                                                 Check me out
                                             </label>
@@ -1498,13 +1498,13 @@
                                             Check out this brand-new rounded checkboxes!
                                         </p>
                                         <div class="checkbox checkbox-circle">
-                                            <input codigo="checkbox7" type="checkbox">
+                                            <input id="checkbox7" type="checkbox">
                                             <label for="checkbox7">
                                                 Simply Rounded
                                             </label>
                                         </div>
                                         <div class="checkbox checkbox-info checkbox-circle">
-                                            <input codigo="checkbox8" type="checkbox" checked>
+                                            <input id="checkbox8" type="checkbox" checked>
                                             <label for="checkbox8">
                                                 Me too
                                             </label>
@@ -1520,19 +1520,19 @@
                                             Disabled state also supported. Full stack checkbox functionality.
                                         </p>
                                         <div class="checkbox">
-                                            <input codigo="checkbox9" type="checkbox" disabled>
+                                            <input id="checkbox9" type="checkbox" disabled>
                                             <label for="checkbox9">
                                                 Can't check this
                                             </label>
                                         </div>
                                         <div class="checkbox checkbox-success">
-                                            <input codigo="checkbox10" type="checkbox" disabled checked>
+                                            <input id="checkbox10" type="checkbox" disabled checked>
                                             <label for="checkbox10">
                                                 This too
                                             </label>
                                         </div>
                                         <div class="checkbox checkbox-warning checkbox-circle">
-                                            <input codigo="checkbox11" type="checkbox" disabled checked>
+                                            <input id="checkbox11" type="checkbox" disabled checked>
                                             <label for="checkbox11">
                                                 And this
                                             </label>
@@ -1574,13 +1574,13 @@
                                         <div class="row">
                                             <div class="col-sm-6">
                                                 <div class="radio">
-                                                    <input type="radio" name="radio1" codigo="radio1" value="option1" checked>
+                                                    <input type="radio" name="radio1" id="radio1" value="option1" checked>
                                                     <label for="radio1">
                                                         Small
                                                     </label>
                                                 </div>
                                                 <div class="radio">
-                                                    <input type="radio" name="radio1" codigo="radio2" value="option2">
+                                                    <input type="radio" name="radio1" id="radio2" value="option2">
                                                     <label for="radio2">
                                                         Big
                                                     </label>
@@ -1588,13 +1588,13 @@
                                             </div>
                                             <div class="col-sm-6">
                                                 <div class="radio radio-danger">
-                                                    <input type="radio" name="radio2" codigo="radio3" value="option1">
+                                                    <input type="radio" name="radio2" id="radio3" value="option1">
                                                     <label for="radio3">
                                                         Next
                                                     </label>
                                                 </div>
                                                 <div class="radio radio-danger">
-                                                    <input type="radio" name="radio2" codigo="radio4" value="option2" checked>
+                                                    <input type="radio" name="radio2" id="radio4" value="option2" checked>
                                                     <label for="radio4">
                                                         One
                                                     </label>
@@ -1612,13 +1612,13 @@
                                             Disabled state also supported. Full stack radios functionality.
                                         </p>
                                         <div class="radio">
-                                            <input type="radio" name="radio3" codigo="radio5" value="option1" disabled>
+                                            <input type="radio" name="radio3" id="radio5" value="option1" disabled>
                                             <label for="radio5">
                                                 Next
                                             </label>
                                         </div>
                                         <div class="radio radio-warning">
-                                            <input type="radio" name="radio3" codigo="radio6" value="option2" checked disabled>
+                                            <input type="radio" name="radio3" id="radio6" value="option2" checked disabled>
                                             <label for="radio6">
                                                 One
                                             </label>
@@ -1636,12 +1636,12 @@
                                         </p>
                                         <div class="checkbox-inline checkbox-ios">
                                             <label for="checkbox-ios1">
-                                                <input type="checkbox" codigo="checkbox-ios1" checked>
+                                                <input type="checkbox" id="checkbox-ios1" checked>
                                             </label>
                                         </div>
                                         <div class="checkbox-inline checkbox-ios">
                                             <label for="checkbox-ios2">
-                                                <input type="checkbox" codigo="checkbox-ios2">
+                                                <input type="checkbox" id="checkbox-ios2">
                                             </label>
                                         </div>
                                     </fieldset>
@@ -1673,7 +1673,7 @@
                                 </legend>
                                 <div class="form-group">
                                     <label for="datetimepicker1">In place</label>
-                                    <input codigo="datetimepicker1" type="text" class="form-control" />
+                                    <input id="datetimepicker1" type="text" class="form-control" />
                                 </div>
                                 <div class="form-group">
                                     <label for="datepicker2i">
@@ -1682,8 +1682,8 @@
                                             Can be customized for both 24 hour and 12 hour clocks.
                                         </span>
                                     </label>
-                                    <div codigo="datetimepicker2" class="input-group">
-                                        <input codigo="datepicker2i" type="text" class="form-control" />
+                                    <div id="datetimepicker2" class="input-group">
+                                        <input id="datepicker2i" type="text" class="form-control" />
                                         <span class="input-group-addon btn btn-success">
                                             <span class="glyphicon glyphicon-calendar"></span>                    
                                         </span>
@@ -1701,8 +1701,8 @@
                                             Colorpicker plugin for Twitter Bootstrap, originally written by Stefan Petre
                                         </span>
                                     </label>
-                                    <div codigo="colorpicker" class="input-group">
-                                        <input type="text" value="#888888" class="form-control" codigo="colorpickeri"/>
+                                    <div id="colorpicker" class="input-group">
+                                        <input type="text" value="#888888" class="form-control" id="colorpickeri"/>
                                         <span class="input-group-addon"><i></i></span>
                                     </div>
                                 </div>
@@ -1735,7 +1735,7 @@
                                         <span class="help-block">(123) 456-7890</span>
                                     </label>
                                     <div class="col-sm-7">
-                                        <input codigo="mask-phone" type="text" class="form-control">
+                                        <input id="mask-phone" type="text" class="form-control">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -1744,7 +1744,7 @@
                                         <span class="help-block">+375 123 456 789</span>
                                     </label>
                                     <div class="col-sm-7">
-                                        <input codigo="mask-int-phone" type="text" class="form-control">
+                                        <input id="mask-int-phone" type="text" class="form-control">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -1753,7 +1753,7 @@
                                         <span class="help-block">07-03-2013</span>
                                     </label>
                                     <div class="col-sm-7">
-                                        <input codigo="mask-date" type="text" class="form-control">
+                                        <input id="mask-date" type="text" class="form-control">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -1762,7 +1762,7 @@
                                         <span class="help-block">13:43</span>
                                     </label>
                                     <div class="col-sm-7">
-                                        <input codigo="mask-time" type="text" class="form-control">
+                                        <input id="mask-time" type="text" class="form-control">
                                     </div>
                                 </div>
                             </fieldset>
@@ -1791,19 +1791,19 @@
                                 <p>LetIt extends Bootstrap Slider and provides different color options:</p>
                                 <form>
                                     <div class="mb-sm">
-                                        <input class="js-slider" codigo="slider-ex1" data-slider-codigo='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
+                                        <input class="js-slider" id="slider-ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
                                     </div>
                                     <div class="slider-danger mb-sm">
-                                        <input class="js-slider" codigo="slider-ex2" data-slider-codigo='ex2Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="18"/>
+                                        <input class="js-slider" id="slider-ex2" data-slider-id='ex2Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="18"/>
                                     </div>
                                     <div class="slider-warning mb-sm">
-                                        <input class="js-slider" codigo="slider-ex3" data-slider-codigo='ex3Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="7"/>
+                                        <input class="js-slider" id="slider-ex3" data-slider-id='ex3Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="7"/>
                                     </div>
                                     <div class="slider-success mb-sm">
-                                        <input class="js-slider" codigo="slider-ex4" data-slider-codigo='ex4Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="11"/>
+                                        <input class="js-slider" id="slider-ex4" data-slider-id='ex4Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="11"/>
                                     </div>
                                     <div class="slider-inverse mb-sm">
-                                        <input class="js-slider" codigo="slider-ex5" data-slider-codigo='ex5Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="4"/>
+                                        <input class="js-slider" id="slider-ex5" data-slider-id='ex5Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="4"/>
                                     </div>
                                 </form>
                             </div>
@@ -1815,23 +1815,23 @@
                                     <div class="row">
                                         <div class="col-sm-8 col-sm-offset-2">
                                         <span class="">
-                                    <input class="js-slider" codigo="slider-ex6" data-slider-orientation="vertical" data-slider-codigo='ex6Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
+                                    <input class="js-slider" id="slider-ex6" data-slider-orientation="vertical" data-slider-id='ex6Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
                                 </span>
                                             &nbsp;&nbsp;&nbsp;&nbsp;
                                 <span class="slider-inverse">
-                                    <input class="js-slider" codigo="slider-ex7" data-slider-orientation="vertical" data-slider-codigo='ex7Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="18"/>
+                                    <input class="js-slider" id="slider-ex7" data-slider-orientation="vertical" data-slider-id='ex7Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="18"/>
                                 </span>
                                             &nbsp;&nbsp;&nbsp;&nbsp;
                                 <span class="">
-                                    <input class="js-slider" codigo="slider-ex8" data-slider-orientation="vertical" data-slider-codigo='ex8Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="7"/>
+                                    <input class="js-slider" id="slider-ex8" data-slider-orientation="vertical" data-slider-id='ex8Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="7"/>
                                 </span>
                                             &nbsp;&nbsp;&nbsp;&nbsp;
                                 <span class="slider-inverse">
-                                    <input class="js-slider" codigo="slider-ex9" data-slider-orientation="vertical" data-slider-codigo='ex9Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="11"/>
+                                    <input class="js-slider" id="slider-ex9" data-slider-orientation="vertical" data-slider-id='ex9Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="11"/>
                                 </span>
                                             &nbsp;&nbsp;&nbsp;&nbsp;
                                 <span class="">
-                                    <input class="js-slider" codigo="slider-ex10" data-slider-orientation="vertical" data-slider-codigo='ex10Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="4"/>
+                                    <input class="js-slider" id="slider-ex10" data-slider-orientation="vertical" data-slider-id='ex10Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="4"/>
                                 </span>
                                         </div>
                                     </div>
@@ -1843,7 +1843,7 @@
                                     an array. Price range selector:</p>
                                 <form>
                                 <span class="slider-warning">
-                                    <input class="js-slider" codigo="slider-ex11" data-slider-codigo='ex11Slider'
+                                    <input class="js-slider" id="slider-ex11" data-slider-id='ex11Slider'
                                            type="text" data-slider-min="0" data-slider-max="2000"
                                            data-slider-step="1" data-slider-value="[200,1547]"/>
                                 </span>
@@ -1871,10 +1871,10 @@
 <script src="js/settings.js"></script>
 
 <!-- common templates -->
-<script type="text/template" codigo="settings-template">
+<script type="text/template" id="settings-template">
     <div class="setting clearfix">
         <div>Background</div>
-        <div codigo="background-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
+        <div id="background-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
             <% dark = background == 'dark'; light = background == 'light';%>
             <button type="button" data-value="dark" class="btn btn-sm btn-default <%= dark? 'active' : '' %>">Dark</button>
             <button type="button" data-value="light" class="btn btn-sm btn-default <%= light? 'active' : '' %>">Light</button>
@@ -1882,7 +1882,7 @@
     </div>
     <div class="setting clearfix">
         <div>Sidebar on the</div>
-        <div codigo="sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
+        <div id="sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
             <% onRight = sidebar == 'right'%>
             <button type="button" data-value="left" class="btn btn-sm btn-default <%= onRight? '' : 'active' %>">Left</button>
             <button type="button" data-value="right" class="btn btn-sm btn-default <%= onRight? 'active' : '' %>">Right</button>
@@ -1890,7 +1890,7 @@
     </div>
     <div class="setting clearfix">
         <div>Sidebar</div>
-        <div codigo="display-sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
+        <div id="display-sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
             <% display = displaySidebar%>
             <button type="button" data-value="true" class="btn btn-sm btn-default <%= display? 'active' : '' %>">Show</button>
             <button type="button" data-value="false" class="btn btn-sm btn-default <%= display? '' : 'active' %>">Hide</button>
@@ -1904,7 +1904,7 @@
     </div>
 </script>
 
-<script type="text/template" codigo="sidebar-settings-template">
+<script type="text/template" id="sidebar-settings-template">
     <% auto = sidebarState == 'auto'%>
     <% if (auto) {%>
     <button type="button"
