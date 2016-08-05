@@ -67,7 +67,7 @@ validations.factory('Validation', ['Notifica',
 
                                 msgs.forEach(function(msg,ind){
                                     $(self).addClass('parsley-error');
-                                    $('#'+nome+'-errors').append(`<li class='parsley-required'>${msg}</li>`);
+                                    $('#'+nome+'-errors').append("<li class='parsley-required'>"+msg+"</li>");
                                 });
                             }
 
