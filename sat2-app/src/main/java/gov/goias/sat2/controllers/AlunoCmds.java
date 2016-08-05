@@ -8,6 +8,7 @@ import gov.goias.validation.NotEmpty;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
+import javax.annotation.security.RolesAllowed;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import javax.ws.rs.*;
@@ -25,6 +26,7 @@ public class AlunoCmds {
     @POST
     @FormValidation
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+    @RolesAllowed("CadastroAluno.I")
     public Response incluir(@FormParam("id") final Long id,
                             @NotNull @NotEmpty @FormParam("nome") final String nome,
                             @NotNull @NotEmpty @FormParam("email") final String email,
@@ -43,6 +45,7 @@ public class AlunoCmds {
 
     @DELETE
     @Path("/{id}")
+    @RolesAllowed("CadastroAluno.E")
     public Response remover(@PathParam("id") final Long id) {
         service.remover(id);
         return Response.status(Response.Status.OK).build();

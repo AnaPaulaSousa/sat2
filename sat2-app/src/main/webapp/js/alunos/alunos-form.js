@@ -1,7 +1,9 @@
 'use strict';
 
 angular.module('myApp.alunosFormPadrao', ['ngRoute'])
-    .controller('AlunosFormPadraoCtrl', ['$scope', '$http', 'acessos', 'Messages', 'Validation', 'Notifica', '$routeParams', function ($scope, $http, acessos, Messages, Validation, Notifica, $routeParams) {
+    .controller('AlunosFormPadraoCtrl', ['$scope', '$http', 'acessos', 'Messages', 'Validation', 'Notifica', '$routeParams', '$controller', function ($scope, $http, acessos, Messages, Validation, Notifica, $routeParams, $controller) {
+
+        angular.extend(this, $controller('BaseController', {$scope: $scope}));
 
         $scope.Aluno = function () {
             return {
@@ -16,7 +18,7 @@ angular.module('myApp.alunosFormPadrao', ['ngRoute'])
         // process the form
         $scope.limparForm = function () {
             $scope.aluno = $scope.Aluno();
-            Validation.limpar('#aluno-form', false);
+            Validation.limpar('aluno-form', false);
         };
 
         //metodo opcional

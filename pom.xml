@@ -67,7 +67,8 @@
             <activeByDefault>true</activeByDefault>
         </activation>
         <properties>
-            <cas.serverName>https://localhost:8443</cas.serverName>
+            <cas.serverName>https://corpdesenv.intra.goias.gov.br</cas.serverName>
+            <cas.client.serverName>https://localhost:8443</cas.client.serverName>
             <cas.casServerUrlPrefix>${cas.serverName}/cas</cas.casServerUrlPrefix>
             <cas.authfilter.casServerLoginUrl>${cas.serverName}/cas/login</cas.authfilter.casServerLoginUrl>
 
@@ -76,6 +77,10 @@
             <portal.cas.user.test>THIAGO</portal.cas.user.test>
             <fake.cas.user>fake</fake.cas.user>
             <cas.ignoressl>true</cas.ignoressl>
+
+            <saml.server.hosts>corpdesenv.intra.goias.gov.br</saml.server.hosts>
+            <saml.server.ignoressl>${cas.ignoressl}</saml.server.ignoressl>
+
         </properties>
     </profile>
 
@@ -93,6 +98,10 @@
                 <portal.cas.user.test>THIAGO</portal.cas.user.test>
                 <fake.cas.user></fake.cas.user>
                 <cas.ignoressl>true</cas.ignoressl>
+
+                <saml.server.hosts>corpdesenv.intra.goias.gov.br</saml.server.hosts>
+                <saml.server.ignoressl>${cas.ignoressl}</saml.server.ignoressl>
+
             </properties>
         </profile>
 
@@ -110,6 +119,10 @@
                 <portal.cas.user.test>THIAGO</portal.cas.user.test>
                 <fake.cas.user></fake.cas.user>
                 <cas.ignoressl>false</cas.ignoressl>
+
+                <saml.server.hosts>jbhomcorp11.intra.goias.gov.br:8543,jbhomcorp12.intra.goias.gov.br:8543</saml.server.hosts>
+                <saml.server.ignoressl>${cas.ignoressl}</saml.server.ignoressl>
+
             </properties>
         </profile>
 
@@ -126,6 +139,10 @@
                 <portal.cas.user.test>THIAGO</portal.cas.user.test>
                 <fake.cas.user></fake.cas.user>
                 <cas.ignoressl>false</cas.ignoressl>
+
+                <saml.server.hosts>jbhomcorp11.intra.goias.gov.br:8543,jbhomcorp12.intra.goias.gov.br:8543</saml.server.hosts>
+                <saml.server.ignoressl>${cas.ignoressl}</saml.server.ignoressl>
+
             </properties>
         </profile>
 
@@ -137,6 +154,10 @@
                 <portal.cas.user.test>THIAGO</portal.cas.user.test>
                 <fake.cas.user></fake.cas.user>
                 <cas.ignoressl>false</cas.ignoressl>
+
+                <saml.server.hosts>jbprodcorp06.intra.goias.gov.br:8543,jbprodcorp07.intra.goias.gov.br:8543</saml.server.hosts>
+                <saml.server.ignoressl>${cas.ignoressl}</saml.server.ignoressl>
+
             </properties>
         </profile>
 

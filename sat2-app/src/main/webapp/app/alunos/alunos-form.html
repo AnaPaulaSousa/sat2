@@ -85,7 +85,7 @@
                     <div class="form-actions">
                         <div class="btn-toolbar">
 
-                            <button go-submit type="button" name="action" class="btn btn-primary pull-right">
+                            <button go-submit type="button" name="action" class="btn btn-primary pull-right" ng-if="AlunFCtrl.isAllowed('CadastroAluno.I')">
                                 <i class="fa fa-save" style="margin-right:4px;" id="show-info-message"></i> Salvar
                             </button>
 
@@ -93,7 +93,6 @@
                                     ng-click="limparForm()">
                                 <i class="fa fa-repeat" style="margin-right:4px;" id="show-info-message"></i> Limpar
                             </button>
-
 
                             <button type="button" name="action" class="btn btn-outline btn-danger pull-right"
                                     ng-if="aluno.id" data-toggle="modal" data-target="#confirm-delete">

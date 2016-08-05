@@ -10,6 +10,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Controller;
 
+import javax.annotation.security.RolesAllowed;
 import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
@@ -31,11 +32,13 @@ public class AlunoQueries {
 
     @GET
     @Path("/{id}")
+    @RolesAllowed("Consultas")
     public Aluno obter(@PathParam("id") final Long id) {
         return Aluno.from(service.obterPorId(id).orElseThrow(() -> new NaoEncontradoException()));
     }
 
     @GET
+    @RolesAllowed("Consultas")
     public List<Aluno> listar() {
         return null; //return service.listarPaginado();
     }
@@ -43,6 +46,7 @@ public class AlunoQueries {
     @GET
     @Path("/paginar")
     @Produces({DataTableResponse.JSON})
+    @RolesAllowed("Consultas")
     public Response list(@QueryParam("draw")   final Integer draw,
                          @QueryParam("start")  final Integer start,
                          @QueryParam("length") final Integer length,

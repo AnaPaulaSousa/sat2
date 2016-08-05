@@ -74,8 +74,7 @@
 
 		<!-- Goias Arquitetura-->
 
-		<!-- Apresentação -->
-
+		<!-- Web -->
 		<dependency>
 			<groupId>org.glassfish.jersey.ext</groupId>
 			<artifactId>jersey-mvc</artifactId>
@@ -97,9 +96,6 @@
 			</exclusions>
 		</dependency>
 
-		<!-- Apresentação -->
-
-		<!-- Web -->
 		<dependency>
 			<groupId>org.glassfish.jersey.ext</groupId>
 			<artifactId>jersey-spring3</artifactId>
@@ -180,52 +176,29 @@
 			<version>${org.hibernate.version}</version>
 			<scope>provided</scope>
 		</dependency>
-
-		<!--<dependency>-->
-			<!--<groupId>org.springframework</groupId>-->
-			<!--<artifactId>spring-orm</artifactId>-->
-			<!--<version>${org.springframework.version}</version>-->
-			<!--<scope>compile</scope>-->
-		<!--</dependency>-->
-
-		<dependency>
-			<groupId>net.sf.dozer</groupId>
-			<artifactId>dozer</artifactId>
-			<version>5.4.0</version>
-		</dependency>
 		<!-- Domínio -->
 
-		<!-- Segurança e Util -->
-		<dependency>
-			<groupId>log4j</groupId>
-			<artifactId>log4j</artifactId>
-			<version>1.2.14</version>
-			<type>jar</type>
-			<scope>provided</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>javax.validation</groupId>
-			<artifactId>validation-api</artifactId>
-			<version>1.0.0.GA</version>
-			<scope>provided</scope>
-		</dependency>
-
+		<!-- Segurança -->
 		<dependency>
 			<groupId>org.owasp</groupId>
 			<artifactId>csrfguard</artifactId>
 			<version>3.1.0</version>
 		</dependency>
 
-
 		<dependency>
 			<groupId>gov.goias</groupId>
 			<artifactId>portal-security</artifactId>
-			<version>1.6.28</version>
+			<version>1.6.46-SNAPSHOT</version>
 			<scope>compile</scope>
 		</dependency>
 
-		<!-- Segurança e Util -->
+		<dependency>
+			<groupId>gov.goias</groupId>
+			<artifactId>cas-security</artifactId>
+			<version>1.4-SNAPSHOT</version>
+			<scope>compile</scope>
+		</dependency>
+		<!-- Segurança -->
 
 		<!-- Test -->
 		<dependency>
@@ -285,6 +258,21 @@
 		</dependency>
 		<!-- Test -->
 
+		<!-- Util -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.14</version>
+			<type>jar</type>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.validation</groupId>
+			<artifactId>validation-api</artifactId>
+			<version>1.0.0.GA</version>
+			<scope>provided</scope>
+		</dependency>
 		<dependency>
 			<groupId>com.google.code.gson</groupId>
 			<artifactId>gson</artifactId>
@@ -293,10 +281,12 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.jasig.cas.client</groupId>
-			<artifactId>cas-client-core</artifactId>
-			<version>RELEASE</version>
+			<groupId>net.sf.dozer</groupId>
+			<artifactId>dozer</artifactId>
+			<version>5.4.0</version>
 		</dependency>
+		<!-- Util -->
+
 
 	</dependencies>
 

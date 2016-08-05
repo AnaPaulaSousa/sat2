@@ -1,7 +1,7 @@
 'use strict';
 
 // Declare app level module which depends on views, and components
-var myApp = angular.module('myApp', [
+angular.module('myApp', [
     'ngRoute',
     'myApp.alunos',
     'myApp.alunosFormPadrao',
@@ -97,13 +97,7 @@ var myApp = angular.module('myApp', [
         }
     });
 
-}]);
-
-myApp.value('API_BASE_URL', '/sat2-app/api');
-
-angular.module('myApp')
-
-    .controller('MyAppCtrl', ['$scope', '$http', 'Messages', 'Validation', 'Notifica', 'API_BASE_URL', '$window', function ($scope, $http, Messages, Validation, Notifica, API_BASE_URL, $window) {
+}]).controller('MyAppCtrl', ['$scope', '$http', 'Messages', 'Validation', 'Notifica', 'API_BASE_URL', '$window', function ($scope, $http, Messages, Validation, Notifica, API_BASE_URL, $window) {
 
         $scope.goToRemoteTagUrl = function () {
             $window.open($scope.toolbar.gitRepositoryState.remoteTagUrl);
@@ -129,5 +123,9 @@ angular.module('myApp')
 
 
     },
-
-    ]);
+])
+.value('CONTEXT_BASE_URL', '/sat2-app')
+.value('API_BASE_URL', '/sat2-app/api')
+.run(['$rootScope', 'RolesService',   function($rootScope, RolesService) {
+    RolesService.fetch();
+}]);
