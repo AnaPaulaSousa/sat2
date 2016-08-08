@@ -89,12 +89,16 @@
                                 <i class="fa fa-save" style="margin-right:4px;" id="show-info-message"></i> Salvar
                             </button>
 
+                            <button go-submit type="button" name="action" class="btn btn-primary pull-right" ng-if="AlunFCtrl.isUpdate && AlunFCtrl.isAllowed('CadastroAluno.A')">
+                                <i class="fa fa-save" style="margin-right:4px;" id="show-info-message"></i> Salvar
+                            </button>
+
                             <button type="button" name="action" class="btn btn-primary pull-right"
                                     ng-click="limparForm()">
                                 <i class="fa fa-repeat" style="margin-right:4px;" id="show-info-message"></i> Limpar
                             </button>
 
-                            <button type="button" name="action" class="btn btn-outline btn-danger pull-right"
+                            <button type="button" name="action" class="btn btn-outline btn-danger pull-right" ng-if="AlunFCtrl.isUpdate && AlunFCtrl.isAllowed('CadastroAluno.E')"
                                     ng-if="aluno.id" data-toggle="modal" data-target="#confirm-delete">
                                 <i class="fa fa-trash" style="margin-right:4px;" id="show-info-message"></i> Excluir
                             </button>

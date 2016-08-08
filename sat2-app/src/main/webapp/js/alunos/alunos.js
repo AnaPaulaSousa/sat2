@@ -19,7 +19,7 @@ angular.module('myApp.alunos', ['ngRoute'])
         // process the form
         $scope.limparForm = function () {
             $scope.aluno = $scope.Aluno();
-            Validation.limpar('#aluno-form', false);
+            Validation.limpar('aluno-form', false);
         };
 
         // process the form
@@ -39,7 +39,7 @@ angular.module('myApp.alunos', ['ngRoute'])
                 .error(function (data) {
 
                     if (data != null) {
-                        Validation.exibir('#aluno-form', data.validations, null, false);
+                        Validation.exibir('aluno-form', data.validations, null, false);
                     } else {
                         Notifica.exibaErro(null, Messages.erroEfetuarOp);
                     }
@@ -49,6 +49,8 @@ angular.module('myApp.alunos', ['ngRoute'])
         };
 
         $scope.edit = function (id) {
+
+            this.isUpdate = true;
 
             if ($scope.aluno.id != id) {
 
@@ -71,6 +73,9 @@ angular.module('myApp.alunos', ['ngRoute'])
 
 
         $scope.delete = function () {
+
+            this.isUpdate = true;
+
             if ($scope.aluno != null) {
                 $http({
                     method: 'DELETE',

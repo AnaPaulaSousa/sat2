@@ -3,6 +3,7 @@ package gov.goias.sat2.controllers;
 import gov.goias.converters.DateParam;
 import gov.goias.sat2.services.AlunoService;
 import gov.goias.sat2.view.model.Aluno;
+import gov.goias.validation.Email;
 import gov.goias.validation.FormValidation;
 import gov.goias.validation.NotEmpty;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +30,7 @@ public class AlunoCmds {
     @RolesAllowed("CadastroAluno.I")
     public Response incluir(@FormParam("id") final Long id,
                             @NotNull @NotEmpty @FormParam("nome") final String nome,
-                            @NotNull @NotEmpty @FormParam("email") final String email,
+                            @NotNull @Email @FormParam("email") final String email,
                             @NotNull @Past @FormParam("nascimento") final DateParam nascimento,
                             @NotNull @NotEmpty @FormParam("sexo") final String sexo,
                             @FormParam("situacao") final Boolean situacao) throws ParseException {
