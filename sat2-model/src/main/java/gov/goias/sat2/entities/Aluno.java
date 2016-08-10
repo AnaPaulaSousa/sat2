@@ -1,16 +1,9 @@
 package gov.goias.sat2.entities;
 
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
-import org.hibernate.annotations.*;
+import org.springframework.data.jpa.domain.Specification;
 
 import javax.persistence.*;
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -40,5 +33,22 @@ public class Aluno {
 
     @Column(name = "ALUN_SITUACAO")
     private Boolean situacao;
+
+    public static Specification<Aluno> id(final Long id) {
+        return (root, criteriaQuery, criteriaBuilder) -> criteriaBuilder.equal(root.<Long>get("id"), id);
+    }
+
+    public static Specification<Aluno> nomeIniciando(final String nome) {
+        return (root, criteriaQuery, criteriaBuilder) -> criteriaBuilder.like(root.get("nome"), nome+"%");
+    }
+
+    public static Specification<Aluno> comEmail(final String email) {
+        return (root, criteriaQuery, criteriaBuilder) -> criteriaBuilder.equal(root.get("email"), email);
+    }
+
+    public static Specification<Aluno> nascidoEm(final Date nascimento) {
+        return (root, criteriaQuery, criteriaBuilder) -> criteriaBuilder.equal(root.<Date>get("nascimento"), nascimento);
+    }
+
 
 }

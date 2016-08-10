@@ -5,6 +5,7 @@ import gov.goias.excecao.negocio.NaoEncontradoException;
 import gov.goias.sat2.representation.DataTableResponse;
 import gov.goias.sat2.services.AlunoService;
 import gov.goias.sat2.view.model.Aluno;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -23,6 +24,8 @@ import java.util.Map;
 @Controller
 @Path("/aluno")
 public class AlunoQueries {
+
+    private static final Logger LOGGER = Logger.getLogger(AlunoQueries.class);
 
     @Context
     protected HttpServletRequest request;
@@ -50,7 +53,10 @@ public class AlunoQueries {
     public Response list(@QueryParam("draw")   final Integer draw,
                          @QueryParam("start")  final Integer start,
                          @QueryParam("length") final Integer length,
-                         @QueryParam("search[value]") final String searchValue) {
+                         @QueryParam("search[value]") final String searchValue,
+                         @QueryParam("columns[0][search][value]") final Long id,
+                         @QueryParam("columns[1][search][value]") final String nome,
+                         @QueryParam("columns[2][search][value]") final String email) {
         final DataTableResponse dtr = new DataTableResponse();
         final List<Map<String, String>> res = new ArrayList<>();
         dtr.setDraw(draw);
@@ -62,7 +68,8 @@ public class AlunoQueries {
                 searchParams.put(columns[1], searchValue);
             }
             final Integer page = new Double(Math.ceil(start / length)).intValue();
-            final Page<Aluno> list = service.listarTodos(new PageRequest(page, length)).map(a -> Aluno.from(a)) ; //searchValue.isEmpty() ? service.listarTodos(new PageRequest(page, length)) : service.listarTodos(new PageRequest(page, length)))); //service.queryFirst10ByName(searchValue, new PageRequest(page, length));
+            final Page<Aluno> list = service.listarPaginado(id, nome, email, new PageRequest(page, length)).map(a -> Aluno.from(a)) ;
+
             final Integer qtFiltrada = new Long(list.getTotalElements()).intValue();
             if (qtFiltrada > 0) {
                 list.forEach(a -> res.add(a.asMapofValues(
@@ -76,7 +83,7 @@ public class AlunoQueries {
             dtr.setData(res);
             dtr.setRecordsTotal(qtTotal);
         } catch (Exception e) {
-//            log.error(e);
+            LOGGER.error(e);
             dtr.setError(GoiasResourceMessage.getMessage("msg_erro_dessconhecido:"+ e.getMessage()));
         }
        return Response.status(Response.Status.OK).entity(dtr).build();
