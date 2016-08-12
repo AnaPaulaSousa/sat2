@@ -3,7 +3,7 @@ angular.module('myApp').service("RolesService", function($http, API_BASE_URL,CON
     var roles = [];
 
     this.contains = function(role){
-        return roles.indexOf(role) > 0
+        return roles.indexOf(role.toString()) != -1;
     }
 
     this.containsAny = function(roleList){
