@@ -26,6 +26,12 @@ angular.module('myApp.alunosFormPadrao', ['ngRoute'])
             //faz alguma coisa
             console.log("Erro ao Salvar:");
             console.log(rejection);
+
+            if (rejection != null) {
+                Validation.exibir('aluno-form', rejection.validations, null, false);
+            } else {
+                Notifica.exibaErro(null, Messages.erroEfetuarOp);
+            }
         }
 
         //metodo opcional

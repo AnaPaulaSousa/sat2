@@ -11,7 +11,7 @@
 
                 <form go-form id="aluno-form" go-form-action="/sat2-app/api/aluno" go-form-on-error-msg="Deu erro!"
                       go-form-redirect="#/aluno-lista-pag-padrao" go-form-model="aluno"
-                      role="form">
+                      role="form" go-form-on-error-fn="erroAoSalvar">
                       <!--go-form-on-success-fn="sucessoAoSalvar" [opcional]-->
                       <!--go-form-on-error-fn="erroAoSalvar" [opcional] -->
 
