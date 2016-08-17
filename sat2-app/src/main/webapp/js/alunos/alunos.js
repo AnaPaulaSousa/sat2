@@ -2,7 +2,10 @@
 
 angular.module('myApp.alunos', ['ngRoute'])
 
-    .controller('AlunosCtrl', ['$scope', '$http', 'acessos', 'Messages', 'Validation', 'Notifica', function ($scope, $http, acessos, Messages, Validation, Notifica) {
+    .controller('AlunosCtrl', ['$scope', '$http', 'acessos', 'Messages', 'Validation', 'Notifica', '$controller', function ($scope, $http, acessos, Messages, Validation, Notifica, $controller) {
+
+        angular.extend(this, $controller('BaseController', {$scope: $scope}));
+
         $scope.Aluno = function () {
             return {
                 id: null,

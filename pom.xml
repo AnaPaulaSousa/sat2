@@ -163,4 +163,17 @@
 
     </profiles>
 
+    <repositories>
+        <repository>
+            <id>GOIAS</id>
+            <name>GOIAS Desenvolvimento</name>
+            <url>http://integracao.intra.goias.gov.br/nexus/content/groups/GOIAS/</url>
+        </repository>
+        <repository>
+            <id>sonatype_snapshot</id>
+            <name>Sonatype Snapshot</name>
+            <url>http://integracao.intra.goias.gov.br/nexus/content/repositories/sonatype_snapshot/</url>
+        </repository>
+    </repositories>
+
 </project>
