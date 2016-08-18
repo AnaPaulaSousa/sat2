@@ -26,7 +26,6 @@ angular.module("myApp").config(function ($routeProvider) {
 		.when('/aluno-form-padrao/:id?', {
 			templateUrl: 'alunos/alunos-form.html',
 			controller: 'AlunosFormPadraoCtrl',
-			controllerAs: 'AlunFCtrl',
 			resolve: {
 				acessos: function () {
 					return "CIAE";

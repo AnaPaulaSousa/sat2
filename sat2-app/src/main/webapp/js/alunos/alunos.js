@@ -53,9 +53,9 @@ angular.module('myApp.alunos', ['ngRoute'])
 
         $scope.edit = function (id) {
 
-            this.isUpdate = true;
-
             if ($scope.aluno.id != id) {
+
+                $scope.isUpdate = true;
 
                 $scope.limparForm();
 

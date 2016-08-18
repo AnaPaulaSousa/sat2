@@ -1,12 +1,12 @@
-angular.module('myApp').controller('BaseController', ['RolesService', function(RolesService){
+angular.module('myApp').controller('BaseController', ['$scope', 'RolesService', function($scope, RolesService){
 
-    this.isUpdate = false;
+    $scope.isUpdate = false;
 
-    this.isAllowed = function(role){
+    $scope.isAllowed = function(role){
         return RolesService.contains(role);
     }
 
-    this.isAllowedAny = function(role){
+    $scope.isAllowedAny = function(role){
         return RolesService.containsAny(role);
     };
 

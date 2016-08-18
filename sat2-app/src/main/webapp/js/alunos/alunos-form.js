@@ -45,9 +45,9 @@ angular.module('myApp.alunosFormPadrao', ['ngRoute'])
 
         $scope.edit = function (id) {
 
-            this.isUpdate = true;
-
             if (id && $scope.aluno.id != id) {
+
+                $scope.isUpdate = true;
 
                 $scope.limparForm();
 
@@ -88,7 +88,6 @@ angular.module('myApp.alunosFormPadrao', ['ngRoute'])
 
 
         $scope.edit($routeParams.id);
-
 
     }]);
 
