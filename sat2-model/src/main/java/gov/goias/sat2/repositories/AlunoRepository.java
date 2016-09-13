@@ -10,6 +10,6 @@ import java.util.Optional;
  * Created by ederbd on 16/05/16.
  */
 public interface AlunoRepository extends JpaRepository<Aluno, Long>, JpaSpecificationExecutor {
-    Optional<Aluno> findById(Long id);
+//    Optional<Aluno> findById(Long id);
     //Page<Aluno> queryFirst10ByNome(final String nome, final Pageable pageable);
 }

@@ -124,8 +124,8 @@ angular.module('myApp', [
 
     },
 ])
-.value('CONTEXT_BASE_URL', '/sat2-app')
-.value('API_BASE_URL', '/sat2-app/api')
+.value('CONTEXT_BASE_URL', '/sat2')
+.value('API_BASE_URL', '/sat2/api')
 .run(['$rootScope', 'RolesService',   function($rootScope, RolesService) {
     RolesService.fetch();
 }]);

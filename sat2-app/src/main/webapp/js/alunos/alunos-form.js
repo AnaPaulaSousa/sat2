@@ -53,7 +53,7 @@ angular.module('myApp.alunosFormPadrao', ['ngRoute'])
 
                 $http({
                     method: 'GET',
-                    url: '/sat2-app/api/aluno/' + id
+                    url: '/sat2/api/aluno/' + id
                 }).success(function (aluno) {
                     if (aluno.nascimento){
                         aluno.nascimento = new Date(aluno.nascimento);
@@ -74,7 +74,7 @@ angular.module('myApp.alunosFormPadrao', ['ngRoute'])
             if ($scope.aluno != null) {
                 $http({
                     method: 'DELETE',
-                    url: '/sat2-app/api/aluno/' + $scope.aluno.id
+                    url: '/sat2/api/aluno/' + $scope.aluno.id
                 }).success(function (response) {
                     $("#confirm-delete").modal('hide');
                     $('#dataTables-alunos').DataTable().ajax.reload(null, false);
