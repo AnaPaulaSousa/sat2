@@ -39,7 +39,8 @@ public class Aluno {
     }
 
     public static Specification<Aluno> nomeIniciando(final String nome) {
-        return (root, criteriaQuery, criteriaBuilder) -> criteriaBuilder.like(root.get("nome"), nome+"%");
+        return (root, criteriaQuery, criteriaBuilder) ->
+                criteriaBuilder.like(criteriaBuilder.upper(root.get("nome")), nome.toUpperCase()+"%");
     }
 
     public static Specification<Aluno> comEmail(final String email) {
