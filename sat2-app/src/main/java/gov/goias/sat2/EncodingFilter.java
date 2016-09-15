@@ -21,7 +21,7 @@ public class EncodingFilter implements Filter {
         try{
             characterEncoding = filterConfig.getInitParameter("requestResponseCharEncoding");
         }catch (Exception e){
-
+            throw new ServletException(e);
         }
 
     }
