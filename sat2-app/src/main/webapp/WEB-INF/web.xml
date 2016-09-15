@@ -8,6 +8,7 @@
   <session-config>
     <tracking-mode>COOKIE</tracking-mode>
   </session-config>
+  
 
   <context-param>
     <param-name>resteasy.scan</param-name>
