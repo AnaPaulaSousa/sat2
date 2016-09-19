@@ -1,20 +1,14 @@
 package gov.goias.sat2.view.model;
 
+import gov.goias.conf.adapters.DateAdapter;
 import gov.goias.sat2.Convertible;
-import gov.goias.sat2.conf.adapters.DateAdapter;
-import gov.goias.sat2.entities.Sistema;
 import gov.goias.sat2.util.DozerUtil;
 import lombok.Data;
-import org.dozer.Mapping;
 import org.dozer.loader.api.BeanMappingBuilder;
-import org.dozer.loader.api.FieldsMappingOptions;
 import org.dozer.loader.api.TypeMappingOptions;
 
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import java.text.DateFormat;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import static org.dozer.loader.api.TypeMappingOptions.mapId;
