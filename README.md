@@ -5,9 +5,13 @@ Java8, JPA, CQRS, Restful, BDD, TDD, DDD, HTML5, WebSocket, Jersey2, Servlet3, J
 
 ## Projeto Web Core
 Projeto com classes Utilitárias para Aplicações Web baseadas em JAX-RS 2.0, Java 8, Servlet 3.1
-
 http://git.intra.goias.gov.br/goias/web-core
-
+```xml
+    <dependency>
+      <groupId>gov.goias</groupId>
+      <artifactId>web-core</artifactId>
+    </dependency>
+```
 
 
 ## Java 8
