@@ -7,7 +7,6 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.DataTable;
 import cucumber.api.java8.Pt;
 import cucumber.api.junit.Cucumber;
-import gov.goias.sat2.conf.mappers.AcessoNegadoExceptionMapper;
 import gov.goias.sat2.services.AlunoService;
 import gov.goias.sat2.test.MyCasUserExtractor;
 import org.glassfish.jersey.server.ResourceConfig;

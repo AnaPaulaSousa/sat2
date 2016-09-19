@@ -1,7 +1,7 @@
 package gov.goias.sat2.conf;
 
+import gov.goias.cas.auth.CasUserExtractor;
 import gov.goias.historico.aspecto.HistoricoAspectoFuncional;
-import gov.goias.sat2.conf.auth.CasUserExtractor;
 import gov.goias.sat2.repositories.HistoricoRepository;
 import gov.goias.sat2.util.MsgApp;
 import org.springframework.beans.factory.annotation.Autowired;

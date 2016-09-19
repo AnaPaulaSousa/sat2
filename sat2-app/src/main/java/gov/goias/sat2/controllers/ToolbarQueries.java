@@ -1,8 +1,8 @@
 package gov.goias.sat2.controllers;
 
-import gov.goias.sat2.AlmPublisher;
-import gov.goias.sat2.conf.auth.CasUserExtractor;
-import gov.goias.sat2.exceptions.AcessoNegadoException;
+import gov.goias.AlmPublisher;
+import gov.goias.cas.auth.CasUserExtractor;
+import gov.goias.exceptions.AcessoNegadoException;
 import gov.goias.sat2.representation.ToolbarRep;
 import gov.goias.sat2.representation.UsuarioRep;
 import javaslang.control.Try;

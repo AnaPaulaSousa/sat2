@@ -1,7 +1,7 @@
 package gov.goias.sat2.representation;
 
-import gov.goias.sat2.AlmPublisher;
-import gov.goias.sat2.GitRepositoryState;
+import gov.goias.AlmPublisher;
+import gov.goias.GitRepositoryState;
 import lombok.Data;
 
 import javax.xml.bind.annotation.XmlRootElement;

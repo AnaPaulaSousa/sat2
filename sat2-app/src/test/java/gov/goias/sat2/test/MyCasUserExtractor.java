@@ -1,6 +1,7 @@
 package gov.goias.sat2.test;
 
-import gov.goias.sat2.conf.auth.CasUserExtractor;
+
+import gov.goias.cas.auth.CasUserExtractor;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
