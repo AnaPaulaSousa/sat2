@@ -14,6 +14,7 @@
     "notifyjs": "0.4.0",
     "pace.js": "https://github.com/HubSpot/pace.git#1.0.2",
     "flickity": "~1.2.1",
+    "blockUI": "2.70",
     "go-form": "http://git.intra.goias.gov.br/goias/go-form.git#~1.0.0",
     "go-data-table": "http://git.intra.goias.gov.br/goias/go-data-table.git#~1.0.0"
   }
