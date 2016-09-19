@@ -1,8 +1,14 @@
 ## Template Arquitetural para desenvolvimento de aplicações Web baseado em plataforma Java.
 
 ## Principais Tecnologias
-
 Java8, JPA, CQRS, Restful, BDD, TDD, DDD, HTML5, WebSocket, Jersey2, Servlet3, JBossEAP, Lombok, Javaslang, Bootstrap, Bower, JQuery, Angular
+
+## Projeto Web Core
+Projeto com classes Utilitárias para Aplicações Web baseadas em JAX-RS 2.0, Java 8, Servlet 3.1
+
+http://git.intra.goias.gov.br/goias/web-core
+
+
 
 ## Java 8
 Programação funcional é utilizado para criar uma DSL fluente para o domínio, facilitando transformações entre camadas sem utilizar estruturas de controles (if, else, for), atribuição de variávies e variáveis mutáveis.
