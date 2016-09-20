@@ -13,6 +13,24 @@ http://git.intra.goias.gov.br/goias/web-core
     </dependency>
 ```
 
+## Projeto Web Template
+Projeto template para recursos web e identidade visual
+http://git.intra.goias.gov.br/goias/web-template.git
+```json
+{
+  "name": "angular-seed",
+  "description": "A starter project for AngularJS",
+  "version": "0.0.0",
+  "homepage": "https://github.com/angular/angular-seed",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    ...,
+    "web-template": "http://git.intra.goias.gov.br/goias/web-template.git"
+  }
+}
+```
+
 
 ## Java 8
 Programação funcional é utilizado para criar uma DSL fluente para o domínio, facilitando transformações entre camadas sem utilizar estruturas de controles (if, else, for), atribuição de variávies e variáveis mutáveis.
