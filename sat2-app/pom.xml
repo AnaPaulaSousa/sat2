@@ -29,6 +29,7 @@
 			<groupId>gov.goias</groupId>
 			<artifactId>sat2-model</artifactId>
 			<version>${version}</version>
+			<scope>compile</scope>
 		</dependency>
 
 		<dependency>
@@ -198,7 +199,7 @@
 		<dependency>
 			<groupId>gov.goias</groupId>
 			<artifactId>portal-security</artifactId>
-			<version>1.6.46-SNAPSHOT</version>
+			<version>1.6.48</version>
 			<scope>compile</scope>
 		</dependency>
 

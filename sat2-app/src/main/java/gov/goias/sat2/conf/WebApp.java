@@ -23,7 +23,7 @@ public class WebApp extends ResourceConfig {
     private static final Logger LOGGER = Logger.getLogger(WebApp.class);
 
     public WebApp() {
-        packages("gov.goias.sat2").register(RolesAllowedDynamicFeature.class);
+        packages("gov.goias").register(RolesAllowedDynamicFeature.class);
     }
 
     /**
