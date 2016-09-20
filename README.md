@@ -15,7 +15,7 @@ http://git.intra.goias.gov.br/goias/web-core
 
 ## Projeto Web Template
 Projeto template para recursos web e identidade visual
-http://git.intra.goias.gov.br/goias/web-core
+http://git.intra.goias.gov.br/goias/web-template.git
 ```json
 {
   "name": "angular-seed",
