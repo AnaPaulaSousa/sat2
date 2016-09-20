@@ -1,0 +1,12 @@
+{
+  "name": "web-template",
+  "authors": [
+    "Diogo <diogo-vc@segplan.go.gov.br>"
+  ],
+  "description": "Projeto com classes Utilitárias para Aplicações Web baseadas em Angular JS",
+  "keywords": [
+    "Angular"
+  ],
+  "license": "MIT",
+  "homepage": "http://git.intra.goias.gov.br/goias/web-template.git"
+}
