@@ -9,6 +9,9 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.Sort.Direction;
+import org.springframework.data.domain.Sort.Order;
 import org.springframework.stereotype.Controller;
 
 import javax.annotation.security.RolesAllowed;
@@ -56,7 +59,10 @@ public class AlunoQueries {
                          @QueryParam("search[value]") final String searchValue,
                          @QueryParam("columns[0][search][value]") final Long id,
                          @QueryParam("columns[1][search][value]") final String nome,
-                         @QueryParam("columns[2][search][value]") final String email) {
+                         @QueryParam("columns[2][search][value]") final String email,
+                         @QueryParam("order[0][column]") final Integer ordem,
+                         @QueryParam("order[0][dir]") final String ordemDir) {
+
         final DataTableResponse dtr = new DataTableResponse();
         final List<Map<String, String>> res = new ArrayList<>();
         dtr.setDraw(draw);
@@ -68,7 +74,11 @@ public class AlunoQueries {
                 searchParams.put(columns[1], searchValue);
             }
             final Integer page = new Double(Math.ceil(start / length)).intValue();
-            final Page<Aluno> list = service.listarPaginado(id, nome, email, new PageRequest(page, length)).map(a -> Aluno.from(a)) ;
+
+            final PageRequest pr = new PageRequest(page, length,
+                    new Sort(new Order(Direction.fromString(ordemDir), columns[ordem])));
+
+            final Page<Aluno> list = service.listarPaginado(id, nome, email, pr).map(a -> Aluno.from(a)) ;
 
             final Integer qtFiltrada = new Long(list.getTotalElements()).intValue();
             if (qtFiltrada > 0) {
