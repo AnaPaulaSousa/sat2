@@ -96,7 +96,7 @@ public interface Convertible {
         if (Date.class.isInstance(fieldValue)) {
             return ((Date) fieldValue).toInstant().atZone( ZoneId.systemDefault()).toLocalDate().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
         } else {
-            return String.valueOf(fieldValue);
+            return fieldValue == null ? "" : String.valueOf(fieldValue);
         }
     }
 
