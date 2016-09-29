@@ -81,7 +81,7 @@ angular.module('goForm').directive("goSubmit", function () {
         },
         transclude: true,
         link: function (scope, element, attr, ctrl) {
-            if (!attr.ngClick) {
+            if (!attr.ngClick || attr.ngClick.indexOf("goFormSubmitFn") > -1) {
                 scope.goFormSubmitFn = function () {
                     ctrl.submit();
                 };
