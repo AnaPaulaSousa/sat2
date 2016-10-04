@@ -307,9 +307,12 @@ A plataforma de autenticação utilizada para Single Sign-On é o Aepero Cas
 A documentação pode ser vista em: [Goias Cas](http://git.intra.goias.gov.br/portal/goias-cas)
 
 ## Autorização
-A autorização é integrada ao Portal sendo essa possibilitada pelo componente portal-security. 
+A autorização é integrada ao Portal sendo essa possibilitada pelos componentes portal-security e cas-security. 
 
-Ver documentação [portal-security](http://git.intra.goias.gov.br/portal/portal-seguranca)
+A documentação pode ser vista em: [Goias Cas: HttpServletRequestWrapperFilter, UserRolesServlet](http://git.intra.goias.gov.br/portal/goias-cas)
+
+[portal-security](http://git.intra.goias.gov.br/portal/portal-seguranca)
+
 
 ## Proximos passos
 
