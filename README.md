@@ -313,6 +313,9 @@ Documentação: [Goias Cas](http://git.intra.goias.gov.br/portal/goias-cas#autor
 
 Documentação: [portal-security](http://git.intra.goias.gov.br/portal/portal-seguranca)
 
+### Autorização utilizando javax.annotation.security de JSR-250 
+
+Documentação: [Goias Cas](https://jersey.java.net/documentation/latest/security.html#d0e12386)
 
 ## Proximos passos
 
