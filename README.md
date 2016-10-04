@@ -309,9 +309,9 @@ A documentação pode ser vista em: [Goias Cas](http://git.intra.goias.gov.br/po
 ## Autorização
 A autorização é integrada ao Portal sendo essa possibilitada pelos componentes portal-security e cas-security. 
 
-A documentação pode ser vista em: [Goias Cas](http://git.intra.goias.gov.br/portal/goias-cas#autoriza%C3%A7%C3%A3o)
+Documentação: [Goias Cas](http://git.intra.goias.gov.br/portal/goias-cas#autoriza%C3%A7%C3%A3o)
 
-[portal-security](http://git.intra.goias.gov.br/portal/portal-seguranca)
+Documentação: [portal-security](http://git.intra.goias.gov.br/portal/portal-seguranca)
 
 
 ## Proximos passos
