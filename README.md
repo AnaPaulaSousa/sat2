@@ -302,14 +302,17 @@ public class NaoEncontradoExceptionMapper implements ExceptionMapper<NaoEncontra
 }
 ```
 ## Autenticação
-A plataforma de autenticação utilizada para Single Sign-On é o Aepero Cas a documentação pode ser vista em: [Goias Cas](http://git.intra.goias.gov.br/portal/goias-cas)
+A plataforma de autenticação utilizada para Single Sign-On é o Aepero Cas 
 
+A documentação pode ser vista em: [Goias Cas](http://git.intra.goias.gov.br/portal/goias-cas)
 
-http://git.intra.goias.gov.br/portal/goias-cas
+## Autorização
+A autorização é integrada ao Portal sendo essa possibilitada pelo componente portal-security. 
+
+Ver documentação [portal-security](http://git.intra.goias.gov.br/portal/portal-seguranca)
 
 ## Proximos passos
 
-   * Autenticação e Autorização
    * Exemplos de Testes unitário
    * Exemplos de Testes de integração
    * Exemplos de Testes Funcionais automatizados
