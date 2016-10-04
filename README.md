@@ -301,6 +301,11 @@ public class NaoEncontradoExceptionMapper implements ExceptionMapper<NaoEncontra
 
 }
 ```
+## Autenticação
+A plataforma de autenticação utilizada para Single Sign-On é o Aepero Cas a documentação pode ser vista em: [Goias Cas](http://git.intra.goias.gov.br/portal/goias-cas)
+
+
+http://git.intra.goias.gov.br/portal/goias-cas
 
 ## Proximos passos
 
