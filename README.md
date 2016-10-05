@@ -42,6 +42,9 @@ Programação funcional é utilizado para criar uma DSL fluente para o domínio,
     }
 ```
 
+### 
+
+
 ## Javaslang
 Framework completamente integrada a Java que estende o conceito de programação funcional em Java com DSLs específicas.
 Ver http://www.javaslang.io
