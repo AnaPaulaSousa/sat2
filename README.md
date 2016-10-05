@@ -32,7 +32,7 @@ http://git.intra.goias.gov.br/goias/web-template.git
 ```
 
 
-## Java 8
+## Programação funcional
 Programação funcional é utilizado para criar uma DSL fluente para o domínio, facilitando transformações entre camadas sem utilizar estruturas de controles (if, else, for), atribuição de variávies e variáveis mutáveis.
 ```java
     @GET
