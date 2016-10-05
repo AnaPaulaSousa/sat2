@@ -119,6 +119,48 @@ public interface AlunoRepository extends  PagingAndSortingRepository<Aluno, Long
 }
 ```
 
+## Rich model
+Através de especificações podemos construir uma DSL onde partes de um mesmo domínio são consultadas por uma API fluente e reutilizável 
+```java
+
+@Entity
+@Table(name = "TB_ALUNO")
+@Data
+public class Aluno {
+    @Id
+    @Column(name = "ALUN_ID")
+    @GeneratedValue(strategy=GenerationType.SEQUENCE)
+    private Long id;
+
+    @Column(name = "ALUN_NOME")
+    private String nome;
+
+    @Column(name = "ALUN_EMAIL")
+    private String email;
+
+    @Column(name = "ALUN_NASCIMENTO")
+    private Date nascimento;
+
+    public static Specification<Aluno> nomeIniciando(final String nome) {
+        return (root, criteriaQuery, criteriaBuilder) ->
+                criteriaBuilder.like(criteriaBuilder.upper(root.get("nome")), nome.toUpperCase()+"%");
+    }
+
+    public static Specification<Aluno> comEmail(final String email) {
+        return (root, criteriaQuery, criteriaBuilder) -> criteriaBuilder.equal(root.get("email"), email);
+    }
+
+    public static Specification<Aluno> nascidoEm(final Date nascimento) {
+        return (root, criteriaQuery, criteriaBuilder) -> criteriaBuilder.equal(root.<Date>get("nascimento"), nascimento);
+    }
+
+}
+
+final Specification<Aluno> spec = where(nomeIniciando("John")).and(comEmail("email@email.com"));
+final List<Aluno> alunos = repository.findAll(spec);
+```
+
+
 ## Angular
 
 Na a interface de usuário, para um front-end mais amigável, rico, contemporizado e simplificando, foi usado o AngularJS, um framework escrito em Java Script, que estende atributos HTML através de diretivas e faz binds de dados para o HTML com expressões.
