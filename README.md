@@ -92,9 +92,11 @@ Ver https://projectlombok.org/
 ```java
 @Data(staticConstructor="of")
 public class Company {
-    private final Person founder;
-    private String name;
+    private Person founder;
+    private final String name;
     private List<Person> employees;
+    
+    final Company c = Company.of("John Doe")
 }
 ```
 
