@@ -31,7 +31,6 @@ http://git.intra.goias.gov.br/goias/web-template.git
 }
 ```
 
-
 ## Programação funcional
 Programação funcional é utilizado para criar uma DSL fluente para o domínio, facilitando transformações entre camadas sem utilizar estruturas de controles (if, else, for), atribuição de variávies e variáveis mutáveis.
 ```java
@@ -42,8 +41,36 @@ Programação funcional é utilizado para criar uma DSL fluente para o domínio,
     }
 ```
 
-### 
+### Monads
+Estruturas de composição computável onde podemos agregar contexto e interpretação a objetos. 
 
+```java
+    service.obterPorId(id).orElseThrow(() -> new NaoEncontradoException())
+```
+
+#### java.util.Optional
+Evitando NullPointerExceptions
+
+```java
+    service.obterPorId(id).orElseThrow(() -> new NaoEncontradoException())
+    
+    final String username = userExtractor.extractUser(request)
+                .orElse(MsgApp.CAS_LOGIN);
+
+```
+
+#### javaslang.control.Try: Tratamento de exceção de forma fluente
+```java
+
+    Try.of(() -> request.getSession(false))
+            .onSuccess(s -> {if(s!=null) s.invalidate(); })
+            .onFailure(e -> LOGGER.debug(e)).get();
+
+    final String nome = Try.of(() -> obterNome())
+                           .onFailure(e -> "ERRO")
+                           .get();
+
+```
 
 ## Javaslang
 Framework completamente integrada a Java que estende o conceito de programação funcional em Java com DSLs específicas.
