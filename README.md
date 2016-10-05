@@ -95,9 +95,10 @@ public class Company {
     private Person founder;
     private final String name;
     private List<Person> employees;
-    
-    final Company c = Company.of("John Doe")
 }
+
+final Company c = Company.of("John Doe")
+
 ```
 
 ## Controllers CQRS (Separação de Responsabilidade entre Comandos e Consultas)
