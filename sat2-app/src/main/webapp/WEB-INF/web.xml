@@ -153,7 +153,7 @@
     </init-param>
     <init-param>
       <param-name>tolerance</param-name>
-      <param-value>10000</param-value>
+      <param-value>${saml.ticket.tolerance}</param-value>
     </init-param>
   </filter>
 

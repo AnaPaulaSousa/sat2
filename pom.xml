@@ -80,6 +80,7 @@
 
             <saml.server.hosts>corpdesenv.intra.goias.gov.br</saml.server.hosts>
             <saml.server.ignoressl>${cas.ignoressl}</saml.server.ignoressl>
+            <saml.ticket.tolerance>180000</saml.ticket.tolerance>
 
         </properties>
     </profile>
@@ -101,6 +102,7 @@
 
                 <saml.server.hosts>corpdesenv.intra.goias.gov.br</saml.server.hosts>
                 <saml.server.ignoressl>${cas.ignoressl}</saml.server.ignoressl>
+                <saml.ticket.tolerance>180000</saml.ticket.tolerance>
 
             </properties>
         </profile>
@@ -122,6 +124,7 @@
 
                 <saml.server.hosts>jbhomcorp11.intra.goias.gov.br:8543,jbhomcorp12.intra.goias.gov.br:8543</saml.server.hosts>
                 <saml.server.ignoressl>${cas.ignoressl}</saml.server.ignoressl>
+                <saml.ticket.tolerance>180000</saml.ticket.tolerance>
 
             </properties>
         </profile>
@@ -142,6 +145,7 @@
 
                 <saml.server.hosts>jbhomcorp11.intra.goias.gov.br:8543,jbhomcorp12.intra.goias.gov.br:8543</saml.server.hosts>
                 <saml.server.ignoressl>${cas.ignoressl}</saml.server.ignoressl>
+                <saml.ticket.tolerance>3000</saml.ticket.tolerance>
 
             </properties>
         </profile>
@@ -149,6 +153,11 @@
         <profile>
             <id>prod</id>
             <properties>
+                <cas.serverName>https://www.intra.goias.gov.br</cas.serverName>
+                <cas.client.serverName>${cas.serverName}</cas.client.serverName>
+                <cas.casServerUrlPrefix>${cas.serverName}/cas</cas.casServerUrlPrefix>
+                <cas.authfilter.casServerLoginUrl>${cas.serverName}/cas/login</cas.authfilter.casServerLoginUrl>
+
                 <include.func.tests>false</include.func.tests>
                 <include.it.tests>**/IT*.java</include.it.tests>
                 <portal.cas.user.test>THIAGO</portal.cas.user.test>
@@ -157,6 +166,7 @@
 
                 <saml.server.hosts>jbprodcorp06.intra.goias.gov.br:8543,jbprodcorp07.intra.goias.gov.br:8543</saml.server.hosts>
                 <saml.server.ignoressl>${cas.ignoressl}</saml.server.ignoressl>
+                <saml.ticket.tolerance>3000</saml.ticket.tolerance>
 
             </properties>
         </profile>
