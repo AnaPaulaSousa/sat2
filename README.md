@@ -31,8 +31,7 @@ http://git.intra.goias.gov.br/goias/web-template.git
 }
 ```
 
-
-## Java 8
+## Programação funcional
 Programação funcional é utilizado para criar uma DSL fluente para o domínio, facilitando transformações entre camadas sem utilizar estruturas de controles (if, else, for), atribuição de variávies e variáveis mutáveis.
 ```java
     @GET
@@ -40,6 +39,37 @@ Programação funcional é utilizado para criar uma DSL fluente para o domínio,
     public Aluno obter(@PathParam("id") final Long id) {
         return Aluno.from(service.obterPorId(id).orElseThrow(() -> new NaoEncontradoException()));
     }
+```
+
+### Monads
+Estruturas de composição computável onde podemos agregar contexto e interpretação a objetos. 
+
+```java
+    service.obterPorId(id).orElseThrow(() -> new NaoEncontradoException())
+```
+
+#### java.util.Optional
+Evitando NullPointerExceptions
+
+```java
+    service.obterPorId(id).orElseThrow(() -> new NaoEncontradoException())
+    
+    final String username = userExtractor.extractUser(request)
+                .orElse(MsgApp.CAS_LOGIN);
+
+```
+
+#### javaslang.control.Try: Tratamento de exceção de forma fluente
+```java
+
+    Try.of(() -> request.getSession(false))
+            .onSuccess(s -> {if(s!=null) s.invalidate(); })
+            .onFailure(e -> LOGGER.debug(e)).get();
+
+    final String nome = Try.of(() -> obterNome())
+                           .onFailure(e -> "ERRO")
+                           .get();
+
 ```
 
 ## Javaslang
@@ -62,10 +92,13 @@ Ver https://projectlombok.org/
 ```java
 @Data(staticConstructor="of")
 public class Company {
-    private final Person founder;
-    private String name;
+    private Person founder;
+    private final String name;
     private List<Person> employees;
 }
+
+final Company c = Company.of("John Doe")
+
 ```
 
 ## Controllers CQRS (Separação de Responsabilidade entre Comandos e Consultas)
@@ -85,6 +118,48 @@ public interface AlunoRepository extends  PagingAndSortingRepository<Aluno, Long
     Page<Aluno> queryFirst10ByNome(final String nome, final Pageable pageable);
 }
 ```
+
+## Rich model
+Através de especificações podemos construir uma DSL onde partes de um mesmo domínio são consultadas por uma API fluente e reutilizável 
+```java
+
+@Entity
+@Table(name = "TB_ALUNO")
+@Data
+public class Aluno {
+    @Id
+    @Column(name = "ALUN_ID")
+    @GeneratedValue(strategy=GenerationType.SEQUENCE)
+    private Long id;
+
+    @Column(name = "ALUN_NOME")
+    private String nome;
+
+    @Column(name = "ALUN_EMAIL")
+    private String email;
+
+    @Column(name = "ALUN_NASCIMENTO")
+    private Date nascimento;
+
+    public static Specification<Aluno> nomeIniciando(final String nome) {
+        return (root, criteriaQuery, criteriaBuilder) ->
+                criteriaBuilder.like(criteriaBuilder.upper(root.get("nome")), nome.toUpperCase()+"%");
+    }
+
+    public static Specification<Aluno> comEmail(final String email) {
+        return (root, criteriaQuery, criteriaBuilder) -> criteriaBuilder.equal(root.get("email"), email);
+    }
+
+    public static Specification<Aluno> nascidoEm(final Date nascimento) {
+        return (root, criteriaQuery, criteriaBuilder) -> criteriaBuilder.equal(root.<Date>get("nascimento"), nascimento);
+    }
+
+}
+
+final Specification<Aluno> spec = where(nomeIniciando("John")).and(comEmail("email@email.com"));
+final List<Aluno> alunos = repository.findAll(spec);
+```
+
 
 ## Angular
 
@@ -301,10 +376,24 @@ public class NaoEncontradoExceptionMapper implements ExceptionMapper<NaoEncontra
 
 }
 ```
+## Autenticação
+A plataforma de autenticação utilizada para Single Sign-On é o Aepero Cas 
+
+A documentação pode ser vista em: [Goias Cas](http://git.intra.goias.gov.br/portal/goias-cas)
+
+## Autorização
+A autorização é integrada ao Portal sendo essa possibilitada pelos componentes portal-security e cas-security. 
+
+Documentação: [Goias Cas](http://git.intra.goias.gov.br/portal/goias-cas#autoriza%C3%A7%C3%A3o)
+
+Documentação: [portal-security](http://git.intra.goias.gov.br/portal/portal-seguranca)
+
+### Autorização utilizando javax.annotation.security.RolesAllowed
+
+Documentação: [Securing JAX-RS resources with standard javax.annotation.security annotations](https://jersey.java.net/documentation/latest/security.html#d0e12386)
 
 ## Proximos passos
 
-   * Autenticação e Autorização
    * Exemplos de Testes unitário
    * Exemplos de Testes de integração
    * Exemplos de Testes Funcionais automatizados
