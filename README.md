@@ -392,6 +392,8 @@ Documentação: [portal-security](http://git.intra.goias.gov.br/portal/portal-se
 
 Documentação: [Securing JAX-RS resources with standard javax.annotation.security annotations](https://jersey.java.net/documentation/latest/security.html#d0e12386)
 
+Portal-security [Autorizaçao de usuários: Cas](http://git.intra.goias.gov.br/portal/portal-seguranca#autoriza%C3%A7ao-de-usu%C3%A1rios-cas)
+
 ## Proximos passos
 
    * Exemplos de Testes unitário
