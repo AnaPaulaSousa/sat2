@@ -17,6 +17,6 @@
     "blockUI": "2.70",
     "go-form": "http://git.intra.goias.gov.br/goias/go-form.git#~1.0.0",
     "go-data-table": "http://git.intra.goias.gov.br/goias/go-data-table.git#~1.0.0",
-    "web-template": "http://git.intra.goias.gov.br/goias/web-template.git"
+    "web-template": "http://git.intra.goias.gov.br/goias/web-template.git#~1.0.0"
   }
 }
