@@ -5,367 +5,238 @@
 <!--[if gt IE 8]><!-->
 <html lang="en" ng-app="myApp" class="no-js">
 <!--<![endif]-->
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Portal AngularJS App</title>
-	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="../resources/css/app.css?v=${project.version}">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-	<title>Segplan UI - Template Responsivo</title>
+		<title>Supervisão de Arquitetura e Tecnologia - Modelo de Aplicação Sat2  </title>
 
-	<link href="../bower_components/web-template/flat/3.2/white/css/style.min.css?v=${project.version}" rel="stylesheet" />
-	<link href="../bower_components/web-template/flat/3.2/white/lib/isotope/isotope.css?v=${project.version}" rel="stylesheet" />
-	<link href="../bower_components/web-template/flat/3.2/white/lib/lightbox/css/lightbox.css?v=${project.version}" rel="stylesheet" />
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="../resources/css/app.css?v=${project.version}">
 
-	<link href="../bower_components/web-template/flat/3.2/white/css/application.min.css?v=${project.version}" rel="stylesheet" type="text/css"/>
-	<link href="../bower_components/web-template/flat/3.2/white/css/segplan.css?v=${project.version}" rel="stylesheet" type="text/css"/>
-    <script src="../JavaScriptServlet"></script>
-</head>
-<body>
+		<link href="../bower_components/web-template/flat/3.2/white/css/style.min.css?v=${project.version}" rel="stylesheet" />
+		<link href="../bower_components/web-template/flat/3.2/white/lib/isotope/isotope.css?v=${project.version}" rel="stylesheet" />
+		<link href="../bower_components/web-template/flat/3.2/white/lib/lightbox/css/lightbox.css?v=${project.version}" rel="stylesheet" />
 
-<div class="logo">
-	<h1 class="logo-portal">
-		<img src="../bower_components/web-template/flat/3.2/white/img/logo-portal-branco-completo-2.png?v=${project.version}" style="height: 70px;" />
-		<!-- <a href="index.html"><strong>Portal de Acesso Intra Goiás</strong></a> -->
-	</h1>
-</div>
+		<link href="../bower_components/web-template/flat/3.2/white/css/application.min.css?v=${project.version}" rel="stylesheet" type="text/css"/>
+		<link href="../bower_components/web-template/flat/3.2/white/css/segplan.css?v=${project.version}" rel="stylesheet" type="text/css"/>
+		<script src="../JavaScriptServlet"></script>
+	</head>
+	<body>
 
-<!-- Navigation -->
-<nav id="sidebar" class="sidebar nav-collapse collapse">
-	<ul id="side-nav" class="side-nav">
-		<li class="active">
-			<a href="#/home" class="accordion-toggle collapsed"><i class="fa fa-home"></i>
-				<span class="name">Inicial</span></a>
-		</li>
+		<div class="logo">
+			<h1 class="logo-portal">
+				<div class="logo-sistema-custom containerNomeSistema" style="margin-left: 34px;">Nome do Sistema</div>
+				<i class="fa fa fa-cube fa-2x" style="float: left;"></i>
+			</h1>
+		</div>
 
-		<li class="panel ">
-			<a class="accordion-toggle collapsed" data-toggle="collapse"
-			   data-parent="#side-nav" href="#forms-collapse">
-				<i class="fa fa-pencil"></i> <span class="name">Aluno</span></a>
-			<ul id="forms-collapse" class="panel-collapse collapse">
-				<li class=""><a href="#/aluno-com-botao" class="accordion-toggle">Form com Lista</a></li>
-				<li class=""><a href="#/aluno-lista-pag-padrao" class="accordion-toggle">Lista paginada padrão</a></li>
-				<li class=""><a href="#/aluno-form-padrao" class="accordion-toggle">Form padrão</a></li>
-			</ul>
-		</li>
-
-		<li class="panel ">
-			<a href="#/link-diverso" class="accordion-toggle collapsed" data-parent="#side-nav">
-				<i class="fa fa-link"></i> <span class="name">Link diverso</span>
-			</a>
-		</li>
-
-		<li class="panel ">
-			<a href="#" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#side-nav">
-				<i class="fa fa-bar-chart-o"></i> <span class="name">Estatísticas</span>
-			</a>
-			<ul id="stats-collapse" class="panel-collapse collapse ">
-				<li class=""><a href="#"> <i class="fa fa-table"></i> Tabelas</a></li>
-				<li class=""><a href="#"> <i class="fa fa-area-chart"></i> Gráficos</a></li>
-				<li class=""><a href="#"> <i class="fa fa-clock-o"></i> Tempo Real</a></li>
-			</ul>
-		</li>
-
-		<li class="panel ">
-			<a href="#" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#side-nav">
-				<i class="fa fa-folder-open"></i> <span class="name">Relatórios</span>
-			</a>
-			<ul id="relatorio-collapse" class="panel-collapse collapse ">
-				<li class=""><a href="#"><i class="fa fa-exchange"></i>Acessos</a></li>
-				<li class=""><a href="#"><i class="fa fa-align-justify"></i>Histórico</a></li>
-			</ul>
-		</li>
-
-		<li class="panel">
-			<a href=""><i class="fa fa-sign-out"></i> <span class="name">Sair</span></a>
-		</li>
-	</ul>
-</nav>
-
-
-<div class="wrap">
-
-	<div style="margin-top: -15px;">
-		<h4 class="logo-goias hidden-xs" >
-			<img src="../bower_components/web-template/flat/3.2/white/img/governo_goias_branco.png?v=${project.version}" style="height: 60px;" />
-			<!-- <a href="index.html"><strong>Goiás</strong></a> -->
-		</h4>
-
-		<h3 class="logo-segplan hidden-xs">
-			<img src="../bower_components/web-template/flat/3.2/white/img/logo-segplan.png?v=${project.version}" style="height: 60px;" />
-			<!-- <a href="index.html"><strong>Segplan</strong></a> -->
-		</h3>
-
-		<h2 class="logo-scti hidden-xs">
-			<img src="../bower_components/web-template/flat/3.2/white/img/logo-scti-v1.png?v=${project.version}" style="height: 70px;" />
-			<!-- <a href="index.html"><strong>SCTI</strong></a> -->
-		</h2>
-	</div>
-
-	<header class="page-header" style="clear: both;">
-		<div class="navbar">
-			<ul ng-controller="MyAppCtrl as myAppCtrl" class="nav navbar-nav navbar-right pull-right">
-
-				<li class="hidden-xs" style="margin-top: 4px;">
-					<form codigo="search-form" role="search">
-						<input type="search" class="form-control search-query" placeholder="Pesquisa..." />
-					</form>
-					<!--
-                    <a href="#" codigo="search-toggle" title="Pesquisa no Sistema">
-                           <i class="fa fa-search"></i>
-                    </a>
-                    -->
+		<!-- Navigation -->
+		<nav id="sidebar" class="sidebar nav-collapse collapse">
+			<ul id="side-nav" class="side-nav">
+				<li class="active">
+					<a href="#/home" class="accordion-toggle collapsed"><i class="fa fa-home"></i><span class="name">Inicial</span></a>
 				</li>
 
-				<li class="divider"></li>
+				<li class="panel ">
+					<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#side-nav" href="#forms-collapse"> <i class="fa fa-pencil"></i> <span class="name">Aluno</span></a>
+					<ul id="forms-collapse" class="panel-collapse collapse">
+						<li class=""><a href="#/aluno-com-botao" class="accordion-toggle">Form com Lista</a></li>
+						<li class=""><a href="#/aluno-lista-pag-padrao" class="accordion-toggle">Lista paginada padrão</a></li>
+						<li class=""><a href="#/aluno-form-padrao" class="accordion-toggle">Form padrão</a></li>
+					</ul>
+				</li>
 
-				<li class="hidden-xs"><a href="" title="Aumentar Fonte"><i class="fa fa-font"></i>+</a></li>
-				<li class="hidden-xs"><a href="" title="Diminuir Fonte"><i class="fa fa-font"></i>-</a></li>
-				<li class="hidden-xs"><a href="" title="Aumentar Relevo"><i class="fa fa-cube"></i></a></li>
-				<li class="hidden-xs"><a href="" title="Aumentar Contraste"><i class="fa fa-adjust"></i></a></li>
-				<li class="hidden-xs" style="margin-top: 3px;"><a href="" title="Inverter Cores"><i class="fa fa-tint"></i></a></li>
-				<li class="hidden-xs"><a href="http://www.acessibilidadelegal.com/00-acessibilidade.php" title="Acessibilidade"><i class="fa fa-wheelchair"></i></a></li>
-
-				<li class="dropdown hidden-xs">
-					<a href="" title="Você possui acesso em 17 sistemas." class="dropdown-toggle" data-toggle="dropdown">
-						<i class="fa fa-th"></i>
-						<span class="count">17</span>
+				<li class="panel ">
+					<a href="#/link-diverso" class="accordion-toggle collapsed" data-parent="#side-nav">
+						<i class="fa fa-link"></i> <span class="name">Link diverso</span>
 					</a>
-					<ul codigo="support-menu" class="dropdown-menu support" role="menu">
-						<li role="presentation" style="margin: 0 5px;">
-							<input type="search" class="form-control search-query" placeholder="Pesquisa..." style="width: 98%; margin-top: 1px; margin-bottom: 8px" />
-						</li>
-						<li role="presentation" style="margin: 0;">
-							<a href="#" class="support-ticket"><span class="label label-info" style="background: #2B8CBE; min-width: 55px; margin-right: 8px;">PORTAL</span> Portal de Acesso Intra Goiás</a>
-							<a href="#" class="support-ticket"><span class="label label-info" style="background: #8CC3EA; min-width: 55px; margin-right: 8px;">CFR</span> Sistema de Fundo Rotativo</a>
-							<a href="#" class="support-ticket"><span class="label label-info" style="background: #0F7948; min-width: 55px; margin-right: 8px;">SFR</span> Sistema de Frequência</a>
-							<a href="#" class="support-ticket"><span class="label label-info" style="background: #006617; min-width: 55px; margin-right: 8px;">GRA</span> Sistema de Gerenciamento de Riscos Ambientais</a>
-							<a href="#" class="support-ticket"><span class="label label-info" style="background: #7FBC41; min-width: 55px; margin-right: 8px;">PLE</span> Passe Livre Estudantil</a>
-							<a href="#" class="support-ticket"><span class="label label-info" style="background: #A7C235; min-width: 55px; margin-right: 8px;">PLEX</span> Sistema Passe Livre Estudantil Externo</a>
-							<a href="#" class="support-ticket"><span class="label label-info" style="background: #666666; min-width: 55px; margin-right: 8px;">PTI</span> Controle de Bens Permanentes (Imóveis)</a>
-							<a href="#" class="support-ticket"><span class="label label-info" style="background: #F9D552; min-width: 55px; margin-right: 8px;">PTM</span> Controle de Bens Permanentes (Móveis - Semoventes)</a>
-							<a href="#" class="support-ticket"><span class="label label-info" style="background: #38A2A2; min-width: 55px; margin-right: 8px;">SALIS</span> Sistema de Acompanhamento a Licença do Servidor</a>
-							<a href="#" class="support-ticket"><span class="label label-info" style="background: #428CCA; min-width: 55px; margin-right: 8px;">SCG</span> Sistema de Contabilidade do Estado de Goias</a>
-							<a href="#" class="support-ticket"><span class="label label-info" style="background: #707478; min-width: 55px; margin-right: 8px;">SCO</span> Sistema de Contratos</a>
-							<a href="#" class="support-ticket"><span class="label label-info" style="background: #959DC3; min-width: 55px; margin-right: 8px;">SCORP</span> Sistema Corporativo</a>
-							<a href="#" class="support-ticket"><span class="label label-info" style="background: #41AB5D; min-width: 55px; margin-right: 8px;">SIGMATE</span> Sistema de Gestão de Material do Estado</a>
-							<a href="#" class="support-ticket"><span class="label label-info" style="background: #5783BD; min-width: 55px; margin-right: 8px;">SPM</span> Sistema de Planejamento e Monitoramento do Plano Plurianual</a>
-							<a href="#" class="support-ticket"><span class="label label-info" style="background: #67BCE9; min-width: 55px; margin-right: 8px;">SPN</span> Sistema de Posse no Serviço Público</a>
-							<a href="#" class="support-ticket"><span class="label label-info" style="background: #5C94B9; min-width: 55px; margin-right: 8px;">SRH</span> Sistema de Recursos Humanos do Estado de Goiás</a>
-							<a href="#" class="support-ticket"><span class="label label-info" style="background: #5783BD; min-width: 55px; margin-right: 8px;">SPM</span> Sistema de Planejamento e Monitoramento do Plano Plurianual</a>
-						</li>
-					</ul>
 				</li>
 
-				<li class="divider"></li>
-
-				<li class='hidden-xs dropdown controleVersaoIcone'>
-					<a href='' title='Sobre' id='versao' class='dropdown-toggle'
-					   data-toggle='dropdown'>
-						<i class='fa fa-tv'></i>
+				<li class="panel ">
+					<a href="#" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#side-nav">
+						<i class="fa fa-bar-chart-o"></i> <span class="name">Estatísticas</span>
 					</a>
-					<ul id='versao-menu' class='dropdown-menu account' role='menu' style="min-width: 180px;">
-						<li role='presentation' class='account-picture'>
-							<i class='fa fa-info-circle'></i>
-							<span class='conteudoDropDownInterno'>{{ toolbar.alm.buildId }}</span>
-						</li>
-
-						<li role='presentation' class='account-picture'>
-							<i class='fa fa-calendar'></i>
-							<span class='conteudoDropDownInterno'>{{ toolbar.alm.buildTime | date : 'dd/MM/yyyy HH:mm:ss' }}</span>
-						</li>
-						<li class="dropdown">
-							<a ng-href="{{toolbar.gitRepositoryState.remoteBuildUrl}}" title="build" codigo="account"
-							   class="dropdown-toggle" ng-click="goToRemoteBuildUrl()"
-							   data-toggle="dropdown">
-								<i class='fa fa-check-square-o'></i>
-                                                            <span class='conteudoDropDownInterno'
-																  title="{{toolbar.gitRepositoryState.remoteBuildUrl}}">Commit: {{toolbar.gitRepositoryState.commitIdAbbrev}}</span>
-							</a>
-						</li>
-						<li class="dropdown">
-							<a ng-href="{{toolbar.gitRepositoryState.remoteTagUrl}}" title="build" codigo="account"
-							   class="dropdown-toggle" ng-click="goToRemoteTagUrl()"
-							   data-toggle="dropdown">
-								<i class='fa fa-tag'></i>
-                                                            <span class='conteudoDropDownInterno'
-																  title="{{toolbar.gitRepositoryState.remoteTagUrl}}">Tag: {{toolbar.gitRepositoryState.tagName}}</span>
-							</a>
-						</li>
+					<ul id="stats-collapse" class="panel-collapse collapse ">
+						<li class=""><a href="#"> <i class="fa fa-table"></i> Tabelas</a></li>
+						<li class=""><a href="#"> <i class="fa fa-area-chart"></i> Gráficos</a></li>
+						<li class=""><a href="#"> <i class="fa fa-clock-o"></i> Tempo Real</a></li>
 					</ul>
 				</li>
 
-				<li class="dropdown">
-					<a href=""
-					   title='{{ toolbar.usuario.nomeUsuario }}'
-					   codigo="account" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-user"></i></a>
-					<ul codigo="account-menu" class="dropdown-menu account" role="menu">
-						<li id="username" role="presentation" class="account-picture"><i class="fa fa-user"></i> {{
-							toolbar.usuario.nomeUsuario }}
-						</li>
+				<li class="panel ">
+					<a href="#" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#side-nav">
+						<i class="fa fa-folder-open"></i> <span class="name">Relatórios</span>
+					</a>
+					<ul id="relatorio-collapse" class="panel-collapse collapse ">
+						<li class=""><a href="#"><i class="fa fa-exchange"></i>Acessos</a></li>
+						<li class=""><a href="#"><i class="fa fa-align-justify"></i>Histórico</a></li>
 					</ul>
 				</li>
 
-				<li class="divider"></li>
-
-				<li class="hidden-xs"><a href="../api/logout"><i class="fa fa-sign-out"></i></a></li>
+				<li class="panel">
+					<a href=""><i class="fa fa-sign-out"></i> <span class="name">Sair</span></a>
+				</li>
 			</ul>
+		</nav>
 
-			<!--
-            <div class="notifications pull-right">
-                <div class="alert pull-right">
-                    <a href="#" class="close ml-xs" data-dismiss="alert">times verificar ×</a>
-                    <i class="fa fa-info-circle mr-xs"></i> Atenção: O contexto será reiniciado em  <a codigo="notification-link" href="#">10min</a> finalize sua atividade!
-                </div>
-            </div>
-            -->
-		</div>
-	</header>
 
-	<div id="container" class="content container" ng-view>
+		<div class="wrap">
 
-	</div>
+			<div style="margin-top: -15px;">
+				<h4 class="logo-goias hidden-xs" >
+					<img src="../bower_components/web-template/flat/3.2/white/img/governo-estado-inovador-pas.png?v=${project.version}" style="height: 61px;" />
+				</h4>
 
-	<div class="loader-wrap hiding hide">
-		<i class="fa fa-circle-o-notch fa-spin"></i>
-	</div>
-</div>
+				<h3 class="logo-segplan hidden-xs">
+					<img src="../bower_components/web-template/flat/3.2/white/img/logo-segplan.png?v=${project.version}" style="height: 60px;" />
+				</h3>
 
-<div>
-	<!-- common libraries. required for every page-->
-	<script src="../bower_components/web-template/flat/3.2/white/lib/jquery/dist/jquery.min.js?v=${project.version}"></script>
-	<script src="../bower_components/web-template/flat/3.2/white/lib/jquery-pjax/jquery.pjax.js?v=${project.version}"></script>
-	<script src="../bower_components/web-template/flat/3.2/white/lib/bootstrap-sass/assets/javascripts/bootstrap.min.js?v=${project.version}"></script>
-	<script src="../bower_components/web-template/flat/3.2/white/lib/widgster/widgster.js?v=${project.version}"></script>
-	<script src="../bower_components/web-template/flat/3.2/white/lib/underscore/underscore.js?v=${project.version}"></script>
+				<h2 class="logo-scti hidden-xs">
+					<img src="../bower_components/web-template/flat/3.2/white/img/logo-scti-v1.png?v=${project.version}" style="height: 80px;" />
+				</h2>
+			</div>
 
-	<!-- common application js -->
-	<script src="../bower_components/web-template/flat/3.2/white/js/app.js?v=${project.version}"></script>
-	<script src="../bower_components/web-template/flat/3.2/white/js/settings.js?v=${project.version}"></script>
+			<header class="page-header" style="clear: both;">
+				<div class="navbar">
+					<ul ng-controller="MyAppCtrl as myAppCtrl" class="nav navbar-nav navbar-right pull-right">
 
-	<!-- common templates -->
-	<script type="text/template" codigo="settings-template">
-		<div class="setting clearfix">
-			<div>Background</div>
-			<div codigo="background-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
-				<button type="button" data-value="dark" class="btn btn-sm btn-default">Vermelho</button>
-				<button type="button" data-value="light" class="btn btn-sm btn-default active">Azul</button>
+						<li class="hidden-xs barra-acessibilidade">
+							<ul class="nav navbar-nav navbar-right pull-right" style="margin-top: 0;">
+								<li class="hidden-xs"><a href="" onclick="acessibilidade.resetarTamanhoFonte();  $(window).resize();" title="Resetar Fonte">
+									<i class="fa fa-font"></i><i class="fa fa-fw fa-refresh" style="font-size:12px;  text-align: center; vertical-align: middle;"></i></a>
+								</li>
+								<li class="hidden-xs"><a href="" onclick="acessibilidade.aumentarTamanhoFonte(); $(window).resize();" title="Aumentar Fonte"><i class="fa fa-font"></i>+</a></li>
+								<li class="hidden-xs"><a href="" onclick="acessibilidade.diminuirTamanhoFonte(); $(window).resize();" title="Diminuir Fonte"><i class="fa fa-font"></i>-</a></li>
+								<li class="hidden-xs"><a href="" onclick="acessibilidade.aplicarRelevo();" title="Aumentar Relevo"><i class="fa fa-cube"></i></a></li>
+								<li class="hidden-xs"><a href="" onclick="acessibilidade.aplicarAltoContraste();" title="Aumentar Contraste"><i class="fa fa-adjust" style="margin-top:9px;"></i></a></li>
+								<li class="hidden-xs"><a href="" onclick="acessibilidade.inverterCores();" title="Inverter Cores"><i class="fa fa-tint" style="vertical-align:middle;"></i></a></li>
+							</ul>
+						</li>
+
+						<li class="hidden-xs divider"></li>
+
+						<li class='hidden-xs dropdown controleVersaoIcone'>
+							<a href='' title='Sobre' id='versao' class='dropdown-toggle'
+							   data-toggle='dropdown'>
+								<i class='fa fa-tv'></i>
+							</a>
+							<ul id='versao-menu' class='dropdown-menu account' role='menu' style="min-width: 180px;">
+								<li role='presentation' class='account-picture'>
+									<i class='fa fa-info-circle'></i>
+									<span class='conteudoDropDownInterno'>{{ toolbar.alm.buildId }}</span>
+								</li>
+								<li role='presentation' class='account-picture'>
+									<i class='fa fa-calendar'></i>
+									<span class='conteudoDropDownInterno'>{{ toolbar.alm.buildTime | date : 'dd/MM/yyyy HH:mm:ss' }}</span>
+								</li>
+								<li class="dropdown">
+									<a ng-href="{{toolbar.gitRepositoryState.remoteBuildUrl}}" title="build" codigo="account" class="dropdown-toggle" ng-click="goToRemoteBuildUrl()" data-toggle="dropdown">
+										<i class='fa fa-check-square-o'></i> <span class='conteudoDropDownInterno' title="{{toolbar.gitRepositoryState.remoteBuildUrl}}">Commit: {{toolbar.gitRepositoryState.commitIdAbbrev}}</span>
+									</a>
+								</li>
+								<li class="dropdown">
+									<a ng-href="{{toolbar.gitRepositoryState.remoteTagUrl}}" title="build" codigo="account" class="dropdown-toggle" ng-click="goToRemoteTagUrl()" data-toggle="dropdown">
+										<i class='fa fa-tag'></i> <span class='conteudoDropDownInterno' title="{{toolbar.gitRepositoryState.remoteTagUrl}}">Tag: {{toolbar.gitRepositoryState.tagName}}</span>
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="dropdown">
+							<a href="" title='{{ toolbar.usuario.nomeUsuario }}' codigo="account" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-user"></i></a>
+							<ul codigo="account-menu" class="dropdown-menu account" role="menu">
+								<li id="username" role="presentation" class="account-picture"><i class="fa fa-user"></i> {{ toolbar.usuario.nomeUsuario }} </li>
+							</ul>
+						</li>
+
+						<li class="divider"></li>
+
+						<li class="hidden-xs"><a href="../api/logout"><i class="fa fa-sign-out"></i></a></li>
+					</ul>
+
+				</div>
+			</header>
+
+			<div id="container" class="content container" ng-view>
+
+			</div>
+
+			<div class="loader-wrap hiding hide">
+				<i class="fa fa-circle-o-notch fa-spin"></i>
 			</div>
 		</div>
-		<div class="setting clearfix">
-			<div>Sidebar on the</div>
-			<div codigo="sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
 
-				<button type="button" data-value="left" class="btn btn-sm btn-default">Left</button>
-				<button type="button" data-value="right" class="btn btn-sm btn-default active">Right</button>
-			</div>
+		<div>
+			<!-- common libraries. required for every page-->
+			<script src="../bower_components/web-template/flat/3.2/white/lib/jquery/dist/jquery.min.js?v=${project.version}"></script>
+			<script src="../bower_components/web-template/flat/3.2/white/lib/jquery-pjax/jquery.pjax.js?v=${project.version}"></script>
+			<script src="../bower_components/web-template/flat/3.2/white/lib/bootstrap-sass/assets/javascripts/bootstrap.min.js?v=${project.version}"></script>
+			<script src="../bower_components/web-template/flat/3.2/white/lib/widgster/widgster.js?v=${project.version}"></script>
+			<script src="../bower_components/web-template/flat/3.2/white/lib/underscore/underscore.js?v=${project.version}"></script>
+
+			<!-- common application js -->
+			<script src="../bower_components/web-template/flat/3.2/white/js/app.js?v=${project.version}"></script>
+			<script src="../bower_components/web-template/flat/3.2/white/js/settings.js?v=${project.version}"></script>
+
+			<!-- page specific scripts -->
+			<!-- page libs -->
+			<script src="../bower_components/web-template/flat/3.2/white/lib/slimScroll/jquery.slimscroll.min.js?v=${project.version}"></script>
+			<script src="../bower_components/web-template/flat/3.2/white/lib/jquery.sparkline/index.js?v=${project.version}"></script>
+
+			<!--<script src="../bower_components/web-template/flat/3.2/white/lib/backbone/backbone.js"></script>-->
+			<!--<script src="../bower_components/web-template/flat/3.2/white/lib/backbone.localStorage/backbone.localStorage-min.js"></script>-->
+
+			<script src="../bower_components/web-template/flat/3.2/white/lib/d3/d3.min.js?v=${project.version}"></script>
+			<script src="../bower_components/web-template/flat/3.2/white/lib/nvd3/build/nv.d3.min.js?v=${project.version}"></script>
+
+			<!--&lt;!&ndash; page application js &ndash;&gt;-->
+			<script src="../bower_components/web-template/flat/3.2/white/js/index.js?v=${project.version}"></script>
+			<!--<script src="../bower_components/web-template/flat/3.2/white/js/chat.js"></script>-->
+
+			<script src="../bower_components/web-template/flat/3.2/white/lib/datatables/media/js/jquery.dataTables.min.js?v=${project.version}"></script>
+
+			<!-- Parsley Validation -->
+			<script src="../bower_components/web-template/flat/3.2/white/lib/parsleyjs/dist/parsley.min.js?v=${project.version}"></script>
+			<script src="../bower_components/web-template/flat/3.2/white/js/forms-validation.js?v=${project.version}"></script>
+			<script src="../bower_components/web-template/flat/3.2/white/lib/parsleyjs/dist/i18n/pt-br.js?v=${project.version}"></script>
+
+			<script src="../bower_components/web-template/flat/3.2/white/lib/isotope/jquery.isotope.min.js?v=${project.version}"></script>
+			<script src="../bower_components/web-template/flat/3.2/white/lib/lightbox/js/lightbox-2.6.min.js?v=${project.version}"></script>
+			<script src="../bower_components/web-template/flat/3.2/white/js/gallery.demo.min.js?v=${project.version}"></script>
+
+			<script src="../js/sistema.js?v=${project.version}"></script>
+			<script src="../bower_components/blockUI/jquery.blockUI.js?v=${project.version}"></script>
+
 		</div>
-		<div class="setting clearfix">
-			<div>Sidebar</div>
-			<div codigo="display-sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
-				<button type="button" data-value="true" class="btn btn-sm btn-default active">Show</button>
-				<button type="button" data-value="false" class="btn btn-sm btn-default">Hide</button>
-			</div>
-		</div>
-		<div class="setting clearfix">
-			<div>Contraste Vermelho</div>
-			<div>
-				<a href="../white/index.html" class="btn btn-sm btn-default">Switch <i class="fa fa-angle-right"></i></a>
-			</div>
-		</div>
-	</script>
 
-	<script type="text/template" codigo="sidebar-settings-template">
-		<button type="button" data-value="icons" class="btn-icons btn btn-transparent btn-sm">Icons</button>
-		<button type="button" data-value="auto" class="btn-auto btn btn-transparent btn-sm">Auto</button>
-		<button type="button" data-value="auto" class="btn btn-transparent btn-sm">Auto</button>
-	</script>
+		<!-- In production use: <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script> -->
+		<script src="../bower_components/angular/angular.js?v=${project.version}"></script>
+		<script src="../bower_components/angular-route/angular-route.js?v=${project.version}"></script>
+		<script src="../bower_components/notifyjs/dist/notify.js?v=${project.version}"></script>
+		<script src="../js/app.js?v=${project.version}"></script>
+		<script src="../js/configs/routeConfig.js?v=${project.version}"></script>
+		<script src="../js/configs/basecontroller.js?v=${project.version}"></script>
+		<script src="../js/alunos/alunos.js?v=${project.version}"></script>
+		<script src="../js/alunos/alunos-form.js?v=${project.version}"></script>
+		<script src="../js/alunos/alunos-lista.js?v=${project.version}"></script>
+		<script src="../js/ui/layout.js?v=${project.version}"></script>
 
-	<!-- page specific scripts -->
-	<!-- page libs -->
-	<script src="../bower_components/web-template/flat/3.2/white/lib/slimScroll/jquery.slimscroll.min.js?v=${project.version}"></script>
-	<script src="../bower_components/web-template/flat/3.2/white/lib/jquery.sparkline/index.js?v=${project.version}"></script>
+		<script src="../js/acessibilidade.js"></script>
 
-	<!--<script src="../bower_components/web-template/flat/3.2/white/lib/backbone/backbone.js"></script>-->
-	<!--<script src="../bower_components/web-template/flat/3.2/white/lib/backbone.localStorage/backbone.localStorage-min.js"></script>-->
+		<script src="../js/messages.js?v=${project.version}"></script>
+		<script src="../js/validations.js?v=${project.version}"></script>
+		<script src="../js/notifications.js?v=${project.version}"></script>
+		<script src="../js/services/apphttpInterceptor.js?v=${project.version}"></script>
+		<script src="../js/services/services.js?v=${project.version}"></script>
+		<script src="../js/configs/configInterceptor.js?v=${project.version}"></script>
+		<script src="../bower_components/go-data-table/goDataTable.js?v=${project.version}"></script>
+		<script src="../bower_components/go-form/goForm.js?v=${project.version}"></script>
+		<script src="../js/components/version/version.js?v=${project.version}"></script>
+		<script src="../js/components/version/version-directive.js?v=${project.version}"></script>
+		<script src="../js/components/version/interpolate-filter.js?v=${project.version}"></script>
 
-	<script src="../bower_components/web-template/flat/3.2/white/lib/d3/d3.min.js?v=${project.version}"></script>
-	<script src="../bower_components/web-template/flat/3.2/white/lib/nvd3/build/nv.d3.min.js?v=${project.version}"></script>
-
-	<!--&lt;!&ndash; page application js &ndash;&gt;-->
-	<script src="../bower_components/web-template/flat/3.2/white/js/index.js?v=${project.version}"></script>
-	<!--<script src="../bower_components/web-template/flat/3.2/white/js/chat.js"></script>-->
-
-	<script src="../bower_components/web-template/flat/3.2/white/lib/datatables/media/js/jquery.dataTables.min.js?v=${project.version}"></script>
-
-	<!-- Parsley Validation -->
-	<script src="../bower_components/web-template/flat/3.2/white/lib/parsleyjs/dist/parsley.min.js?v=${project.version}"></script>
-	<script src="../bower_components/web-template/flat/3.2/white/js/forms-validation.js?v=${project.version}"></script>
-	<script src="../bower_components/web-template/flat/3.2/white/lib/parsleyjs/dist/i18n/pt-br.js?v=${project.version}"></script>
-
-	<script src="../bower_components/web-template/flat/3.2/white/lib/isotope/jquery.isotope.min.js?v=${project.version}"></script>
-	<script src="../bower_components/web-template/flat/3.2/white/lib/lightbox/js/lightbox-2.6.min.js?v=${project.version}"></script>
-	<script src="../bower_components/web-template/flat/3.2/white/js/gallery.demo.min.js?v=${project.version}"></script>
-
-	<script src="../js/sistema.js?v=${project.version}"></script>
-	<script src="../bower_components/blockUI/jquery.blockUI.js?v=${project.version}"></script>
-
-	<!-- page template -->
-	<script type="text/template" codigo="message-template">
-		<div class="sender pull-left">
-			<div class="icon">
-				<img src="../bower_components/web-template/flat/3.2/white/img/2.jpg?v=${project.version}" class="img-circle" alt="" />
-			</div>
-			<div class="time">just now</div>
-		</div>
-		<div class="chat-message-body">
-			<span class="arrow"></span>
-			<div class="sender">
-				<a href="#">Tikhon Laninga</a>
-			</div>
-			<div class="text"></div>
-		</div>
-	</script>
-
-	<!--script type="text/javascript">
-      window.Parsley.setLocale('pt-br');
-      $(document).ready(function() {
-          $('#confirm-delete').on('show.bs.modal', function(e) {
-              $(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));
-          });
-      });
-  </script-->
-</div>
-
-<!--[if lt IE 7]>
-<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-<![endif]-->
-
-<!-- In production use:
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
--->
-<script src="../bower_components/angular/angular.js?v=${project.version}"></script>
-<script src="../bower_components/angular-route/angular-route.js?v=${project.version}"></script>
-<script src="../bower_components/notifyjs/dist/notify.js?v=${project.version}"></script>
-<script src="../js/app.js?v=${project.version}"></script>
-<script src="../js/configs/routeConfig.js?v=${project.version}"></script>
-<script src="../js/configs/basecontroller.js?v=${project.version}"></script>
-<script src="../js/alunos/alunos.js?v=${project.version}"></script>
-<script src="../js/alunos/alunos-form.js?v=${project.version}"></script>
-<script src="../js/alunos/alunos-lista.js?v=${project.version}"></script>
-<script src="../js/messages.js?v=${project.version}"></script>
-<script src="../js/validations.js?v=${project.version}"></script>
-<script src="../js/notifications.js?v=${project.version}"></script>
-<script src="../js/services/apphttpInterceptor.js?v=${project.version}"></script>
-<script src="../js/services/services.js?v=${project.version}"></script>
-<script src="../js/configs/configInterceptor.js?v=${project.version}"></script>
-<script src="../bower_components/go-data-table/goDataTable.js?v=${project.version}"></script>
-<script src="../bower_components/go-form/goForm.js?v=${project.version}"></script>
-<script src="../js/components/version/version.js?v=${project.version}"></script>
-<script src="../js/components/version/version-directive.js?v=${project.version}"></script>
-<script src="../js/components/version/interpolate-filter.js?v=${project.version}"></script>
-
-</body>
+	</body>
 </html>

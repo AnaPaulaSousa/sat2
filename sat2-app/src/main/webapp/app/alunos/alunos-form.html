@@ -16,6 +16,23 @@
                       <!--go-form-on-error-fn="erroAoSalvar" [opcional] -->
 
                     <fieldset>
+                        <div class="btn-toolbar">
+                            <button go-submit ng-click="goFormSubmitFn()" type="button" name="action" class="btn btn-primary pull-right" ng-if="!isUpdate && isAllowed('CadastroAluno.I')">
+                                <i class="fa fa-save" style="margin-right:4px;" id="show-info-message"></i> Salvar
+                            </button>
+
+                            <button go-submit ng-click="goFormSubmitFn()" type="button" name="action" class="btn btn-primary pull-right" ng-if="isUpdate && isAllowed('CadastroAluno.A')">
+                                <i class="fa fa-save" style="margin-right:4px;" id="show-info-message"></i> Salvar
+                            </button>
+
+                            <button type="button" name="action" class="btn btn-primary pull-right" ng-click="limparForm()">
+                                <i class="fa fa-repeat" style="margin-right:4px;" id="show-info-message"></i> Limpar
+                            </button>
+
+                            <button type="button" name="action" class="btn btn-outline btn-danger pull-right" ng-if="isUpdate && isAllowed('CadastroAluno.E')" ng-if="aluno.id" data-toggle="modal" data-target="#confirm-delete">
+                                <i class="fa fa-trash" style="margin-right:4px;" id="show-info-message"></i> Excluir
+                            </button>
+                        </div>
 
                         <legend class="section" style="font-weight:600;">Cadastrar Aluno</legend>
 
@@ -83,27 +100,7 @@
 
                     </fieldset>
                     <div class="form-actions">
-                        <div class="btn-toolbar">
 
-                            <button go-submit ng-click="goFormSubmitFn()" type="button" name="action" class="btn btn-primary pull-right" ng-if="!isUpdate && isAllowed('CadastroAluno.I')">
-                                <i class="fa fa-save" style="margin-right:4px;" id="show-info-message"></i> Salvar
-                            </button>
-
-                            <button go-submit ng-click="goFormSubmitFn()" type="button" name="action" class="btn btn-primary pull-right" ng-if="isUpdate && isAllowed('CadastroAluno.A')">
-                                <i class="fa fa-save" style="margin-right:4px;" id="show-info-message"></i> Salvar
-                            </button>
-
-                            <button type="button" name="action" class="btn btn-primary pull-right"
-                                    ng-click="limparForm()">
-                                <i class="fa fa-repeat" style="margin-right:4px;" id="show-info-message"></i> Limpar
-                            </button>
-
-                            <button type="button" name="action" class="btn btn-outline btn-danger pull-right" ng-if="isUpdate && isAllowed('CadastroAluno.E')"
-                                    ng-if="aluno.id" data-toggle="modal" data-target="#confirm-delete">
-                                <i class="fa fa-trash" style="margin-right:4px;" id="show-info-message"></i> Excluir
-                            </button>
-
-                        </div>
                     </div>
 
                 </form>
