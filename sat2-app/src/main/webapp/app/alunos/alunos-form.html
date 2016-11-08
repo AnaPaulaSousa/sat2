@@ -16,58 +16,52 @@
                       <!--go-form-on-error-fn="erroAoSalvar" [opcional] -->
 
                     <fieldset>
-                        <div class="btn-toolbar">
-                            <button go-submit ng-click="goFormSubmitFn()" type="button" name="action" class="btn btn-primary pull-right" ng-if="!isUpdate && isAllowed('CadastroAluno.I')">
-                                <i class="fa fa-save" style="margin-right:4px;" id="show-info-message"></i> Salvar
-                            </button>
+                        <div class="form-actions">
+                            <div class="btn-toolbar">
+                                <button type="submit" name="action" class="btn btn-info pull-right" ng-if="!isUpdate && isAllowed('CadastroAluno.I')">
+                                    <i class="fa fa-save" style="margin-right:4px;" id="show-info-message"></i> Salvar
+                                </button>
 
-                            <button go-submit ng-click="goFormSubmitFn()" type="button" name="action" class="btn btn-primary pull-right" ng-if="isUpdate && isAllowed('CadastroAluno.A')">
-                                <i class="fa fa-save" style="margin-right:4px;" id="show-info-message"></i> Salvar
-                            </button>
+                                <button type="submit" name="action" class="btn btn-info pull-right" ng-if="isUpdate && isAllowed('CadastroAluno.A')">
+                                    <i class="fa fa-save" style="margin-right:4px;" id="show-info-message"></i> Salvar
+                                </button>
 
-                            <button type="button" name="action" class="btn btn-primary pull-right" ng-click="limparForm()">
-                                <i class="fa fa-repeat" style="margin-right:4px;" id="show-info-message"></i> Limpar
-                            </button>
+                                <button type="button" name="action" class="btn btn-warning pull-right" ng-click="limparForm()">
+                                    <i class="fa fa-rotate-left" style="margin-right:4px;" id="show-info-message"></i> Limpar
+                                </button>
 
-                            <button type="button" name="action" class="btn btn-outline btn-danger pull-right" ng-if="isUpdate && isAllowed('CadastroAluno.E')" ng-if="aluno.id" data-toggle="modal" data-target="#confirm-delete">
-                                <i class="fa fa-trash" style="margin-right:4px;" id="show-info-message"></i> Excluir
-                            </button>
-                        </div>
-
-                        <legend class="section" style="font-weight:600;">Cadastrar Aluno</legend>
-
-                        <div class="form-group">
-                            <input id="id" name="id" ng-model="aluno.id" type="hidden">
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-5">
-                                <div class="form-group">
-                                    <label for="nome">Nome</label>
-                                    <input type="text" id="nome" name="nome" class="form-control"
-                                           placeholder="Nome do Aluno" ng-model="aluno.nome">
-                                    <ul class="parsley-errors-list filled" id="nome-errors"></ul>
-                                </div>
+                                <button type="button" name="action" class="btn btn-outline btn-danger pull-right" ng-if="isUpdate && isAllowed('CadastroAluno.E')" ng-if="aluno.id" data-toggle="modal" data-target="#confirm-delete">
+                                    <i class="fa fa-trash" style="margin-right:4px;" id="show-info-message"></i> Excluir
+                                </button>
                             </div>
                         </div>
 
+
+                        <legend class="section">Cadastrar Aluno</legend>
                         <div class="row">
-                            <div class="col-md-5">
+                            <input id="id" name="id" ng-model="aluno.id" type="hidden">
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="nome">Nome</label>
+                                    <input type="text" id="nome" name="nome" class="form-control" placeholder="Nome do Aluno" ng-model="aluno.nome">
+                                    <ul class="parsley-errors-list filled" id="nome-errors"></ul>
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
                                 <div class="form-group">
                                     <label for="email">E-mail</label>
-                                    <input type="text" id="email" name="email" class="form-control"
-                                           placeholder="E-mail do Aluno" ng-model="aluno.email">
+                                    <input type="text" id="email" name="email" class="form-control" placeholder="E-mail do Aluno" ng-model="aluno.email">
                                     <ul class="parsley-errors-list filled" id="email-errors"></ul>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="row">
                             <div class="col-md-2">
                                 <div class="form-group">
                                     <label for="nascimento">Nascimento</label>
-                                    <input type="date" id="nascimento" name="nascimento" class="form-control go-date-style"
-                                           placeholder="dd/MM/yyyy" ng-model="aluno.nascimento"/>
+                                    <input type="date" id="nascimento" name="nascimento" class="form-control go-date-style" placeholder="dd/MM/yyyy" ng-model="aluno.nascimento"/>
                                     <ul class="parsley-errors-list filled" id="nascimento-errors"></ul>
                                 </div>
                             </div>
@@ -95,13 +89,8 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
-
                     </fieldset>
-                    <div class="form-actions">
-
-                    </div>
 
                 </form>
 

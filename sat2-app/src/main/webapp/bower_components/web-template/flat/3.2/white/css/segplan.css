@@ -215,8 +215,8 @@ h4.logo-goias 	img {
 /* .dataTables_length input[type=search], */
 .dataTables_filter input[type=search], .dataTable input[type=text],
 	.dataTables_length select {
-	background-position: 97%;
-	background: #fff url("../img/search.png") no-repeat scroll 2%;
+	/*background-position: 97%;
+	background: #fff url("../img/search.png") no-repeat scroll 2%;*/
 	/* 5px 6px */
 	padding: 5px 12px;
 	padding-left: 25px;
@@ -1018,3 +1018,21 @@ li.introjs-showElement ul li a i , .page-header li.introjs-showElement ul li a ,
 .dropdown-menu>li>a{ padding: 0;}
 .dropdown-menu>li>a{ padding: 0;}
 .account>li>a:hover,.account>li>a:focus{background: none; text-shadow: 0 0 2px #eee, 0 0 2px #eee;}
+
+.btn-toolbar{ margin-top: -59px; }
+
+.form-actions {
+	 padding: 0;
+	 margin-top: 0;
+	 background: none;
+}
+
+form fieldset{min-height: 130px;}
+
+.btn.btn-warning{ background: #f59c1a; }
+
+legend.section {line-height: 20px; font-weight:600; font-size: 14px;}
+
+.odd{border-bottom: 1px solid #ddd;}
+
+.edit-table-cell .btn{ padding: 4px 8px; }

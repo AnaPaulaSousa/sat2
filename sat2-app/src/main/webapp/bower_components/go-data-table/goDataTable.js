@@ -36,8 +36,6 @@ angular.module('goDataTable', []).directive("goDataTable", function () {
                         "sInfoPostFix": "",
                         "sInfoThousands": ".",
                         "sLengthMenu": "_MENU_ resultados por página",
-                        "sLoadingRecords": "Carregando...",
-                        "sProcessing": "Processando...",
                         "sZeroRecords": "Nenhum registro encontrado",
                         "sSearch": "Pesquisar",
                         "oPaginate": {
@@ -51,7 +49,9 @@ angular.module('goDataTable', []).directive("goDataTable", function () {
                             "sSortDescending": ": Ordenar colunas de forma descendente"
                         }
                     },
-                    "columns": columns
+                    "columns": columns,
+                    "orderCellsTop": true,
+                    "bProcessing": false
                 });
                 dataTable.columns().every(function () {
                     var that = this;
