@@ -14,7 +14,7 @@
 	<description>Web do Sistema de Exemplo</description>
 
 	<properties>
-		<org.hibernate.version>4.2.18.Final</org.hibernate.version>
+		<org.hibernate.version>5.1.0.Final</org.hibernate.version>
 		<org.glassfish.jersey.version>2.22</org.glassfish.jersey.version>
 		<selenium.chrome.driver.version>2.17</selenium.chrome.driver.version>
 		<jaxws-ri-rt.version>2.2.10</jaxws-ri-rt.version>
@@ -185,7 +185,7 @@
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
 			<version>${org.hibernate.version}</version>
-			<scope>provided</scope>
+			<scope>compile</scope>
 		</dependency>
 		<!-- Domínio -->
 

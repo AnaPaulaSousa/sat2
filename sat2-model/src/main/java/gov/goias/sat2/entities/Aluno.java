@@ -16,7 +16,7 @@ import java.util.Date;
 public class Aluno {
     @Id
     @Column(name = "ALUN_ID")
-    @GeneratedValue(strategy=GenerationType.SEQUENCE)
+    @GeneratedValue(strategy=GenerationType.AUTO)
     private Long id;
 
     @Column(name = "ALUN_NOME")

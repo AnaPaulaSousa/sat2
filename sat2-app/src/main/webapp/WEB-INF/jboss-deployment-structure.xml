@@ -3,9 +3,12 @@
     <deployment>
         <exclude-subsystems>
             <subsystem name="jaxrs"/>
+            <subsystem name="jpa"/>
         </exclude-subsystems>
         <exclusions>
             <module name="javaee.api"/>
+            <module name="org.slf4j"/>
+            <module name="org.jboss.logging"/>
         </exclusions>
         <dependencies>
             <module name="javax.activation.api" export="true"/>
