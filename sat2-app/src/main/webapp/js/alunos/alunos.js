@@ -23,6 +23,7 @@ angular.module('myApp.alunos', ['ngRoute'])
         $scope.limparForm = function () {
             $scope.aluno = $scope.Aluno();
             Validation.limpar('aluno-form', false);
+            $scope.isUpdate = false;
         };
 
         // process the form
@@ -55,9 +56,8 @@ angular.module('myApp.alunos', ['ngRoute'])
 
             if ($scope.aluno.id != id) {
 
-                $scope.isUpdate = true;
-
                 $scope.limparForm();
+                $scope.isUpdate = true;
 
                 $http({
                     method: 'GET',
