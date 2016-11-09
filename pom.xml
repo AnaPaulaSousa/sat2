@@ -82,6 +82,8 @@
             <saml.server.ignoressl>${cas.ignoressl}</saml.server.ignoressl>
             <saml.ticket.tolerance>180000</saml.ticket.tolerance>
 
+            <owasp.referer.pattern>.*localhost.*</owasp.referer.pattern>
+
         </properties>
     </profile>
 
@@ -103,6 +105,8 @@
                 <saml.server.hosts>corpdesenv.intra.goias.gov.br</saml.server.hosts>
                 <saml.server.ignoressl>${cas.ignoressl}</saml.server.ignoressl>
                 <saml.ticket.tolerance>180000</saml.ticket.tolerance>
+
+                <owasp.referer.pattern>.*corpdesenv.intra.goias.gov.br.*</owasp.referer.pattern>
 
             </properties>
         </profile>
@@ -126,6 +130,8 @@
                 <saml.server.ignoressl>${cas.ignoressl}</saml.server.ignoressl>
                 <saml.ticket.tolerance>180000</saml.ticket.tolerance>
 
+                <owasp.referer.pattern>.*testeap.intra.goias.gov.br.*</owasp.referer.pattern>
+
             </properties>
         </profile>
 
@@ -147,6 +153,8 @@
                 <saml.server.ignoressl>${cas.ignoressl}</saml.server.ignoressl>
                 <saml.ticket.tolerance>3000</saml.ticket.tolerance>
 
+                <owasp.referer.pattern>.*portalhomolog.intra.goias.gov.br.*</owasp.referer.pattern>
+
             </properties>
         </profile>
 
@@ -167,6 +175,8 @@
                 <saml.server.hosts>jbprodcorp06.intra.goias.gov.br:8543,jbprodcorp07.intra.goias.gov.br:8543</saml.server.hosts>
                 <saml.server.ignoressl>${cas.ignoressl}</saml.server.ignoressl>
                 <saml.ticket.tolerance>3000</saml.ticket.tolerance>
+
+                <owasp.referer.pattern>.*www.intra.goias.gov.br.*</owasp.referer.pattern>
 
             </properties>
         </profile>
