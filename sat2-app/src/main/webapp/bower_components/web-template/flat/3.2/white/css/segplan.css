@@ -1028,11 +1028,11 @@ li.introjs-showElement ul li a i , .page-header li.introjs-showElement ul li a ,
 }
 
 form fieldset{min-height: 130px;}
-
 .btn.btn-warning{ background: #f59c1a; }
-
 legend.section {line-height: 20px; font-weight:600; font-size: 14px;}
-
 .odd{border-bottom: 1px solid #ddd;}
-
 .edit-table-cell .btn{ padding: 4px 8px; }
+.btn-toolbar .btn { margin-right:4px;}
+
+@media (min-height: 940px){ .logo {position: absolute;} }
+
