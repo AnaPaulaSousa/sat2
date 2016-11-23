@@ -12,8 +12,8 @@ angular.module('myApp').controller('BaseController', ['$scope', 'RolesService', 
     
     $scope.reloadSelect2 = function() {
        	setTimeout(function() {
-       	$('select').trigger('change.select2')
-   	}, 100);
-
+       	    $('select').trigger('change.select2')
+   	    }, 100);
+    };
 }]);
 
