@@ -21,7 +21,6 @@ angular.module("myApp").config(function ($routeProvider) {
 					return "CIAE";
 				}
 			}
-
 		})
 		.when('/aluno-form-padrao/:id?', {
 			templateUrl: 'alunos/alunos-form.html',
@@ -31,8 +30,13 @@ angular.module("myApp").config(function ($routeProvider) {
 					return "CIAE";
 				}
 			}
-
 		})
+		.when('/ui/layout', {
+			templateUrl: 'ui/layout.html',
+			controller: 'LayoutCtrl',
+			resolve: { acessos: function () { return "CIAE"; } }
+		})
+
 		.otherwise({
 			redirectTo: '/aluno-com-botao'
 		});

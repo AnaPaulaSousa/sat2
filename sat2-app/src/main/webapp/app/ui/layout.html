@@ -1,0 +1,406 @@
+<h2 class="page-title">Guidelines</h2>
+
+<!-- /.row -- container principal -------------------------------------------------------------------------------------------------------------------------- -->
+<div class="row">
+    <!-- /.col-lg-12 -->
+    <div class="col-lg-12">
+        <section class="widget">
+            <div class="body ">
+                <fieldset>
+                    <legend class="section">Container Principal</legend>
+                </fieldset>
+
+                <div class="language-markup">
+                    <script type="text/plain">
+                        <h2 class="page-title">Funcionalidade <small>Incluir</small></h2>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <section class="widget">
+                                    <div class="body ">
+                                        <legend class="section">Detalhes</legend>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </script>
+                </div>
+
+            </div>
+            <!-- /.panel-body -->
+        </section>
+        <!-- /.panel -->
+    </div>
+</div>
+
+<!-- /.row -- botoes de navegao -------------------------------------------------------------------------------------------------------------------------- -->
+<div class="row">
+    <!-- /.col-lg-12 -->
+    <div class="col-lg-12">
+        <section class="widget">
+            <div class="body">
+
+                <fieldset>
+                    <div class="form-actions">
+                        <div class="btn-toolbar">
+                            <button type="button" name="action" class="btn btn-warning pull-right"> <i class="fa fa-rotate-left" ></i> Limpar </button>
+                            <button type="button" name="action" class="btn btn-warning pull-right"> <i class="fa fa-rotate-left" ></i> Voltar </button>
+                            <button type="button" name="action" class="btn btn-warning pull-right"> <i class="fa fa-rotate-left" ></i> Cancelar </button>
+                            <button type="submit" name="action" class="btn btn-info pull-right">    <i class="fa fa-save"        ></i> Salvar </button>
+                            <button type="button" name="action" class="btn btn-danger pull-right">  <i class="fa fa-trash"       ></i> Excluir </button>
+                            <button type="submit" name="action" class="btn btn-success pull-right"> <i class="fa fa-file-code-o" ></i> Exportar </button>
+                            <button type="submit" name="action" class="btn btn-info pull-right">    <i class="fa fa-print"       ></i> Imprimir </button>
+                        </div>
+                    </div>
+                    <legend class="section">Controles de Navegação e Ações</legend>
+                </fieldset>
+
+                <div class="language-markup">
+                    <script type="text/plain">
+                        <div class="form-actions">
+                            <div class="btn-toolbar">
+                                <button type="button" name="action" class="btn btn-warning pull-right"> <i class="fa fa-rotate-left" ></i> Limpar </button>
+                                <button type="button" name="action" class="btn btn-warning pull-right"> <i class="fa fa-rotate-left" ></i> Voltar </button>
+                                <button type="button" name="action" class="btn btn-warning pull-right"> <i class="fa fa-rotate-left" ></i> Cancelar </button>
+                                <button type="submit" name="action" class="btn btn-info pull-right">    <i class="fa fa-save"        ></i> Salvar </button>
+                                <button type="button" name="action" class="btn btn-danger pull-right">  <i class="fa fa-trash"       ></i> Excluir </button>
+                                <button type="submit" name="action" class="btn btn-success pull-right"> <i class="fa fa-file-code-o" ></i> Exportar </button>
+                                <button type="submit" name="action" class="btn btn-info pull-right">    <i class="fa fa-print"       ></i> Imprimir </button>
+                            </div>
+                        </div>
+                        <legend class="section">Controles de Navegação e Ações</legend>
+                    </script>
+                </div>
+
+            </div>
+            <!-- /.panel-body -->
+        </section>
+        <!-- /.panel -->
+    </div>
+</div>
+
+
+
+
+<!-- /.row -- botoes de navegao -------------------------------------------------------------------------------------------------------------------------- -->
+<div class="row">
+    <!-- /.col-lg-12 -->
+    <div class="col-lg-12">
+        <section class="widget">
+            <div class="body">
+
+                <fieldset>
+                    <legend class="section">Listagem</legend>
+
+
+                </fieldset>
+
+                <ul id="myTab" class="nav nav-tabs">
+                    <li class="active"> <a href="#/ui/layout#padrao-lista-paginada" data-toggle="tab">Modelo</a></li>
+                    <li> <a href="#/ui/layout#html-source" data-toggle="tab">HTML - Angular - Directiva goDatable</a></li>
+                    <li>                <a href="#/ui/layout#controller-source" data-toggle="tab">Java - Controller Service</a></li>
+                    <li>                <a href="#/ui/layout#service-source" data-toggle="tab">Java - Service</a></li>
+                    <li>                <a href="#/ui/layout#entity-source" data-toggle="tab">Java - Entity</a></li>
+                    <li>                <a href="#/ui/layout#plugins-source" data-toggle="tab">Javascript Plugin - Datatables</a></li>
+                </ul>
+                <div id="myTabContent" class="tab-content">
+                    <div class="tab-pane fade in active" id="padrao-lista-paginada">
+                        <table go-data-table  edit-url="#/aluno-form-padrao"  ajax="../api/aluno/paginar" id="dataTables-alunos" class="display table table-hover" cellspacing="0" width="100%">
+                            <thead>
+                            <tr style="background: #F5F5F5;">
+                                <th go-data-table-item name="id" style="width: 5%">Id</th>
+                                <th go-data-table-item name="nome" style="width: 40%">Nome</th>
+                                <th go-data-table-item name="email" style="width: 15%">Email</th>
+                                <th style="width: 5%"></th>
+                            </tr>
+                            <tr style="background: #F5F5F5;">
+                                <th><input id="id-search" type="text" placeholder="Id" /></th>
+                                <th><input id="nome-search" type="text" placeholder="Filtrar por Nome" /></th>
+                                <th><input id="email-search" type="text" placeholder="Filtrar por Email" /></th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <div class="tab-pane " id="html-source">
+                        <div class="language-markup">
+                            <script type="text/plain">
+                                <table go-data-table  edit-url="#/aluno-form-padrao"  ajax="../api/aluno/paginar" id="dataTables-alunos" class="display table table-hover" cellspacing="0" width="100%">
+                                    <thead>
+                                        <tr style="background: #F5F5F5;">
+                                            <th go-data-table-item name="id" style="width: 5%">Id</th>
+                                            <th go-data-table-item name="nome" style="width: 40%">Nome</th>
+                                            <th go-data-table-item name="email" style="width: 15%">Email</th>
+                                            <th style="width: 5%"></th>
+                                        </tr>
+                                        <tr style="background: #F5F5F5;">
+                                            <th><input id="id-search" type="text" placeholder="Id" /></th>
+                                            <th><input id="nome-search" type="text" placeholder="Filtrar por Nome" /></th>
+                                            <th><input id="email-search" type="text" placeholder="Filtrar por Email" /></th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </script>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="controller-source">
+                        <pre class="language-java"> <code>
+                            @GET
+                            @Path("/paginar")
+                            @Produces({DataTableResponse.JSON})
+                            @RolesAllowed("Consultas")
+                            public Response list(@QueryParam("draw")   final Integer draw,
+                                                 @QueryParam("start")  final Integer start,
+                                                 @QueryParam("length") final Integer length,
+                                                 @QueryParam("search[value]") final String searchValue,
+                                                 @QueryParam("columns[0][search][value]") final Long id,
+                                                 @QueryParam("columns[1][search][value]") final String nome,
+                                                 @QueryParam("columns[2][search][value]") final String email,
+                                                 @QueryParam("order[0][column]") final Integer ordem,
+                                                 @QueryParam("order[0][dir]") final String ordemDir) {
+
+                                final DataTableResponse dtr = new DataTableResponse();
+                                final List<Map<String, String>> res = new ArrayList<>();
+                                dtr.setDraw(draw);
+                                final String[] columns = new String[]{"id", "nome","email"};
+                                try {
+                                    final Integer qtTotal = new Long(service.contarTodos()).intValue();
+                                    final Map<String, String> searchParams = new HashMap<>();
+                                    if (!searchValue.isEmpty()) {
+                                        searchParams.put(columns[1], searchValue);
+                                    }
+                                    final Integer page = new Double(Math.ceil(start / length)).intValue();
+
+                                    final PageRequest pr = new PageRequest(page, length,
+                                            new Sort(new Order(Direction.fromString(ordemDir), columns[ordem])));
+
+                                    final Page<Aluno> list = service.listarPaginado(id, nome, email, pr).map(a -> Aluno.from(a)) ;
+
+                                    final Integer qtFiltrada = new Long(list.getTotalElements()).intValue();
+                                    if (qtFiltrada > 0) {
+                                        list.forEach(a -> res.add(a.asMapofValues(
+                                                (Object v) -> String.format("row_%s", v),
+                                                "DT_RowId",
+                                                "id",
+                                                columns
+                                        )));
+                                    }
+                                    dtr.setRecordsFiltered(qtFiltrada);
+                                    dtr.setData(res);
+                                    dtr.setRecordsTotal(qtTotal);
+                                } catch (Exception e) {
+                                    LOGGER.error(e);
+                                    dtr.setError(GoiasResourceMessage.getMessage("msg_erro_dessconhecido:"+ e.getMessage()));
+                                }
+                               return Response.status(Response.Status.OK).entity(dtr).build();
+                            }
+                        </code></pre>
+                    </div>
+
+                    <div class="tab-pane fade " id="service-source">
+                        <pre class="language-java"> <code>
+                            @Service
+                            public class AlunoService extends CrudService<Aluno,Long> {
+                                private final Logger log = Logger.getLogger(getClass());
+
+                                @Autowired
+                                private AlunoRepository repository;
+
+                                @Override
+                                public AlunoRepository getRepo() {
+                                    return repository;
+                                }
+
+                                public Page<Aluno> listarPaginado(final Long id, final String nome, final String email, final PageRequest page) {
+
+                                    List<Specification<Aluno>> specs = List.empty();
+
+                                    specs = id != null && id > 0? specs.append(id(id)) : specs;
+                                    specs = Strings.isNullOrEmpty(nome)? specs : specs.append(nomeIniciando(nome));
+                                    specs = Strings.isNullOrEmpty(email)? specs : specs.append(comEmail(email));
+
+                                    final boolean noSpec = specs.isEmpty();
+
+                                    final Specification<Aluno> spec = noSpec? null : specs.reduce((a1, a2) -> where(a1).and(a2));
+
+                                    return Try.of(() -> noSpec? repository.findAll(page) : repository.findAll(spec, page)).onFailure(e -> new InfraException(e)).get();
+                                }
+                            }
+                        </code></pre>
+                    </div>
+
+                    <div class="tab-pane fade " id="entity-source">
+                        <pre class="language-java"> <code>
+                            @Entity
+                            @Table(name = "TB_ALUNO")
+                            @Data
+                            public class Aluno {
+                                @Id
+                                @Column(name = "ALUN_ID")
+                                @GeneratedValue(strategy=GenerationType.AUTO)
+                                private Long id;
+
+                                @Column(name = "ALUN_NOME")
+                                private String nome;
+
+                                @Column(name = "ALUN_EMAIL")
+                                private String email;
+
+                                @Column(name = "ALUN_NASCIMENTO")
+                                private Date nascimento;
+
+                                @Column(name = "ALUN_SEXO")
+                                private String sexo;
+
+                                @Column(name = "ALUN_SITUACAO")
+                                private Boolean situacao;
+
+                                public static Specification<Aluno> id(final Long id) {
+                                    return (root, criteriaQuery, criteriaBuilder) -> criteriaBuilder.equal(root.<Long>get("id"), id);
+                                }
+
+                                public static Specification<Aluno> nomeIniciando(final String nome) {
+                                    return (root, criteriaQuery, criteriaBuilder) ->
+                                            criteriaBuilder.like(criteriaBuilder.upper(root.get("nome")), nome.toUpperCase()+"%");
+                                }
+
+                                public static Specification<Aluno> comEmail(final String email) {
+                                    return (root, criteriaQuery, criteriaBuilder) -> criteriaBuilder.equal(root.get("email"), email);
+                                }
+
+                                public static Specification<Aluno> nascidoEm(final Date nascimento) {
+                                    return (root, criteriaQuery, criteriaBuilder) -> criteriaBuilder.equal(root.<Date>get("nascimento"), nascimento);
+                                }
+                            }
+                        </code></pre>
+                    </div>
+
+                    <div class="tab-pane fade " id="plugins-source">
+                        <h4>Documentação</h4>
+                        <p><a href="https://datatables.net/" target="_blank" title="Ir para página da documentação.">https://datatables.net/</a> </p>
+                        <p><a href="https://editor.datatables.net/" target="_blank" title="Ir para página da documentação.">https://editor.datatables.net/</a> </p>
+
+                        <p>Exemplificação de utilização do plugin nativo.</p>
+
+                        <pre class="language-js"> <code>
+                            $(document).ready(function() {
+                                $('#example tfoot th').each( function () {
+                                    var title = $(this).text();
+                                    $(this).html( '<input type="text" placeholder="Filtrar" />' );
+                                } );
+
+                                // DataTable
+                                var table = $('#example').DataTable( {
+                                    // dom: 'T clear lfrtip',
+                                    dom: 'T clear rtip',
+                                    tableTools: {
+                                        "sRowSelect": "multi",
+                                        "aButtons": [
+                                                        {
+                                                            "sExtends": "create",
+                                                            "sButtonText": "Adicionar"
+                                                        },
+                                                        {
+                                                            "sExtends": "select_all",
+                                                            "sButtonText": "Selecionar Todos"
+                                                        },
+                                                        {
+                                                            "sExtends": "select_none",
+                                                            "sButtonText": "Deselecionar Todos"
+                                                        }
+                                                    ]
+                                        // funcao ctrl+click ok
+                                        ,"fnPreRowSelect": function(e, nodes) {
+                                            if (e) {
+                                                mySelectList = myDeselectList = null;
+                                                if (!e.ctrlKey) {
+                                                    myDeselectList = this.fnGetSelected();
+                                                    mySelectList = nodes;
+                                                }
+                                            }
+                                            return true;
+                                        },
+
+                                        "fnRowSelected": function(nodes) {
+                                            if (myDeselectList) {
+                                                var nodeList = myDeselectList;
+                                                myDeselectList = null;
+                                                this.fnDeselect(nodeList);
+                                                $('#btnEditarItemSelecionado').prop("disabled",false);
+                                            }
+                                        },
+
+                                        "fnRowDeselected": function(nodes) {
+                                            if (myDeselectList) {
+                                                var nodeList = myDeselectList;
+                                                myDeselectList = null;
+                                                this.fnDeselect(nodeList);
+                                                $('#btnEditarItemSelecionado').prop("disabled",true);
+                                            }
+
+                                            if (mySelectList) {
+                                                var nodeList = mySelectList;
+                                                mySelectList = null;
+                                                this.fnSelect (nodeList);
+                                                $('#btnEditarItemSelecionado').prop("disabled",false);
+                                            }
+                                        }
+                                    },
+                                    language: {
+                                        emptyTable: "Nenhum registro encontrado",
+                                        info: "Mostrando de _START_ até _END_ de _TOTAL_ registros",
+                                        infoEmpty: "Mostrando 0 até 0 de 0 registros",
+                                        infoFiltered: "(Filtrados de _MAX_ registros)",
+                                        infoPostFix: "",
+                                        infoThousands: ".",
+                                        lengthMenu: "_MENU_ resultados por página ",
+                                        loadingRecords: "Carregando... ",
+                                        processing: "Processando... ",
+                                        zeroRecords: "Nenhum registro encontrado ",
+                                        search: "Pesquisar : ",
+                                        paginate: {
+                                            "sNext": " Próximo ",
+                                            "sPrevious": " Anterior ",
+                                            "sFirst": " Primeiro ",
+                                            "sLast": " Último "
+                                        },
+                                        aria: {
+                                            sortAscending: ": Ordenar colunas de forma ascendente",
+                                            sortDescending: ": Ordenar colunas de forma descendente"
+                                        }
+                                    }
+                                });
+
+                                // Aplicando a pesquisa.
+                                table.columns().every( function () {
+                                    var that = this;
+
+                                    $('input', this.footer() ).on( 'keyup change', function () {
+                                        if ( that.search() !== this.value ) {
+                                            that.search(this.value).draw();
+                                        }
+                                    } );
+                                });
+
+                                var btnRemover= $(' <button type="button" class="btn btn-danger pull-right" id="btnRemoverItensSelecionados" title="Excluir Selecionados" alt=" Excluir Selecionados" disabled="disabled"> <i class="glyphicon glyphicon-trash"></i> </button> ');
+                                $(".DTTT_container").append(btnRemover);
+
+                                var btnEditar= $(' <button type="button" class="btn btn-info pull-right" id="btnEditarItemSelecionado" title="Excluir Selecionados" alt=" Excluir Selecionados" disabled="disabled"> <i class="glyphicon glyphicon-pencil"></i> </button> ');
+                                $(".DTTT_container").append(btnEditar);
+                            } );
+
+                        </code> </pre>
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- /.panel-body -->
+        </section>
+        <!-- /.panel -->
+    </div>
+</div>
+
+
+

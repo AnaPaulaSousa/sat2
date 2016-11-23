@@ -12,6 +12,7 @@
     "angular-mocks": "~1.4.0",
     "html5-boilerplate": "~5.2.0",
     "notifyjs": "0.4.0",
+    "highlight": "9.8.0",
     "pace.js": "https://github.com/HubSpot/pace.git#1.0.2",
     "flickity": "~1.2.1",
     "blockUI": "2.70",

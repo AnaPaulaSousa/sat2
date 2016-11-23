@@ -22,9 +22,11 @@
 
 		<link href="../bower_components/web-template/flat/3.2/white/css/application.min.css?v=${project.version}" rel="stylesheet" type="text/css"/>
 		<link href="../bower_components/web-template/flat/3.2/white/css/segplan.css?v=${project.version}" rel="stylesheet" type="text/css"/>
+		<link href="../bower_components/prism/prism.css" rel="stylesheet" data-noprefix />
+
 		<script src="../JavaScriptServlet"></script>
 	</head>
-	<body>
+	<body >
 
 		<div class="logo">
 			<h1 class="logo-portal">
@@ -163,6 +165,8 @@
 				</div>
 			</header>
 
+
+
 			<div id="container" class="content container" ng-view>
 
 			</div>
@@ -240,8 +244,12 @@
 		<script src="../js/components/version/version.js?v=${project.version}"></script>
 		<script src="../js/components/version/version-directive.js?v=${project.version}"></script>
 		<script src="../js/components/version/interpolate-filter.js?v=${project.version}"></script>
+		<script src="../js/pace.min.js?v=${project.version}"></script>
+		<!--<script src="../bower_components/prism/prism.js?v=${project.version}" data-manual></script>-->
 
-		<script src="../js/pace.min.js"></script>
+		<script src="../bower_components/prism/prism-full.js"></script>
+		<script src="../bower_components/prism-2/prism-unescaped-markup.js" data-manual></script>
+
 
 	</body>
 </html>

@@ -50,6 +50,4 @@ public class Aluno {
     public static Specification<Aluno> nascidoEm(final Date nascimento) {
         return (root, criteriaQuery, criteriaBuilder) -> criteriaBuilder.equal(root.<Date>get("nascimento"), nascimento);
     }
-
-
 }

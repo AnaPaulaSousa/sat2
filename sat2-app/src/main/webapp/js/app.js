@@ -6,6 +6,7 @@ angular.module('myApp', [
     'myApp.alunos',
     'myApp.alunosFormPadrao',
     'myApp.alunosListaPaginada',
+    'myApp.layout',
     'myApp.version',
     'myApp.messages',
     'myApp.validations',
