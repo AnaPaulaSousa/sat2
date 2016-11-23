@@ -88,7 +88,7 @@
     </init-param>
     <init-param>
       <param-name>referer-pattern</param-name>
-      <param-value>.*localhost.*</param-value>
+      <param-value>${owasp.referer.pattern}</param-value>
     </init-param>
   </servlet>
 
